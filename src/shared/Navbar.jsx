@@ -2,9 +2,9 @@
 const Navbar = () => {
 
     const navOptions = <>
-        <li><a>Item 1</a></li>
-        <li><a>Item 2</a></li>
-        <li><a>Item 3</a></li>
+        <li><a>About</a></li>
+        <li><a>Service</a></li>
+        <li><a>Contact</a></li>
     </>
     return (
         <section>
