@@ -7,7 +7,7 @@ const Footer = () => {
             <div>
                 <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
                     <aside>
-                        <img className="h-[50px] w-[50px] rounded-xl" src={F_logo} alt="matrimony" />
+                        <img className="h-12 w-12 rounded-xl" src={F_logo} alt="matrimony" />
                         <p>
                             Global Matrimony Ltd.
                             <br />
