@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import bg_image from "../assets/bg-image/Warm embrace under golden lights.png";
 import image_logo from "../assets/logo/Interlocked hands forming a heart.png"
 
@@ -16,9 +17,9 @@ const Landing = () => {
             <div className="absolute inset-0 bg-black/40"></div>
 
             {/* Login Button - Top Right */}
-            <button className="absolute top-5 right-5 z-20 bg-teal-600 text-white px-8 py-2 rounded-xl hover:bg-teal-700 transition">
+            <Link to="/login"><button className="absolute top-5 right-5 z-20 bg-teal-600 text-white px-8 py-2 rounded-xl hover:bg-teal-700 transition">
                 Login
-            </button>
+            </button></Link>
 
             {/* Content Card - Left Center */}
             <div className="relative z-10 bg-white rounded-xl shadow-xl w-full max-w-md p-6 text-center">
