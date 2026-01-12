@@ -1,13 +1,10 @@
 import { useEffect } from 'react';
 import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
-
-
-
 const Login = () => {
 
     useEffect(() => {
         loadCaptchaEnginge(6);
-    }, [])
+    }, []);
 
     const handleLogin = event => {
         event.preventDefault();
@@ -15,39 +12,33 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password);
-    }
+    };
 
     return (
-        <section>
-            {/* This is login page  */}
-            <div className="hero bg-base-200 min-h-screen">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
+        <section className="min-h-screen flex items-center justify-center bg-base-200">
+            <div className="card bg-base-100 w-full max-w-sm shadow-2xl">
+                <form onSubmit={handleLogin} className="card-body">
+                    <h1 className="text-3xl font-bold text-center mb-2">Login Now</h1>
+
+                    <label className="label">Email</label>
+                    <input type="email" name="email" className="input input-bordered" placeholder="Email" />
+
+                    <label className="label">Password</label>
+                    <input type="password" name="password" className="input input-bordered" placeholder="Password" />
+
+                    <div className="text-right">
+                        <a className="link link-hover text-sm">Forgot password?</a>
                     </div>
-                    <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                        <form onSubmit={handleLogin} className="card-body">
-                            <fieldset className="fieldset">
 
-                                <label className="label">Email</label>
-                                <input type="email" name="email" className="input" placeholder="Email" />
+                    {/* Captcha */}
+                    <label className="label mt-2">
+                        <LoadCanvasTemplate />
+                    </label>
+                    <input type="text" name="captcha" className="input input-bordered" placeholder="Captcha" />
 
-                                <label className="label">Password</label>
-                                <input type="password" name="password" className="input" placeholder="Password" />
-                                <div><a className="link link-hover">Forgot password?</a></div>
 
-                                {/* This is captcha section  */}
-                                <label className="label mt-2">
-                                    <LoadCanvasTemplate />
-                                </label>
-                                <input type="text" name="captcha" className="input" placeholder="Captcha" />
-
-                                <input className="btn btn-neutral mt-4" type="submit" value="Login" />
-
-                            </fieldset>
-                        </form>
-                    </div>
-                </div>
+                    <input className="btn btn-neutral mt-4 w-full" type="submit" value="Login" />
+                </form>
             </div>
         </section>
     );
