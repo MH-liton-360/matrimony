@@ -18,7 +18,7 @@ const Login = () => {
         <section className="min-h-screen flex items-center justify-center bg-base-200">
             <div className="card bg-base-100 w-full max-w-sm shadow-2xl">
                 <form onSubmit={handleLogin} className="card-body">
-                    <h1 className="text-3xl font-bold text-center mb-2">Login Now</h1>
+                    <h1 className="text-3xl font-bold text-center mb-2">Login Now!</h1>
 
                     <label className="label">Email</label>
                     <input type="email" name="email" className="input input-bordered" placeholder="Email" />
