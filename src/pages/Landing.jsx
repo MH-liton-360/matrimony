@@ -35,7 +35,7 @@ const Landing = () => {
                         Find Your Muslim Life Partner
                     </h2>
                     <p className="text-sm text-gray-500">
-                        Trusted Site Used By Over 7.5 Million Worldwide
+                        Trusted Site Used By Million Worldwide
                     </p>
 
                     {/* Gender Selection */}
