@@ -8,9 +8,9 @@ const Footer = () => {
                         {/* Navigation Links */}
                         <nav class="flex flex-wrap justify-center gap-6 font-semibold">
                             <a class="link link-hover">About us</a>
-                            <a class="link link-hover">Contact</a>
-                            <a class="link link-hover">Jobs</a>
-                            <a class="link link-hover">Press kit</a>
+                            <a class="link link-hover">Terms of Use</a>
+                            <a class="link link-hover">Privacy Statement</a>
+                            <a class="link link-hover">Dating Safety</a>
                         </nav>
 
                         {/* Matrimony Summary */}
