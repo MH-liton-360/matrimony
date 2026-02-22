@@ -32,8 +32,9 @@ const Landing = () => {
 
                     {/* Headline */}
                     <h2 className="text-black text-2xl font-medium">
-
+                        Connecting Hearts, Creating Futures
                     </h2>
+
                     <p className="text-sm text-gray-500">
                         Trusted Site Used By Million Worldwide
                     </p>
