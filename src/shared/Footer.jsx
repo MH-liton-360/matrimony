@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <section>
             <div>
-                <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
+                <footer className="footer sm:footer-horizontal bg-white text-black p-10">
                     <aside>
                         <img className="h-12 w-12 rounded-xl" src={F_logo} alt="matrimony" />
                         <p>
@@ -15,22 +15,13 @@ const Footer = () => {
                         </p>
                     </aside>
                     <nav>
-                        <h6 className="footer-title">Services</h6>
-                        <a className="link link-hover">Branding</a>
-                        <a className="link link-hover">Marketing</a>
-                        <a className="link link-hover">Advertisement</a>
+                        <h6 className="footer-title">About Us</h6>
                     </nav>
                     <nav>
-                        <h6 className="footer-title">Help & Support</h6>
-                        <a className="link link-hover">About us</a>
-                        <a className="link link-hover">Contact</a>
-                        <a className="link link-hover">Feedback</a>
+                        <h6 className="footer-title">Term of Use</h6>
                     </nav>
                     <nav>
                         <h6 className="footer-title">Quick Links</h6>
-                        <a className="link link-hover">Terms of use</a>
-                        <a className="link link-hover">Privacy policy</a>
-                        <a className="link link-hover">Cookie policy</a>
                     </nav>
                 </footer>
             </div>
