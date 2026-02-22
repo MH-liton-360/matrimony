@@ -2,11 +2,11 @@ const Footer = () => {
     return (
         <section>
             <div>
-                <footer class="bg-base-200 text-base-content rounded-t-xl p-10">
+                <footer class="bg-amber-50 text-emerald-950 rounded-t-xl p-10">
                     <div class="max-w-6xl mx-auto flex flex-col items-center gap-6">
 
                         {/* Navigation Links */}
-                        <nav class="flex flex-wrap justify-center gap-6">
+                        <nav class="flex flex-wrap justify-center gap-6 font-semibold">
                             <a class="link link-hover">About us</a>
                             <a class="link link-hover">Contact</a>
                             <a class="link link-hover">Jobs</a>
@@ -14,16 +14,16 @@ const Footer = () => {
                         </nav>
 
                         {/* Matrimony Summary */}
-                        <p class="text-center text-sm text-gray-500 max-w-md">
+                        <p class="text-center text-sm text-emerald-950 max-w-md">
                             Matrimony is a lifelong partnership built on love, trust, and mutual respect.
                             It helps create strong families and meaningful relationships in society.
                         </p>
 
                         {/* Divider */}
-                        <hr class="w-full border-gray-300 opacity-30 my-6" />
+                        <hr class="w-full border-emerald-950 opacity-30" />
 
                         {/* Copyright */}
-                        <div class="text-center text-xs text-gray-400">
+                        <div class="text-center text-xs text-emerald-950">
                             Copyright © {new Date().getFullYear()} - Global Matrimony Ltd. All Rights Reserved
                         </div>
 
