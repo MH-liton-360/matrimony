@@ -1,6 +1,3 @@
-import F_logo from "../assets/logo/Interlocked hands forming a heart.png"
-
-
 const Footer = () => {
     return (
         <section>
