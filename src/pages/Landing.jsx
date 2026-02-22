@@ -32,7 +32,7 @@ const Landing = () => {
 
                     {/* Headline */}
                     <h2 className="text-black text-2xl font-medium">
-                        Find Your Muslim Life Partner
+
                     </h2>
                     <p className="text-sm text-gray-500">
                         Trusted Site Used By Million Worldwide
