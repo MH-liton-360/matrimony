@@ -17,27 +17,30 @@ const SignUp = () => {
         <div className="hero bg-base-200 min-h-screen">
             <div className="hero-content flex-col lg:flex-row-reverse">
 
-                <form onSubmit={handleSubmit(onSubmit)} className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                    <div className="card-body">
+                <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                         <fieldset className="fieldset">
 
                             <h1 className="text-3xl font-bold text-center mb-2">SignUp</h1>
 
                             <label className="label">Name</label>
-                            <input type="text" {...register("name")} name="name" className="input input-bordered" placeholder="Name" />
+                            <input type="text" {...register("name", { required: true })} name="name" className="input input-bordered" placeholder="Name" />
+                            {errors.name && <span className="text-red-600">This field is required</span>}
 
                             <label className="label">Email</label>
-                            <input type="email" {...register("email")} name="email" className="input input-bordered" placeholder="Email" />
+                            <input type="email" {...register("email", { required: true })} name="email" className="input input-bordered" placeholder="Email" />
+                            {errors.email && <span className="text-red-600">This field is required</span>}
 
                             <label className="label">Password</label>
-                            <input type="password" {...register("password")} name="password" className="input input-bordered" placeholder="Password" />
+                            <input type="password" {...register("password", { required: true })} name="password" className="input input-bordered" placeholder="Password" />
+                            {errors.password && <span className="text-red-600">This field is required</span>}
 
                             <div><a className="link link-hover">Forgot password?</a></div>
                             <button className="btn btn-neutral mt-4">Login</button>
 
                         </fieldset>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     );
