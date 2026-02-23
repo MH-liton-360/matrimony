@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
 const Login = () => {
 
@@ -38,6 +39,7 @@ const Login = () => {
 
                     <input className="btn btn-neutral mt-4 w-full" type="submit" value="Login" />
                 </form>
+                <p><small>New Here? <Link to="/signup">Create an account</Link> </small></p>
             </div>
         </section>
     );
