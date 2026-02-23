@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 const SignUp = () => {
 
     // React Hook Form 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm()
+    const { register, handleSubmit, formState: { errors } } = useForm()
 
 
     // Onsubmit Multiline
@@ -34,6 +34,7 @@ const SignUp = () => {
 
                             <div><a className="link link-hover">Forgot password?</a></div>
                             <button className="btn btn-neutral mt-4">Login</button>
+
                         </fieldset>
                     </div>
                 </form>
