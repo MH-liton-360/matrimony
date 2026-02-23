@@ -36,7 +36,6 @@ const Login = () => {
                     </label>
                     <input type="text" name="captcha" className="input input-bordered" placeholder="Captcha" />
 
-
                     <input className="btn btn-neutral mt-4 w-full" type="submit" value="Login" />
                 </form>
             </div>

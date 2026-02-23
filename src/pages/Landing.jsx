@@ -29,7 +29,6 @@ const Landing = () => {
                         <img className="h-16" src={image_logo} alt="image_logo" />
                         <h1 className="text-cyan-950 uppercase text-xl font-semibold">Matrimony</h1>
                     </div>
-
                     {/* Headline */}
                     <h2 className="text-black text-2xl font-medium">
                         Connecting Hearts, Creating Futures
