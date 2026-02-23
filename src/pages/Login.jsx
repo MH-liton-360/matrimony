@@ -25,7 +25,7 @@ const Login = () => {
                     <input type="email" name="email" className="input input-bordered" placeholder="Email" />
 
                     <label className="label">Password</label>
-                    <input type="password" name="password" className="input input-bordered" placeholder="Password" />
+                    <input type="password" ame="password" className="input input-bordered" placeholder="Password" />
 
                     <div className="text-right">
                         <a className="link link-hover text-sm">Forgot password?</a>
