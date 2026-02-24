@@ -1,6 +1,5 @@
 import { useForm } from "react-hook-form";
 
-
 const SignUp = () => {
 
     // React Hook Form.....
