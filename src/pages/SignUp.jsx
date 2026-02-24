@@ -2,11 +2,11 @@ import { useForm } from "react-hook-form";
 
 const SignUp = () => {
 
-    // React Hook Form.....
+    // React Hook Form........................................!
     const { register, handleSubmit, formState: { errors }, } = useForm()
 
 
-    // Onsubmit Multiline
+    // Onsubmit Multiline system..............................!
     const onSubmit = (data) => {
         console.log(data)
     };
