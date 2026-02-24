@@ -20,7 +20,7 @@ const SignUp = () => {
                         <fieldset className="fieldset">
 
                             {/* Headline Signup  */}
-                            <h1 className="text-3xl font-bold text-center mb-2">SignUp</h1>
+                            <h1 className="text-3xl font-bold text-center mb-2">Sign Up</h1>
 
                             {/* Name  */}
                             <label className="label">Name</label>
@@ -39,9 +39,11 @@ const SignUp = () => {
                             {errors.password?.type === "minLength" && (<p className="text-red-600">Password must be at least 6 characters</p>)}
                             {errors.password?.type === "maxLength" && (<p className="text-red-600">Password must not exceed 20 characters</p>)}
 
-                            {/* Button  */}
+                            {/* hyper link  */}
                             <div><a className="link link-hover">Forgot password?</a></div>
-                            <button className="btn btn-neutral mt-4">Login</button>
+
+                            {/* button  */}
+                            <input className="btn btn-neutral mt-4" type="button" value="Sign Up" />
 
                         </fieldset>
                     </form>
