@@ -19,22 +19,27 @@ const SignUp = () => {
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                         <fieldset className="fieldset">
 
+                            {/* Headline Signup  */}
                             <h1 className="text-3xl font-bold text-center mb-2">SignUp</h1>
 
+                            {/* Name  */}
                             <label className="label">Name</label>
                             <input type="text" {...register("name", { required: true })} name="name" className="input input-bordered" placeholder="Name" />
                             {errors.name && <span className="text-red-600">Name is required</span>}
 
+                            {/* Email  */}
                             <label className="label">Email</label>
                             <input type="email" {...register("email", { required: true })} name="email" className="input input-bordered" placeholder="Email" />
                             {errors.email && <span className="text-red-600">Email is required</span>}
 
+                            {/* Password  */}
                             <label className="label">Password</label>
                             <input type="password" {...register("password", { required: true, minLength: 6, maxLength: 20 })} name="password" className="input input-bordered" placeholder="Password" />
                             {errors.password?.type === "required" && (<p className="text-red-600">Password is required</p>)}
                             {errors.password?.type === "minLength" && (<p className="text-red-600">Password must be at least 6 characters</p>)}
                             {errors.password?.type === "maxLength" && (<p className="text-red-600">Password must not exceed 20 characters</p>)}
 
+                            {/* Button  */}
                             <div><a className="link link-hover">Forgot password?</a></div>
                             <button className="btn btn-neutral mt-4">Login</button>
 
