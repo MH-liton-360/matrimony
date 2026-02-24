@@ -8,9 +8,16 @@ const Main = () => {
 
     return (
         <div>
+
+            {/* Navbar  */}
             {/* <Navbar></Navbar> */}
+
+            {/* Outlet  */}
             <Outlet></Outlet>
+
+            {/* Footer  */}
             {noHeaderFooter || < Footer ></Footer>}
+
         </div >
     );
 };
