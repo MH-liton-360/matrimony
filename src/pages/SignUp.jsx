@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
 
@@ -45,6 +46,9 @@ const SignUp = () => {
                     <input className="btn btn-neutral mt-4" type="button" value="Sign Up" />
 
                 </form>
+
+                {/* Link add login  */}
+                <p className='text-center justify-center items-center'><small><Link to="/login">Already have an account</Link> </small></p>
 
             </div>
         </div>
