@@ -12,44 +12,43 @@ const SignUp = () => {
     };
 
     return (
-        <div className="hero bg-base-200 min-h-screen">
-            <div className="hero-content flex-col lg:flex-row-reverse">
+        <div className="min-h-screen flex items-center justify-center bg-base-200">
 
-                <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                    <form onSubmit={handleSubmit(onSubmit)} className="card-body">
-                        <fieldset className="fieldset">
+            <div className="card bg-base-100 w-full max-w-sm shadow-2xl">
+                <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+                    <fieldset className="fieldset">
 
-                            {/* Headline Signup  */}
-                            <h1 className="text-3xl font-bold text-center mb-2">Sign Up</h1>
+                        {/* Headline Signup  */}
+                        <h1 className="text-3xl font-bold text-center mb-2">Sign Up</h1>
 
-                            {/* Name  */}
-                            <label className="label">Name</label>
-                            <input type="text" {...register("name", { required: true })} name="name" className="input input-bordered" placeholder="Name" />
-                            {errors.name && <span className="text-red-600">Name is required</span>}
+                        {/* Name  */}
+                        <label className="label">Name</label>
+                        <input type="text" {...register("name", { required: true })} name="name" className="input input-bordered" placeholder="Name" />
+                        {errors.name && <span className="text-red-600">Name is required</span>}
 
-                            {/* Email  */}
-                            <label className="label">Email</label>
-                            <input type="email" {...register("email", { required: true })} name="email" className="input input-bordered" placeholder="Email" />
-                            {errors.email && <span className="text-red-600">Email is required</span>}
+                        {/* Email  */}
+                        <label className="label">Email</label>
+                        <input type="email" {...register("email", { required: true })} name="email" className="input input-bordered" placeholder="Email" />
+                        {errors.email && <span className="text-red-600">Email is required</span>}
 
-                            {/* Password  */}
-                            <label className="label">Password</label>
-                            <input type="password" {...register("password", { required: true, minLength: 6, maxLength: 20 })} name="password" className="input input-bordered" placeholder="Password" />
-                            {errors.password?.type === "required" && (<p className="text-red-600">Password is required</p>)}
-                            {errors.password?.type === "minLength" && (<p className="text-red-600">Password must be at least 6 characters</p>)}
-                            {errors.password?.type === "maxLength" && (<p className="text-red-600">Password must not exceed 20 characters</p>)}
+                        {/* Password  */}
+                        <label className="label">Password</label>
+                        <input type="password" {...register("password", { required: true, minLength: 6, maxLength: 20 })} name="password" className="input input-bordered" placeholder="Password" />
+                        {errors.password?.type === "required" && (<p className="text-red-600">Password is required</p>)}
+                        {errors.password?.type === "minLength" && (<p className="text-red-600">Password must be at least 6 characters</p>)}
+                        {errors.password?.type === "maxLength" && (<p className="text-red-600">Password must not exceed 20 characters</p>)}
 
-                            {/* hyper link  */}
-                            <div><a className="link link-hover">Forgot password?</a></div>
+                        {/* hyper link  */}
+                        <div><a className="link link-hover">Forgot password?</a></div>
 
-                            {/* button  */}
-                            <input className="btn btn-neutral mt-4" type="button" value="Sign Up" />
+                        {/* button  */}
+                        <input className="btn btn-neutral mt-4" type="button" value="Sign Up" />
 
-                        </fieldset>
-                    </form>
-                </div>
+                    </fieldset>
+                </form>
             </div>
         </div>
+
     );
 };
 

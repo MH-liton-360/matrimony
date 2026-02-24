@@ -17,7 +17,9 @@ const Login = () => {
 
     return (
         <section className="min-h-screen flex items-center justify-center bg-base-200">
+
             <div className="card bg-base-100 w-full max-w-sm shadow-2xl">
+
                 <form onSubmit={handleLogin} className="card-body">
                     <h1 className="text-3xl font-bold text-center mb-2">Login Now!</h1>
 
