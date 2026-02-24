@@ -13,6 +13,8 @@ const Landing = () => {
             }}
             className="relative flex items-center justify-start px-6 md:px-12 lg:px-20"
         >
+
+
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/40"></div>
 
@@ -24,11 +26,13 @@ const Landing = () => {
             {/* Content Card - Left Center */}
             <div className="relative z-10 bg-white rounded-xl shadow-xl w-full max-w-md p-6 text-center">
                 <div className="flex flex-col gap-4">
+
                     {/* Logo */}
                     <div className="flex justify-center items-center gap-2 mb-2">
                         <img className="h-16" src={image_logo} alt="image_logo" />
                         <h1 className="text-cyan-950 uppercase text-xl font-semibold">Matrimony</h1>
                     </div>
+
                     {/* Headline */}
                     <h2 className="text-black text-2xl font-medium">
                         Connecting Hearts, Creating Futures
