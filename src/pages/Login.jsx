@@ -21,9 +21,11 @@ const Login = () => {
                 <form onSubmit={handleLogin} className="card-body">
                     <h1 className="text-3xl font-bold text-center mb-2">Login Now!</h1>
 
+                    {/* Email  */}
                     <label className="label">Email</label>
                     <input type="email" name="email" className="input input-bordered" placeholder="Email" />
 
+                    {/* Password  */}
                     <label className="label">Password</label>
                     <input type="password" ame="password" className="input input-bordered" placeholder="Password" />
 
@@ -39,6 +41,7 @@ const Login = () => {
 
                     <input className="btn btn-neutral mt-4 w-full" type="submit" value="Login" />
                 </form>
+
                 <p><small>New Here? <Link to="/signup">Create an account</Link> </small></p>
             </div>
         </section>
