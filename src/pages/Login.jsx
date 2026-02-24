@@ -42,6 +42,7 @@ const Login = () => {
                     <input className="btn btn-neutral mt-4 w-full" type="submit" value="Login" />
                 </form>
 
+                {/* Link add signup  */}
                 <p className='text-center justify-center items-center'><small>New Here? <Link to="/signup">Create an account</Link> </small></p>
             </div>
         </section>
