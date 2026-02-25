@@ -9,7 +9,6 @@ const Main = () => {
 
     return (
         <div>
-
             {/* Navbar  */}
             <Navbar></Navbar>
 
