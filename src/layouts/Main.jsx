@@ -9,8 +9,6 @@ const Main = () => {
     return (
         <div>
 
-
-
             {/* Outlet  */}
             {/* <Outlet></Outlet> */}
 
