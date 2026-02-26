@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
 const Login = () => {
+
+    // Ei link ta just check korar jonno je gloin e click korle home e niye jay ki na 
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -14,6 +16,8 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password);
+
+        // Ei link ta just check korar jonno je gloin e click korle home e niye jay ki na 
         navigate("/home");
     };
 
