@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
 const Login = () => {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     useEffect(() => {
         loadCaptchaEnginge(6);
