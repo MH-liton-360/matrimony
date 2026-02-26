@@ -2,10 +2,11 @@
 const Navbar = () => {
 
     const navOptions = <>
-        <li><a>About US</a></li>
+        <li><a>Home</a></li>
         <li><a>Service</a></li>
+        <li><a>Blog</a></li>
         <li><a>Contact</a></li>
-        <li><a>Dashboard</a></li>
+
     </>
     return (
 
