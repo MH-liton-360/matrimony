@@ -12,7 +12,7 @@ import 'swiper/css/pagination';
 
 const Success_Story = () => {
     return (
-        <div className="">
+        <div id='success_story' className="">
             <Swiper
                 slidesPerView={3}
                 spaceBetween={30}

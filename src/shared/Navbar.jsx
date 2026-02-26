@@ -1,13 +1,52 @@
 import { Link } from "react-router-dom";
 
+// This is React spa scrolling system 
+import { Link as ScrollLink } from "react-scroll";
+
 const Navbar = () => {
 
     const navOptions = <>
 
-        <li><Link to="/home" className="hover:text-yellow-400 transition-colors">Home</Link></li>
-        <li><Link to="/success_story" className="hover:text-yellow-400 transition-colors">Service</Link></li>
-        <li><Link to="/blog" className="hover:text-yellow-400 transition-colors">Blog</Link></li>
-        <li><Link to="/contact" className="hover:text-yellow-400 transition-colors">Contact</Link></li>
+        <li>
+            <ScrollLink
+                to="home"
+                smooth={true}
+                duration={500}
+                className="hover:text-yellow-400 transition-colors cursor-pointer"
+            >
+                Home
+            </ScrollLink>
+        </li>
+        <li>
+            <ScrollLink
+                to="success_story"
+                smooth={true}
+                duration={500}
+                className="hover:text-yellow-400 transition-colors cursor-pointer"
+            >
+                Service
+            </ScrollLink>
+        </li>
+        <li>
+            <ScrollLink
+                to="blog"
+                smooth={true}
+                duration={500}
+                className="hover:text-yellow-400 transition-colors cursor-pointer"
+            >
+                Blog
+            </ScrollLink>
+        </li>
+        <li>
+            <ScrollLink
+                to="contact"
+                smooth={true}
+                duration={500}
+                className="hover:text-yellow-400 transition-colors cursor-pointer"
+            >
+                Contact
+            </ScrollLink>
+        </li>
     </>
 
     return (
