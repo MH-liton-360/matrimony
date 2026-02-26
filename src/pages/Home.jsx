@@ -5,20 +5,22 @@ import Navbar from "../shared/Navbar";
 
 const Home = () => {
     return (
-        <div>
-            {/* Navbar  */}
-            <Navbar></Navbar>
+        <section id="home">
+            <div>
+                {/* Navbar  */}
+                <Navbar></Navbar>
 
-            {/* Banner  */}
-            <Banner></Banner>
+                {/* Banner  */}
+                <Banner></Banner>
 
-            <div className="max-w-6xl mx-auto">
+                <div className="max-w-6xl mx-auto">
 
-                {/* Success-Story  */}
-                <Success_Story></Success_Story>
+                    {/* Success-Story  */}
+                    <Success_Story></Success_Story>
 
+                </div>
             </div>
-        </div>
+        </section>
     );
 };
 
