@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
 const Login = () => {
+    const navigate = useNavigate();
 
     useEffect(() => {
         loadCaptchaEnginge(6);
@@ -13,7 +14,9 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password);
+        navigate("/home");
     };
+
 
     return (
         <section className="min-h-screen flex items-center justify-center bg-base-200">
