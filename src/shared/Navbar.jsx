@@ -1,10 +1,13 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
 
     const navOptions = <>
-        <li><a className="hover:text-yellow-400 transition-colors">Home</a></li>
-        <li><a className="hover:text-yellow-400 transition-colors">Service</a></li>
-        <li><a className="hover:text-yellow-400 transition-colors">Blog</a></li>
-        <li><a className="hover:text-yellow-400 transition-colors">Contact</a></li>
+
+        <li><Link to="/home" className="hover:text-yellow-400 transition-colors">Home</Link></li>
+        <li><Link to="/success_story" className="hover:text-yellow-400 transition-colors">Service</Link></li>
+        <li><Link to="/blog" className="hover:text-yellow-400 transition-colors">Blog</Link></li>
+        <li><Link to="/contact" className="hover:text-yellow-400 transition-colors">Contact</Link></li>
     </>
 
     return (
@@ -29,9 +32,10 @@ const Navbar = () => {
 
                     </div>
 
-                    <a className="text-2xl font-bold text-white hover:text-amber-400 transition-colors">
+                    <Link to="/" className="text-2xl font-bold text-white hover:text-amber-400 transition-colors">
                         Global~Matrimony
-                    </a>
+                    </Link>
+
                 </div>
 
                 <div className="navbar-center hidden lg:flex">
