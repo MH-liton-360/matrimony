@@ -17,6 +17,7 @@ const Login = () => {
         navigate("/home");
     };
 
+
     return (
         <section className="min-h-screen flex items-center justify-center bg-base-200">
 
@@ -31,7 +32,7 @@ const Login = () => {
 
                     {/* Password  */}
                     <label className="label">Password</label>
-                    <input type="password" ame="password" className="input input-bordered" placeholder="Password" />
+                    <input type="password" name="password" className="input input-bordered" placeholder="Password" />
 
                     <div className="text-right">
                         <a className="link link-hover text-sm">Forgot password?</a>
