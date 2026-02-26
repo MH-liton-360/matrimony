@@ -7,7 +7,14 @@ const Home = () => {
         <div>
             {/* Navbar  */}
             <Navbar></Navbar>
-            <Banner></Banner>
+
+
+            <div className="max-w-6xl mx-auto p-10">
+
+                {/* Banner  */}
+                <Banner></Banner>
+
+            </div>
         </div>
     );
 };
