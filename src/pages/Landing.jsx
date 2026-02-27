@@ -5,6 +5,7 @@ import image_logo from "../assets/logo/Interlocked hands forming a heart.png"
 const Landing = () => {
     return (
         <section
+
             style={{
                 backgroundImage: `url(${bg_image})`,
                 backgroundSize: "cover",
