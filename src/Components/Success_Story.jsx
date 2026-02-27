@@ -136,6 +136,7 @@ const Success_Story = () => {
                         </div>
                     </div>
                 </SwiperSlide>
+
                 {/* Swiper slide 08  */}
                 <SwiperSlide>
                     <div className="card bg-base-100 w-96 shadow-sm">
@@ -151,6 +152,7 @@ const Success_Story = () => {
                         </div>
                     </div>
                 </SwiperSlide>
+
                 {/* Swiper slide 09  */}
                 <SwiperSlide>
                     <div className="card bg-base-100 w-96 shadow-sm">
