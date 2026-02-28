@@ -1,14 +1,37 @@
 [
   {
     "id": 1,
-    "name": "Rahim & Sumaiya",
     "image": "https://i.ibb.co/8m6rQ5N/couple1.jpg",
-    "story": "We met through this matrimony platform and instantly felt a connection. Today we are happily married and grateful for this journey."
+    "description": "We met through this matrimony platform and instantly felt a connection. Today we are happily married and grateful for this beautiful journey together."
   },
   {
     "id": 2,
-    "name": "Arif & Jannat",
     "image": "https://i.ibb.co/Fz2p4Pq/couple2.jpg",
-    "story": "Finding a life partner felt challenging until we found each other here. This platform made our dream come true."
+    "description": "Finding a life partner felt challenging until we found each other here. This platform truly helped us turn our dream into reality."
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/0Jmshvb/couple3.jpg",
+    "description": "Our families connected first, but our hearts connected even faster. Thanks to this platform, we found trust, respect, and lifelong companionship."
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/Y3qKp9m/couple4.jpg",
+    "description": "We were searching for sincerity and compatibility. This matrimony service helped us find both, and today we proudly walk our journey together."
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/VV5ZJkG/couple5.jpg",
+    "description": "From the first conversation to our wedding day, everything felt meant to be. We are thankful for this platform for bringing us together."
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co/6J8Zf9R/couple6.jpg",
+    "description": "We never imagined finding love online could be so genuine. This platform helped us discover a partner who truly understands and supports each other."
+  },
+  {
+    "id": 7,
+    "image": "https://i.ibb.co/3W7fQ6K/couple7.jpg",
+    "description": "What started as a simple profile view turned into a lifelong bond. We are forever grateful for this beautiful connection."
   }
 ]
