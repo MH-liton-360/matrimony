@@ -2,7 +2,7 @@ const Footer = () => {
     return (
         <section>
             <div>
-                <footer class="bg-amber-50 text-emerald-950 rounded-t-xl pt-10">
+                <footer class="bg-amber-100 text-emerald-950 rounded-t-xl pt-10">
                     <div class="max-w-6xl mx-auto flex flex-col items-center gap-6">
 
                         {/* Navigation Links */}
