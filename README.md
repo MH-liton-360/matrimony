@@ -1,16 +1,42 @@
-# React + Vite
+# Matrimony Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive Matrimony web application built with **React**, **Vite**, **Tailwind CSS**, and **Swiper.js**. This platform helps singles find meaningful connections and showcases success stories of couples.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- Fully responsive design for **mobile, tablet, and desktop**  
+- **Success Stories** carousel with images and testimonials  
+- Navbar with quick access to **Home, About, Services, Stories, Contact, Login**  
+- Smooth scrolling between sections  
+- Modern UI using **Tailwind CSS**  
+- Easy to extend for **premium membership, blogs, and user dashboards**  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React + Vite  
+- **Styling:** Tailwind CSS, DaisyUI (optional)  
+- **Carousel:** Swiper.js  
+- **Routing:** React Router DOM  
+- **Version Control:** Git / GitHub  
+
+---
+
+## ⚙ Installation
+
+1. Clone the repository:
+
+git clone https://github.com/yourusername/matrimony-project.git
+cd matrimony-project
+
+
+1. Install dependencies:
+npm install
+
+3. Start development server:
+npm run dev
+
+4. Open in browser (usually at http://localhost:5173)
