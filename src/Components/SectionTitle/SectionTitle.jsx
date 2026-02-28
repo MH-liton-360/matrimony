@@ -1,8 +1,8 @@
 
-const SectionTitle = ({ heading }) => {
+const SectionTitle = ({ heading }) => {   //Here heading is props;
     return (
-        <div>
-            <p>{heading}</p>
+        <div className="p-10">
+            <p className="text-2xl font-semibold text-amber-900 text-center pt-10">{heading}</p>
         </div>
     );
 };

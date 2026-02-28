@@ -18,6 +18,7 @@ import slide04 from '../assets/Success-story-image/01 (4).jpg';
 import slide05 from '../assets/Success-story-image/01 (5).jpg';
 import slide06 from '../assets/Success-story-image/01 (6).jpg';
 import slide07 from '../assets/Success-story-image/01 (7).jpg';
+import SectionTitle from './SectionTitle/SectionTitle';
 
 const Success_Story = () => {
 
@@ -35,6 +36,13 @@ const Success_Story = () => {
 
     return (
         <div id='success_story' className="">
+
+
+            <SectionTitle
+                heading={"Success-Story"}
+            ></SectionTitle>
+
+
             <Swiper
                 slidesPerView={3}
                 spaceBetween={30}
