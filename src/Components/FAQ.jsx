@@ -1,6 +1,6 @@
 const FAQ = () => {
     return (
-        <section className="relative py-12 px-4 bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100">
+        <section id="FAQ" className="relative py-12 px-4 bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100">
 
             {/* Background Blur Circle */}
             <div className="absolute top-10 left-10 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>

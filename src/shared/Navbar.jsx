@@ -24,7 +24,7 @@ const Navbar = () => {
                 duration={500}
                 className="hover:text-yellow-400 transition-colors cursor-pointer"
             >
-                Service
+                Stories
             </ScrollLink>
         </li>
         <li>
@@ -39,12 +39,12 @@ const Navbar = () => {
         </li>
         <li>
             <ScrollLink
-                to="contact"
+                to="FAQ"
                 smooth={true}
                 duration={500}
                 className="hover:text-yellow-400 transition-colors cursor-pointer"
             >
-                Contact
+                FAQ
             </ScrollLink>
         </li>
     </>
