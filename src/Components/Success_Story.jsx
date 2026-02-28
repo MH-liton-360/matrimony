@@ -35,7 +35,7 @@ const Success_Story = () => {
     const slides = [slide01, slide07, slide03, slide04, slide05, slide06, slide02];
 
     return (
-        <div id='success_story' className="">
+        <div id='success_story' className="pb-5">
 
 
             <SectionTitle
@@ -56,25 +56,37 @@ const Success_Story = () => {
                     1024: { slidesPerView: 3, spaceBetween: 30 },
                 }}
             >
-                {slides.map((slide, index) => (     //slide.map-> slide on mapping, slide -> current slide, index means position start 0....6
+                {slides.map((slide, index) => (
 
-                    //    key index means unique id. 
-                    <SwiperSlide key={index}>
+                    // slide.map -> slide on mapping
+                    // slide -> current slide
+                    // index -> position (0....6)
+
+                    // key={index} means unique id index position 1...7
+                    <SwiperSlide key={index} className="flex">
 
                         {/* This is card  */}
-                        <div className="card bg-base-100 shadow-sm">
+                        <div className="card bg-base-100 shadow-md hover:shadow-2xl 
+                        transition-all duration-300 
+                        hover:-translate-y-2 
+                        rounded-2xl 
+                        flex flex-col w-full h-full">
+
                             <figure className="px-5 pt-5">
                                 <img
-                                    src={slide}     //current slide
-                                    alt={`Slide ${index + 1}`}    //Increase slide : current + 1, mane next slide hobe.
+                                    src={slide}     // current slide image
+                                    alt={`Slide ${index + 1}`}    // index + 1 means slide number (1....7)
                                     className="rounded-xl w-full h-64 md:h-72 lg:h-80 object-cover"
                                 />
                             </figure>
 
-                            <div className="card-body items-center text-center">
+                            <div className="card-body items-center text-center flex flex-col flex-grow justify-between">
 
                                 {/* per story position 0....6 */}
-                                <p>{stories[index]}</p>
+                                <p className="min-h-[90px]">
+                                    {stories[index]}   {/* index position on story showing */}
+                                </p>
+
                             </div>
                         </div>
                     </SwiperSlide>
