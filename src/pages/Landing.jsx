@@ -20,7 +20,7 @@ const Landing = () => {
             <div className="absolute inset-0 bg-black/40"></div>
 
             {/* Login Button - Top Right */}
-            <Link to="/login"><button className="absolute top-5 right-5 z-20 bg-teal-600 text-white px-8 py-2 rounded-xl hover:bg-teal-700 transition">
+            <Link to=""><button className="absolute top-5 right-5 z-20 bg-teal-600 text-white px-8 py-2 rounded-xl hover:bg-teal-700 transition">
                 Login
             </button></Link>
 
@@ -60,9 +60,10 @@ const Landing = () => {
                     </div>
 
                     {/* View Singles Button */}
-                    <button className="btn btn-teal-600 bg-teal-600 text-white mt-3 hover:bg-teal-700 transition w-full">
-                        View Singles Now
-                    </button>
+                    <Link to="/home"><button className="btn btn-teal-600 bg-teal-600 text-white mt-3 hover:bg-teal-700 transition w-full">
+                        Welcome Now
+                    </button></Link>
+
                 </div>
             </div>
         </section>

@@ -17,7 +17,7 @@ const Login = () => {
         const password = form.password.value;
         console.log(email, password);
 
-        // Ei link ta just check korar jonno je gloin e click korle home e niye jay ki na 
+        // Ei link ta just check korar jonno je login e click korle home e niye jay ki na 
         navigate("/home");
     };
 

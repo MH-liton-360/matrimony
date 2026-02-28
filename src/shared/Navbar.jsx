@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Links } from "react-router-dom";
 
 // This is React spa scrolling system 
 import { Link as ScrollLink } from "react-scroll";
@@ -84,7 +84,8 @@ const Navbar = () => {
                 </div>
 
                 <div className="navbar-end">
-                    <a className="btn btn-outline text-white border-white hover:bg-yellow-400 hover:border-yellow-400 hover:text-black">Login</a>
+                    <Link to="/login"><a className="btn btn-outline text-white border-white hover:bg-yellow-400 hover:border-yellow-400 hover:text-black">Login</a>
+                    </Link>
                 </div>
             </div>
         </section>

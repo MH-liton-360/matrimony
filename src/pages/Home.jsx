@@ -1,4 +1,5 @@
 import Banner from "../Components/Banner";
+import FAQ from "../Components/FAQ";
 import Success_Story from "../Components/Success_Story";
 import Navbar from "../shared/Navbar";
 
@@ -18,6 +19,9 @@ const Home = () => {
 
                     {/* Success-Story  */}
                     <Success_Story></Success_Story>
+
+                    {/* FAQ means: Frequently Asked Questions  */}
+                    <FAQ></FAQ>
                 </div>
             </div>
         </section>
