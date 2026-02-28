@@ -9,6 +9,9 @@ import 'swiper/css/pagination';
 // import required modules
 import { FreeMode, Pagination } from 'swiper/modules';
 
+
+
+//Slide import image
 import slide01 from '../assets/Success-story-image/01 (1).jpg';
 import slide02 from '../assets/Success-story-image/01 (2).jpg';
 import slide03 from '../assets/Success-story-image/01 (3).jpg';
@@ -45,13 +48,17 @@ const Success_Story = () => {
                 1024: { slidesPerView: 3, spaceBetween: 30 },
             }}
         >
-            {slides.map((slide, index) => (
+            {slides.map((slide, index) => (     //slide.map-> slide on mapping, slide -> current slide, index means position start 0....6
+
+                //    key index means unique id. 
                 <SwiperSlide key={index}>
+
+                    {/* This is card  */}
                     <div className="card bg-base-100 shadow-sm">
                         <figure className="px-5 pt-5">
                             <img
-                                src={slide}
-                                alt={`Slide ${index + 1}`}
+                                src={slide}     //current slide
+                                alt={`Slide ${index + 1}`}    //Increase slide : current + 1, mane next slide hobe.
                                 className="rounded-xl w-full h-64 md:h-72 lg:h-80 object-cover"
                             />
                         </figure>
