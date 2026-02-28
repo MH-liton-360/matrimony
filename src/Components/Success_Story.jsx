@@ -1,177 +1,18 @@
-import slide01 from '../assets/bg-image/Warm embrace under golden lights.png'
 
+import { use } from 'react';
+import Story from './Story';
 
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-// import required modules
-import { Pagination } from 'swiper/modules';
+const Success_Story = ({ storyPromise }) => {
+    const success_Story = use(storyPromise);
+    console.log(success_Story);
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-
-const Success_Story = () => {
     return (
-        <div id='success_story' className="">
-            <Swiper
-                slidesPerView={3}
-                spaceBetween={30}
-                pagination={{
-                    clickable: true,
-                }}
-                modules={[Pagination]}
-                className="mySwiper"
-            >
 
-                {/* Slide Start Now Here!  */}
-
-                {/* Swiper slide 01  */}
-                <SwiperSlide>
-                    <div className="card bg-base-100 w-96 shadow-sm">
-                        <figure className="px-10 pt-10">
-                            <img
-                                src={slide01}
-                                alt="Shoes"
-                                className="rounded-xl" />
-                        </figure>
-                        <div className="card-body items-center text-center">
-                            <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-
-                        </div>
-                    </div>
-                </SwiperSlide>
-
-                {/* Swiper slide 02  */}
-                <SwiperSlide>
-                    <div className="card bg-base-100 w-96 shadow-sm">
-                        <figure className="px-10 pt-10">
-                            <img
-                                src={slide01}
-                                alt="Shoes"
-                                className="rounded-xl" />
-                        </figure>
-                        <div className="card-body items-center text-center">
-                            <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-
-                        </div>
-                    </div>
-                </SwiperSlide>
-
-                {/* Swiper slide 03  */}
-                <SwiperSlide>
-                    <div className="card bg-base-100 w-96 shadow-sm">
-                        <figure className="px-10 pt-10">
-                            <img
-                                src={slide01}
-                                alt="Shoes"
-                                className="rounded-xl" />
-                        </figure>
-                        <div className="card-body items-center text-center">
-                            <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-
-                        </div>
-                    </div>
-                </SwiperSlide>
-
-                {/* Swiper slide 04  */}
-                <SwiperSlide>
-                    <div className="card bg-base-100 w-96 shadow-sm">
-                        <figure className="px-10 pt-10">
-                            <img
-                                src={slide01}
-                                alt="Shoes"
-                                className="rounded-xl" />
-                        </figure>
-                        <div className="card-body items-center text-center">
-                            <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-
-                        </div>
-                    </div>
-                </SwiperSlide>
-
-                {/* Swiper slide 05  */}
-                <SwiperSlide>
-                    <div className="card bg-base-100 w-96 shadow-sm">
-                        <figure className="px-10 pt-10">
-                            <img
-                                src={slide01}
-                                alt="Shoes"
-                                className="rounded-xl" />
-                        </figure>
-                        <div className="card-body items-center text-center">
-                            <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-
-                        </div>
-                    </div>
-                </SwiperSlide>
-
-                {/* Swiper slide 06  */}
-                <SwiperSlide>
-                    <div className="card bg-base-100 w-96 shadow-sm">
-                        <figure className="px-10 pt-10">
-                            <img
-                                src={slide01}
-                                alt="Shoes"
-                                className="rounded-xl" />
-                        </figure>
-                        <div className="card-body items-center text-center">
-                            <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-
-                        </div>
-                    </div>
-                </SwiperSlide>
-
-                {/* Swiper slide 07  */}
-                <SwiperSlide>
-                    <div className="card bg-base-100 w-96 shadow-sm">
-                        <figure className="px-10 pt-10">
-                            <img
-                                src={slide01}
-                                alt="Shoes"
-                                className="rounded-xl" />
-                        </figure>
-                        <div className="card-body items-center text-center">
-                            <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-
-                        </div>
-                    </div>
-                </SwiperSlide>
-
-                {/* Swiper slide 08  */}
-                <SwiperSlide>
-                    <div className="card bg-base-100 w-96 shadow-sm">
-                        <figure className="px-10 pt-10">
-                            <img
-                                src={slide01}
-                                alt="Shoes"
-                                className="rounded-xl" />
-                        </figure>
-                        <div className="card-body items-center text-center">
-                            <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-
-                        </div>
-                    </div>
-                </SwiperSlide>
-
-                {/* Swiper slide 09  */}
-                <SwiperSlide>
-                    <div className="card bg-base-100 w-96 shadow-sm">
-                        <figure className="px-10 pt-10">
-                            <img
-                                src={slide01}
-                                alt="Shoes"
-                                className="rounded-xl" />
-                        </figure>
-                        <div className="card-body items-center text-center">
-                            <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-
-                        </div>
-                    </div>
-                </SwiperSlide>
-
-
-            </Swiper>
-
+        <div className="card">
+            <h3>success_Story:{success_Story.length} </h3>
+            {
+                success_Story.map(story => <Story story={story}></Story>)
+            }
         </div>
 
     );
