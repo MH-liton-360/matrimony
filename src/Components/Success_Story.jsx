@@ -59,10 +59,10 @@ const Success_Story = () => {
                 }}
             >
                 {slides.map((slide, index) => (
-
                     // slide.map -> slide on mapping
                     // slide -> current slide
                     // index -> position (0....6)
+
 
                     // key={index} means unique id index position 1...7
                     <SwiperSlide key={index} className="flex">
