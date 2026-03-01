@@ -54,7 +54,7 @@ const Success_Story = () => {
                 className="mySwiper py-10"
                 breakpoints={{
                     320: { slidesPerView: 1, spaceBetween: 20 },   //Mobile view
-                    640: { slidesPerView: 2, spaceBetween: 20 },
+                    640: { slidesPerView: 2, spaceBetween: 20 },  //Desktop view
                     1024: { slidesPerView: 3, spaceBetween: 30 },
                 }}
             >
