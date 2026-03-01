@@ -20,6 +20,8 @@ import slide06 from '../assets/Success-story-image/01 (6).jpg';
 import slide07 from '../assets/Success-story-image/01 (7).jpg';
 import SectionTitle from './SectionTitle/SectionTitle';
 
+
+
 const Success_Story = () => {
 
     const stories = [
@@ -80,10 +82,10 @@ const Success_Story = () => {
                                 />
                             </figure>
 
-                            <div className="card-body items-center text-center flex flex-col flex-grow justify-between">
+                            <div className="card-body items-center text-center flex flex-col grow justify-between">
 
                                 {/* per story position 0....6 */}
-                                <p className="min-h-[90px]">
+                                <p className="min-h-22.5">
                                     {stories[index]}   {/* index position on story showing */}
                                 </p>
 
