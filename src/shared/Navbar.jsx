@@ -83,8 +83,10 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                <div className="navbar-end">
-                    <Link to="/login"><a className="btn btn-outline text-white border-white hover:bg-yellow-400 hover:border-yellow-400 hover:text-black">Login</a>
+                <div className="navbar-end gap-1">
+                    <Link to="/login"><a className="btn btn-outline text-white bg-accent-content border-white hover:bg-yellow-400 hover:border-yellow-400 hover:text-black">Login</a>
+                    </Link>
+                    <Link to="/signup"><a className="btn btn-outline text-black bg-amber-50 border-white hover:bg-yellow-400 hover:border-yellow-400 hover:text-black">Create Account</a>
                     </Link>
                 </div>
             </div>
