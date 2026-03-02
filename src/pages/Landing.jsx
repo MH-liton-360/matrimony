@@ -15,6 +15,8 @@ const Landing = () => {
             className="relative flex items-center justify-start px-6 md:px-12 lg:px-20"
         >
 
+            {/* title means browser heading replace helmet because react 19 not using helmet using "Just title"  */}
+            <title>Home - Our Matrimony </title>
 
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/40"></div>
