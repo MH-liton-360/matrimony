@@ -4,7 +4,6 @@ import Success_Story from "../Components/Success_Story";
 import Navbar from "../shared/Navbar";
 
 
-
 const Home = () => {
     return (
         <section id="home">
