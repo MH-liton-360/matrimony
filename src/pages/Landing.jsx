@@ -16,7 +16,7 @@ const Landing = () => {
         >
 
             {/* title means browser heading replace helmet because react 19 not using helmet using "Just title"  */}
-            <title>Home - Our Matrimony </title>
+            <title>Matrimony - Our Matrimony </title>
 
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/40"></div>
