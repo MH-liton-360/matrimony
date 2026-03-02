@@ -10,6 +10,8 @@ import 'swiper/css/pagination';
 import { FreeMode, Pagination } from 'swiper/modules';
 
 
+
+
 //Slide import image
 import slide01 from '../assets/Success-story-image/01 (1).jpg';
 import slide02 from '../assets/Success-story-image/01 (2).jpg';
@@ -23,6 +25,8 @@ import SectionTitle from './SectionTitle/SectionTitle';
 
 
 const Success_Story = () => {
+
+
 
     const stories = [
         "Oliver and Emily from England met through our platform and built a bond on trust and understanding.",
