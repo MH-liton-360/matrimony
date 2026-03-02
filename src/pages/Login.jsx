@@ -25,6 +25,8 @@ const Login = () => {
     return (
         <section className="min-h-screen flex items-center justify-center bg-base-200">
 
+            <title>Matrimony Site</title>
+
             <div className="card bg-base-100 w-full max-w-sm shadow-2xl">
 
                 <form onSubmit={handleLogin} className="card-body">
