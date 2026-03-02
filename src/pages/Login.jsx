@@ -25,6 +25,7 @@ const Login = () => {
     return (
         <section className="min-h-screen flex items-center justify-center bg-base-200">
 
+            {/* title means browser heading replace helmet because react 19 not using helmet using "Just title"  */}
             <title>Matrimony Site</title>
 
             <div className="card bg-base-100 w-full max-w-sm shadow-2xl">
