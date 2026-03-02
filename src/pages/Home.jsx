@@ -8,6 +8,8 @@ import Navbar from "../shared/Navbar";
 const Home = () => {
     return (
         <section id="home">
+            {/* title means browser heading replace helmet because react 19 not using helmet using "Just title"  */}
+            <title>Home - Our Matrimony </title>
             <div>
                 {/* Navbar  */}
                 <Navbar></Navbar>
