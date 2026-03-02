@@ -15,6 +15,9 @@ const SignUp = () => {
     return (
         <div className="min-h-screen flex items-center justify-center bg-base-200">
 
+            {/* title means browser heading replace helmet because react 19 not using helmet using "Just title"  */}
+            <title>SignUp - Our Matrimony </title>
+
             <div className="card bg-base-100 w-full max-w-sm shadow-2xl">
 
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body">
