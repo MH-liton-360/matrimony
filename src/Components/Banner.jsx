@@ -9,13 +9,10 @@ const Banner = () => {
                 backgroundImage: `url(${bgImg})`
             }}
         >
-            {/* Overlay */}
             <div className="absolute inset-0 bg-black/40"></div>
 
-            {/* Content Wrapper */}
             <div className="relative z-10 container mx-auto px-6 grid md:grid-cols-2 items-center">
 
-                {/* Left Side Text */}
                 <div>
                     <h1 className="text-white text-5xl font-bold leading-tight">
                         Find Your Perfect Match for a
@@ -33,7 +30,6 @@ const Banner = () => {
                     </button>
                 </div>
 
-                {/* Right Side Image */}
                 <div className="hidden md:flex justify-end">
                     <img
                         src={bannerImg}

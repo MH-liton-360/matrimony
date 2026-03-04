@@ -3,6 +3,8 @@ import { Link, Links } from "react-router-dom";
 // This is React spa scrolling system 
 import { Link as ScrollLink } from "react-scroll";
 
+import logoMat from "../assets/logo/logo-matrimony.png"
+
 const Navbar = () => {
 
     const navOptions = <>
@@ -73,10 +75,11 @@ const Navbar = () => {
                         </ul>
 
                     </div>
-
-                    <Link to="/" className="text-2xl font-bold text-white hover:text-amber-400 transition-colors">
-                        Global~Matrimony
-                    </Link>
+                    <div className="flex items-center">
+                        <Link to="/" className="text-2xl font-bold text-white hover:text-amber-400 transition-colors">
+                            Matrimony
+                        </Link>
+                    </div>
 
                 </div>
 
