@@ -6,12 +6,12 @@ const Banner = () => {
         <section className="flex justify-between pt-20 px-20">
 
             <div>
-                <p className='text-4xl font-bold text-center'>Find Your Perfect Match for a Halal & Happy Marriage</p>
+                <p className='text-4xl font-bold text-center pt-12'>Find Your Perfect Match for a Halal & Happy Marriage</p>
 
             </div>
 
             <div>
-                <img src={bannerImg} alt="" />
+                <img src={bannerImg} alt="" className='w-full h-90 object-cover' />
             </div>
 
         </section>
