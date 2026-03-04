@@ -20,7 +20,7 @@ const Banner = () => {
             </div>
 
             {/* ✅ Content */}
-            <div className="relative z-10 pt-20 max-w-sm">
+            <div className="relative z-10 pt-20 max-w-xl">
 
                 <h3 className='text-4xl md:text-3xl font-bold leading-tight'>
                     Find Your Perfect Match for a <br />
@@ -29,17 +29,20 @@ const Banner = () => {
                     </span>
                 </h3>
 
-                <p className="mt-6 text-gray-700 text-xs leading-relaxed">
+                <p className="mt-6 text-gray-700 text-sm leading-relaxed">
                     Join the leading matrimony platform for Muslims. Connect with
                     genuine, verified profiles worldwide and start your beautiful
                     journey today.
                 </p>
 
                 <div className="flex gap-2 pt-3">
-                    <button className="btn btn-outline btn-secondary">Create Free Profile</button>
-                    <button className="btn btn-outline btn-secondary">Browse Profile</button>
+                    <button className="btn btn-outline btn-secondary">
+                        Create Free Profile
+                    </button>
+                    <button className="btn btn-outline btn-secondary">
+                        Browse Profile
+                    </button>
                 </div>
-
 
             </div>
 
