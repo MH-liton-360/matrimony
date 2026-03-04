@@ -35,7 +35,7 @@ const Banner = () => {
                     journey today.
                 </p>
 
-                <div className="flex gap-2 pt-2">
+                <div className="flex gap-2 pt-3">
                     <button className="btn btn-outline btn-secondary">Create Free Profile</button>
                     <button className="btn btn-outline btn-secondary">Browse Profile</button>
                 </div>
