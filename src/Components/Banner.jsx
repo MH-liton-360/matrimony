@@ -35,8 +35,10 @@ const Banner = () => {
                     journey today.
                 </p>
 
-                <button className="btn btn-outline btn-secondary">Secondary</button>
-                <button className="btn btn-outline btn-secondary">Secondary</button>
+                <div className="gap-2">
+                    <button className="btn btn-outline btn-secondary">Secondary</button>
+                    <button className="btn btn-outline btn-secondary">Secondary</button>
+                </div>
 
 
             </div>
