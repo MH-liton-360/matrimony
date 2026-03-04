@@ -56,7 +56,7 @@ const Navbar = () => {
 
     return (
         <section>
-            <div className="navbar fixed z-10 w-full bg-black/40 backdrop-blur-md text-white shadow-md">
+            <div className="navbar bg-base-100 shadow-sm">
 
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -76,7 +76,7 @@ const Navbar = () => {
 
                     </div>
                     <div className="flex items-center">
-                        <Link to="/" className="text-2xl font-bold text-white hover:text-amber-400 transition-colors">
+                        <Link to="/" className="text-2xl font-bold text-black hover:text-amber-400 transition-colors">
                             Matrimony
                         </Link>
                     </div>
