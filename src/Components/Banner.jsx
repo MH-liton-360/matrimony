@@ -5,16 +5,13 @@ const Banner = () => {
     return (
         <section className="relative flex flex-col md:flex-row justify-between items-center md:items-start pt-12 px-4 md:px-20 overflow-hidden">
 
-            {/* ✅ Background Image */}
             <div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                 style={{ backgroundImage: `url(${bgImg})` }}
             ></div>
 
-            {/* ✅ Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/50 to-transparent"></div>
 
-            {/* ✅ Text Content */}
             <div className="relative z-10 pt-20 max-w-xl text-center md:text-left">
                 <h3 className='font-[Playfair_Display] text-3xl sm:text-4xl md:text-4xl font-bold leading-tight'>
                     Find Your Perfect Match for a <br />
@@ -39,7 +36,6 @@ const Banner = () => {
                 </div>
             </div>
 
-            {/* ✅ Banner Image */}
             <div className="relative z-10 mt-6 md:mt-0 md:self-end">
                 <img
                     src={bannerImg}

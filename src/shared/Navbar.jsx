@@ -26,7 +26,6 @@ const Navbar = () => {
             <div className="navbar fixed z-10 bg-gradient-to-r from-white/40 via-white/50 to-transparent backdrop-blur-md shadow-sm">
                 <div className="w-full max-w-7xl mx-auto flex items-center justify-center px-4 sm:px-6 relative">
 
-                    {/* Logo */}
                     <div className="absolute lg:left-0 flex items-center gap-1">
                         <img
                             src={logoMat}
@@ -41,12 +40,10 @@ const Navbar = () => {
                         </Link>
                     </div>
 
-                    {/* Desktop menu (centered) */}
                     <ul className="hidden lg:flex menu menu-horizontal gap-6">
                         {navOptions}
                     </ul>
 
-                    {/* Desktop buttons */}
                     <div className="absolute right-4 hidden lg:flex gap-2">
                         <Link to="/login">
                             <span className="btn btn-outline text-white bg-accent-content border-white hover:bg-yellow-400 hover:border-yellow-400 hover:text-black">Login</span>
@@ -56,7 +53,6 @@ const Navbar = () => {
                         </Link>
                     </div>
 
-                    {/* Mobile dropdown */}
                     <div className="dropdown absolute left-0 lg:hidden">
                         <div tabIndex={0} className="btn btn-ghost text-amber-950">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
