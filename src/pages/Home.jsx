@@ -1,6 +1,7 @@
 import Banner from "../Components/Banner";
 import FAQ from "../Components/FAQ";
 import Featured_Premium from "../Components/Featured_Premium";
+import Safety_and_Privacy from "../Components/HomeSection/Safety_and_Privacy";
 import Success_Story from "../Components/Success_Story";
 import Navbar from "../shared/Navbar";
 
@@ -21,6 +22,9 @@ const Home = () => {
 
                     {/* Featured Premium Profiles  */}
                     <Featured_Premium></Featured_Premium>
+
+                    {/* Safety and Privacy  */}
+                    <Safety_and_Privacy></Safety_and_Privacy>
 
                     {/* Success-Story  */}
                     <Success_Story></Success_Story>
