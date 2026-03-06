@@ -1,4 +1,4 @@
-import Banner from "../Components/Banner";
+import Banner from "../Components/Banner/Banner";
 import FAQ from "../Components/FAQ";
 import Featured_Premium from "../Components/Featured_Premium";
 import Safety_and_Privacy from "../Components/HomeSection/Safety_and_Privacy";
