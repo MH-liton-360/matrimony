@@ -2,6 +2,7 @@ import Banner from "../Components/Banner";
 import FAQ from "../Components/FAQ";
 import Featured_Premium from "../Components/Featured_Premium";
 import Safety_and_Privacy from "../Components/HomeSection/Safety_and_Privacy";
+import Recently_Join_Members from "../Components/Recently_Join_Members/Recently_Join_Members";
 import Success_Story from "../Components/Success_Story";
 import Navbar from "../shared/Navbar";
 
@@ -22,6 +23,9 @@ const Home = () => {
 
                     {/* Featured Premium Profiles  */}
                     <Featured_Premium></Featured_Premium>
+
+                    {/* Recently_Join_Members  */}
+                    <Recently_Join_Members></Recently_Join_Members>
 
                     {/* Safety and Privacy  */}
                     <Safety_and_Privacy></Safety_and_Privacy>
