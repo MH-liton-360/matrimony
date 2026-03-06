@@ -21,7 +21,7 @@ import slide05 from '../../assets/Success-story-image/01 (5).jpg';
 import slide06 from '../../assets/Success-story-image/01 (6).jpg';
 import slide07 from '../../assets/Success-story-image/01 (7).jpg';
 
-import SectionTitle from './SectionTitle/SectionTitle';
+import SectionTitle from '../SectionTitle/SectionTitle';
 
 
 
