@@ -13,13 +13,14 @@ import { FreeMode, Pagination } from 'swiper/modules';
 
 
 //Slide import image
-import slide01 from '../assets/Success-story-image/01 (1).jpg';
-import slide02 from '../assets/Success-story-image/01 (2).jpg';
-import slide03 from '../assets/Success-story-image/01 (3).jpg';
-import slide04 from '../assets/Success-story-image/01 (4).jpg';
-import slide05 from '../assets/Success-story-image/01 (5).jpg';
-import slide06 from '../assets/Success-story-image/01 (6).jpg';
-import slide07 from '../assets/Success-story-image/01 (7).jpg';
+import slide01 from '../../assets/Success-story-image/01 (1).jpg';
+import slide02 from '../../assets/Success-story-image/01 (2).jpg';
+import slide03 from '../../assets/Success-story-image/01 (3).jpg';
+import slide04 from '../../assets/Success-story-image/01 (4).jpg';
+import slide05 from '../../assets/Success-story-image/01 (5).jpg';
+import slide06 from '../../assets/Success-story-image/01 (6).jpg';
+import slide07 from '../../assets/Success-story-image/01 (7).jpg';
+
 import SectionTitle from './SectionTitle/SectionTitle';
 
 
