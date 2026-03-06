@@ -3,7 +3,7 @@ import FAQ from "../Components/FAQ/FAQ";
 import Featured_Premium from "../Components/Featured_Premium/Featured_Premium";
 import Safety_and_Privacy from "../Components/HomeSection/Safety_and_Privacy";
 import Recently_Join_Members from "../Components/Recently_Join_Members/Recently_Join_Members";
-import Success_Story from "../Components/Success_Story";
+import Success_Story from "../Components/Success_Story/Success_Story";
 import Navbar from "../shared/Navbar";
 
 
