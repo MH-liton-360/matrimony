@@ -8,7 +8,6 @@ const Safety_and_Privacy = () => {
                 heading={"Safety & Privacy"}
             ></SectionTitle>
 
-
             <div className="bg">
                 <img src={couple1} alt="" />
             </div>
