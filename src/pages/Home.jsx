@@ -7,6 +7,11 @@ import Success_Story from "../Components/Home_Components/Success_Story/Success_S
 import Navbar from "../shared/Navbar";
 
 
+
+// const fetchJoinMembers = async ()=>{
+//     const res = await fetch("")
+// }
+
 const Home = () => {
     return (
         <section id="home">

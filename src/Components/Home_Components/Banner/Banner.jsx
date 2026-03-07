@@ -1,5 +1,5 @@
 import bannerImg from '../../../assets/Banner/BG-matrimony-image.png'
-import bgImg from '../../../assets/Banner/bg.png'
+import bgImg from '../../../assets/bg-image/bg.png'
 
 const Banner = () => {
     return (

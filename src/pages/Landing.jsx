@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import bg_image from "../assets/bg-image/Warm embrace under golden lights.png";
+import bg_image from "../assets/Banner/Warm embrace under golden lights.png";
 import image_logo from "../assets/logo/Interlocked hands forming a heart.png"
 
 const Landing = () => {
