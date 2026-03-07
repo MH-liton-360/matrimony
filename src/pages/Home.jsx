@@ -1,9 +1,9 @@
-import Banner from "../Components/Banner/Banner";
-import FAQ from "../Components/FAQ/FAQ";
-import Featured_Premium from "../Components/Featured_Premium/Featured_Premium";
-import Safety_and_Privacy from "../Components/HomeSection/Safety_and_Privacy";
-import Recently_Join_Members from "../Components/Recently_Join_Members/Recently_Join_Members";
-import Success_Story from "../Components/Success_Story/Success_Story";
+import Banner from "../Components/Home_Components/Banner/Banner";
+import FAQ from "../Components/Home_Components/FAQ/FAQ";
+import Featured_Premium from "../Components/Home_Components/Featured_Premium/Featured_Premium";
+import Recently_Join_Members from "../Components/Home_Components/Recently_Join_Members/Recently_Join_Members";
+import Safety_and_Privacy from "../Components/Home_Components/Safety_and_Privacy/Safety_and_Privacy";
+import Success_Story from "../Components/Home_Components/Success_Story/Success_Story";
 import Navbar from "../shared/Navbar";
 
 
