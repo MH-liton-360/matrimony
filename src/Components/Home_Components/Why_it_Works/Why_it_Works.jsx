@@ -31,7 +31,7 @@ const Why_it_Works = () => {
                         <div className="w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-lg">
                             1
                         </div>
-                        <h3 className="text-lg font-semibold text-gray-800">Create Account</h3>
+                        <h3 className="text-lg font-semibold text-gray-800">Complete Profile</h3>
                     </div>
 
                     {/* Description */}
@@ -47,7 +47,7 @@ const Why_it_Works = () => {
                         <div className="w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-lg">
                             1
                         </div>
-                        <h3 className="text-lg font-semibold text-gray-800">Create Account</h3>
+                        <h3 className="text-lg font-semibold text-gray-800">Get Verified</h3>
                     </div>
 
                     {/* Description */}
@@ -63,7 +63,7 @@ const Why_it_Works = () => {
                         <div className="w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-lg">
                             1
                         </div>
-                        <h3 className="text-lg font-semibold text-gray-800">Create Account</h3>
+                        <h3 className="text-lg font-semibold text-gray-800">Start Connecting</h3>
                     </div>
 
                     {/* Description */}
