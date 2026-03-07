@@ -4,6 +4,7 @@ import Featured_Premium from "../Components/Home_Components/Featured_Premium/Fea
 import Recently_Join_Members from "../Components/Home_Components/Recently_Join_Members/Recently_Join_Members";
 import Safety_and_Privacy from "../Components/Home_Components/Safety_and_Privacy/Safety_and_Privacy";
 import Success_Story from "../Components/Home_Components/Success_Story/Success_Story";
+import Why_it_Works from "../Components/Home_Components/Why_it_Works/Why_it_Works";
 import Navbar from "../shared/Navbar";
 
 
@@ -31,6 +32,9 @@ const Home = () => {
 
                     {/* Recently_Join_Members  */}
                     <Recently_Join_Members></Recently_Join_Members>
+
+                    {/* Why it Works  */}
+                    <Why_it_Works></Why_it_Works>
 
                     {/* Safety and Privacy  */}
                     <Safety_and_Privacy></Safety_and_Privacy>

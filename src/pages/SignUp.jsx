@@ -51,7 +51,7 @@ const SignUp = () => {
                 </form>
 
                 {/* Link add login  */}
-                <p className='text-center justify-center items-center'><small><Link to="/login">Already have an account</Link> </small></p>
+                <p className='text-center justify-center items-center'><small><Link to="/login" className="hover:underline">Already have an account</Link> </small></p>
 
             </div>
         </div>
