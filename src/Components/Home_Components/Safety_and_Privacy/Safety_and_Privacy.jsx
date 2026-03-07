@@ -1,7 +1,7 @@
-import { section } from "framer-motion/client";
 import couple1Bg from "../../../assets/bg-image/Safe-bg.jpg";
 import couple2Bg from "../../../assets/bg-image/Safe-Bg0.jpg";
 import safetyCouple from "../../../assets/Safety_&_privacy/couple-01.png"
+import safety_Couple from "../../../assets/Safety_&_privacy/couple-02.jpg"
 import SectionTitle from "../SectionTitle/SectionTitle";
 
 const Safety_and_Privacy = () => {
@@ -62,7 +62,7 @@ const Safety_and_Privacy = () => {
                         </p>
                     </div>
 
-                    <img src={safetyCouple} alt="" className="h-40 w-40 object-cover rounded-full" />
+                    <img src={safety_Couple} alt="" className="h-40 w-40 object-cover rounded-full" />
                 </div>
             </div>
         </section>

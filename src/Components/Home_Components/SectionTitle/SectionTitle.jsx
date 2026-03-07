@@ -1,6 +1,6 @@
 const SectionTitle = ({ heading, subHeading }) => {
     return (
-        <div className="text-center my-16 px-4">
+        <div className="text-center my-8 px-4">
 
             {/* Optional Subheading */}
             {subHeading && (
