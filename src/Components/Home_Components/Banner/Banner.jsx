@@ -10,12 +10,12 @@ const Banner = () => {
                 style={{ backgroundImage: `url(${bgImg})` }}
             ></div>
 
-            <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/50 to-transparent"></div>
+            <div className="absolute inset-0 bg-linear-to-r from-white/70 via-white/50 to-transparent"></div>
 
             <div className="relative z-10 pt-20 max-w-xl text-center md:text-left">
                 <h3 className='font-[Playfair_Display] text-3xl sm:text-4xl md:text-4xl font-bold leading-tight'>
                     Find Your Perfect Match for a <br />
-                    <span className="bg-gradient-to-r from-yellow-500 via-orange-500 to-green-600 bg-clip-text text-transparent">
+                    <span className="bg-linear-to-r from-yellow-500 via-orange-500 to-green-600 bg-clip-text text-transparent">
                         Halal & Happy Marriage
                     </span>
                 </h3>

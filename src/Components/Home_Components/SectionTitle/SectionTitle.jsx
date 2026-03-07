@@ -2,21 +2,29 @@ const SectionTitle = ({ heading, subHeading }) => {
     return (
         <div className="text-center my-16 px-4">
 
-            {/* Small Top Label */}
+            {/* Optional Subheading */}
             {subHeading && (
-                <p className="text-sm tracking-widest uppercase text-green-600 font-semibold mb-3">
+                <p className="text-sm tracking-widest uppercase text-green-600 font-semibold mb-3 animate-pulse">
                     {subHeading}
                 </p>
             )}
 
-            {/* Main Gradient Heading */}
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold 
-                bg-gradient-to-r from-yellow-500 via-orange-500 to-green-600 
-                bg-clip-text text-transparent inline-block">
+            {/* Divider with gradient heading in the middle */}
+            <div className="flex items-center justify-center w-full">
+                {/* Left line */}
+                <div className="grow border-t border-gray-300 opacity-50 animate-pulse"></div>
 
-                ---{heading}---
+                {/* Heading */}
+                <h2 className="mx-4 text-xl
+            bg-linear-to-r from-yellow-400 via-orange-400 to-green-400
+            bg-clip-text text-transparent inline-block
+            transform transition-transform duration-500 hover:scale-105">
+                    {heading}
+                </h2>
 
-            </h2>
+                {/* Right line */}
+                <div className="grow border-t border-gray-300 opacity-50 animate-pulse"></div>
+            </div>
 
         </div>
     );
