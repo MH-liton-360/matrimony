@@ -13,7 +13,7 @@ const Safety_and_Privacy = () => {
             ></SectionTitle>
 
             {/* Main content start  */}
-            <div className="relative flex">
+            <div className="relative gap-2 grid sm:grid-cols-1 md:grid-cols-1 lg:flex">
                 {/* Content number Data Encryption .................................... */}
                 <div className="relative w-full flex items-center justify-between bg-linear-to-br from-green-900 via-green-700 to-green-300 rounded-lg shadow-lg overflow-hidden">
 
@@ -42,7 +42,7 @@ const Safety_and_Privacy = () => {
 
                 {/* Content number Safe and Secure .................................... */}
                 <div
-                    className="relative w-full flex items-center justify-between rounded-lg shadow-lg overflow-hidden bg-gradient-to-br"
+                    className="relative w-full flex items-center justify-between rounded-lg shadow-lg overflow-hidden bg-linear-to-br"
                     style={{ background: "linear-gradient(to bottom right, #000E24, #000E24)" }}
                 >
                     {/* Optional background image behind gradient */}
