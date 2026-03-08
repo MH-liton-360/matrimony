@@ -7,6 +7,7 @@ import Success_Story from "../Components/Home_Components/Success_Story/Success_S
 import Why_it_Works from "../Components/Home_Components/Why_it_Works/Why_it_Works";
 import Navbar from "../shared/Navbar";
 
+import FeaturesBg from "../assets/bg-image/Elegant green damask texture.png"
 
 
 // const fetchJoinMembers = async ()=>{
@@ -27,11 +28,18 @@ const Home = () => {
 
                 <div className="max-w-6xl mx-auto">
 
-                    {/* Featured Premium Profiles  */}
-                    <Featured_Premium></Featured_Premium>
+                    <section className="py-20 bg-cover bg-center relative"
+                        style={{ backgroundImage: `url(${FeaturesBg})` }}
+                    >
+                        <div className="absolute inset-0 bg-black/60"></div>
+                        <div>
+                            {/* Featured Premium Profiles  */}
+                            <Featured_Premium></Featured_Premium>
 
-                    {/* Recently_Join_Members  */}
-                    <Recently_Join_Members></Recently_Join_Members>
+                            {/* Recently_Join_Members  */}
+                            <Recently_Join_Members></Recently_Join_Members>
+                        </div>
+                    </section>
 
                     {/* Why it Works  */}
                     <Why_it_Works></Why_it_Works>
