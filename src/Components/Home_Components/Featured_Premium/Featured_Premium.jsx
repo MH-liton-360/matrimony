@@ -1,9 +1,18 @@
+import SectionTitle from "../SectionTitle/SectionTitle";
 
 const Featured_Premium = () => {
     return (
-        <div>
 
-        </div>
+        <section>
+            <SectionTitle
+                heading={
+                    <>
+                        <span className="font-semibold text-white ">Featured</span> Premium Numbers
+                    </>
+                }
+                className="text-center text-4xl"
+            />
+        </section>
     );
 };
 

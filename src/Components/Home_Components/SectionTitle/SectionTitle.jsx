@@ -1,4 +1,4 @@
-const SectionTitle = ({ heading, subHeading }) => {
+const SectionTitle = ({ heading, subHeading, className }) => {
     return (
         <div className="text-center my-8 px-4">
 
@@ -15,10 +15,13 @@ const SectionTitle = ({ heading, subHeading }) => {
                 <div className="grow border-t border-gray-300 opacity-50 animate-pulse"></div>
 
                 {/* Heading */}
-                <h2 className="mx-4 text-xl
-            bg-linear-to-r from-yellow-400 via-orange-400 to-green-400
-            bg-clip-text text-transparent inline-block
-            transform transition-transform duration-500 hover:scale-105">
+                <h2
+                    className={`mx-4 text-xl
+                    bg-linear-to-r from-yellow-400 via-orange-400 to-green-400
+                    bg-clip-text text-transparent inline-block
+                    transform transition-transform duration-500 hover:scale-105
+                    ${className}`}
+                >
                     {heading}
                 </h2>
 
