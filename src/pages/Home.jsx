@@ -28,7 +28,7 @@ const Home = () => {
 
                 <div className="max-w-6xl mx-auto">
 
-                    <section className="py-20 bg-cover bg-center relative"
+                    <section className="bg-cover bg-center relative"
                         style={{ backgroundImage: `url(${FeaturesBg})` }}
                     >
                         <div className="absolute inset-0 bg-black/60"></div>
