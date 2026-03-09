@@ -43,7 +43,7 @@ const Success_Story = () => {
     const slides = [slide01, slide07, slide03, slide04, slide05, slide06, slide02];
 
     return (
-        <div id='success_story' className="pb-20">
+        <div id='success_story'>
 
 
             <SectionTitle

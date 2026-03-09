@@ -1,69 +1,105 @@
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-
-
-// import required modules
 import { Pagination } from 'swiper/modules';
 
+
 import couple2Bg from "../../../assets/bg-image/Safe-Bg0.jpg";
-import safety_Couple from "../../../assets/Safety_&_privacy/couple-02.jpg"
+import safety_Couple from "../../../assets/Safety_&_privacy/couple-02.jpg";
 import SectionTitle from '../SectionTitle/SectionTitle';
 
-const Testimonials = () => {
+const testimonials = [
+    {
+        name: "Priya & Daniel",
+        quote: "We lived on different continents, but this platform brought us together.",
+        image: safety_Couple,
+    },
+    {
+        name: "Aisha & Omar",
+        quote: "Our families were hesitant at first, but the match was perfect and now everyone is happy.",
+        image: safety_Couple,
+    },
+    {
+        name: "Maria & José",
+        quote: "Distance couldn’t keep us apart. This site introduced us, and now we share our lives together.",
+        image: safety_Couple,
+    },
+];
+
+export default function App() {
     return (
-        <div className=''>
+        <section>
             <SectionTitle
                 heading={"Testimonials"}
             ></SectionTitle>
-            <>
+
+            <div>
                 <Swiper
-                    spaceBetween={30}
-                    pagination={{
-                        clickable: true,
-                    }}
+                    className="mySwiper swiper-h"
+                    spaceBetween={50}
+                    pagination={{ clickable: true }}
                     modules={[Pagination]}
-                    className="mySwiper"
                 >
+
                     <SwiperSlide>
-
-                        {/* Content number Safe and Secure .................................... */}
-                        <div
-                            className="relative w-full flex items-center justify-between rounded-lg shadow-lg overflow-hidden bg-linear-to-br p-2"
-                            style={{ background: "linear-gradient(to bottom right, #000E24, #000E24)" }}
+                        {/* Inner vertical swiper */}
+                        <Swiper
+                            className="mySwiper2 swiper-v"
+                            direction="vertical"
+                            spaceBetween={50}
+                            pagination={{ clickable: true }}
+                            modules={[Pagination]}
+                            style={{ height: "200px", position: "relative" }}
                         >
-                            {/* Optional background image behind gradient */}
-                            <img
-                                src={couple2Bg}
-                                alt="Background"
-                                className="absolute inset-0 w-full h-full object-cover opacity-30"
-                            />
+                            {testimonials.map((t, index) => (
+                                <SwiperSlide key={index}>
+                                    <div
+                                        className="relative w-full flex items-center gap-6 rounded-lg shadow-lg overflow-hidden bg-linear-to-br p-4"
+                                        style={{ background: "linear-gradient(to bottom right, #000E24, #000E24)" }}
+                                    >
+                                        <img
+                                            src={couple2Bg}
+                                            alt="Background"
+                                            className="absolute inset-0 w-full h-full object-cover opacity-30"
+                                        />
 
-                            {/* Text Content */}
-                            <img src={safety_Couple} alt="" className="h-40 w-40 object-cover rounded-full" />
+                                        <img src={t.image} alt={t.name} className="h-32 w-32 object-cover rounded-full relative z-10" />
 
-                            <div className="relative z-10 text-center">
-                                <h2 className="text-white text-4xl font-bold flex items-center justify-center gap-2">
-                                    Safe and Secure
-                                </h2>
-                                <p className="text-gray-200 mt-4 text-lg">
-                                    Trusted and Confidential
-                                </p>
-                            </div>
-
-                        </div>
-
+                                        <div className="relative z-10 text-left">
+                                            <h2 className="text-white text-2xl font-bold">{t.name}</h2>
+                                            <p className="text-gray-200 mt-2 text-lg italic">“{t.quote}”</p>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
                     </SwiperSlide>
 
 
-                </Swiper>
-            </>
-        </div>
-    );
-};
 
-export default Testimonials;
+                    {/* Inline style override for vertical pagination */}
+                    <style>
+                        {`
+                            .swiper-v .swiper-pagination {
+                                position: absolute;
+                                right: 10px;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                display: flex;
+                                flex-direction: column;
+                                z-index: 20;
+                            }
+                            .swiper-v .swiper-pagination-bullet {
+                                background: #fff;
+                                margin: 6px 0;
+                            }
+                            .swiper-v .swiper-pagination-bullet-active {
+                                background: #00aced;
+                            }
+                            `}
+                    </style>
+                </Swiper>
+            </div>
+        </section>
+    );
+}
