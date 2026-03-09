@@ -26,7 +26,7 @@ const testimonials = [
     },
 ];
 
-export default function App() {
+const Testimonials = () => {
     return (
         <section>
             <SectionTitle
@@ -108,3 +108,4 @@ export default function App() {
         </section>
     );
 }
+export default Testimonials;
