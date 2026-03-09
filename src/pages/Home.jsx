@@ -8,6 +8,7 @@ import Why_it_Works from "../Components/Home_Components/Why_it_Works/Why_it_Work
 import Navbar from "../shared/Navbar";
 
 import FeaturesBg from "../assets/bg-image/Elegant green damask texture.png"
+import Testimonials from "../Components/Home_Components/Testimonials/Testimonials";
 
 
 // const fetchJoinMembers = async ()=>{
@@ -49,6 +50,9 @@ const Home = () => {
 
                     {/* Success-Story  */}
                     <Success_Story></Success_Story>
+
+                    {/* Testimonials  */}
+                    <Testimonials></Testimonials>
 
                     {/* FAQ means: Frequently Asked Questions  */}
                     <FAQ></FAQ>
