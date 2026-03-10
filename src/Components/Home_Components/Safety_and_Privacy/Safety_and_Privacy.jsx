@@ -1,7 +1,12 @@
+// background 
 import Bg_data_encryption from "../../../assets/bg-image/Bg-data-encryption.jpg";
 import Bg_safe_secure from "../../../assets/bg-image/Bg-safe-secure.jpg";
-import safetyCouple from "../../../assets/Safety_&_privacy/couple-data-encryption.png"
-import safety_Couple from "../../../assets/Safety_&_privacy/Safe and secure.png"
+
+// image 
+import Couple_data_encryption from "../../../assets/Safety_&_privacy/couple-data-encryption.png"
+import Couple_safe_secure from "../../../assets/Safety_&_privacy/Couple-Safe and secure.png"
+
+// section title 
 import SectionTitle from "../SectionTitle/SectionTitle";
 
 const Safety_and_Privacy = () => {
@@ -34,7 +39,7 @@ const Safety_and_Privacy = () => {
                         </p>
                     </div>
 
-                    <img src={safetyCouple} alt="" className="h-40 w-40 object-cover rounded-full" />
+                    <img src={Couple_data_encryption} alt="" className="h-40 w-40 object-cover rounded-full" />
                 </div>
 
                 {/* Divider  */}
@@ -61,7 +66,7 @@ const Safety_and_Privacy = () => {
                         </p>
                     </div>
 
-                    <img src={safety_Couple} alt="" className="h-40 w-40 object-cover rounded-full" />
+                    <img src={Couple_safe_secure} alt="" className="h-40 w-40 object-cover rounded-full" />
                 </div>
             </div>
         </section >
