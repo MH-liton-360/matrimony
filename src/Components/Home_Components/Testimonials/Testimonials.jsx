@@ -4,7 +4,7 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 
 
-import TestimonialsBg from "../../../assets/Testimonials/Testimonials-bg.jpg";
+import TestimonialsBg from "../../../assets/Testimonials/anna-sullivan-ARrM9jUl780-unsplash.jpg";
 import safety_Couple from "../../../assets/Safety_&_privacy/couple-02.jpg";
 import SectionTitle from '../SectionTitle/SectionTitle';
 
@@ -71,8 +71,8 @@ const Testimonials = () => {
                                         <img src={t.image} alt={t.name} className="h-32 w-32 object-cover rounded-full relative z-10" />
 
                                         <div className="relative z-10 text-left">
-                                            <h2 className="text-cyan-950 text-2xl font-bold">{t.name}</h2>
-                                            <p className="text-cyan-950 mt-2 text-lg italic">“{t.quote}”</p>
+                                            <h2 className="text-[#1D3C5B] text-2xl font-bold">{t.name}</h2>
+                                            <p className="text-[#DDE8E9] mt-2 text-lg italic">“{t.quote}”</p>
                                         </div>
                                     </div>
                                 </SwiperSlide>
@@ -98,7 +98,7 @@ const Testimonials = () => {
                                 margin: 6px 0;
                             }
                             .swiper-v .swiper-pagination-bullet-active {
-                                background: #00aced;
+                                background: #135BA2;
                             }
                             `}
                     </style>
