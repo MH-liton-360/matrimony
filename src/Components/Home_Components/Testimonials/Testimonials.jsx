@@ -60,7 +60,7 @@ const Testimonials = () => {
                                 <SwiperSlide key={index}>
                                     <div
                                         className="relative w-full flex items-center gap-6 rounded-lg shadow-lg overflow-hidden bg-linear-to-br p-4"
-                                        style={{ background: "linear-gradient(to bottom right, #000E24, #000E24)" }}
+                                        style={{ background: "linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.5), transparent)" }}
                                     >
                                         <img
                                             src={TestimonialsBg}
@@ -71,8 +71,8 @@ const Testimonials = () => {
                                         <img src={t.image} alt={t.name} className="h-32 w-32 object-cover rounded-full relative z-10" />
 
                                         <div className="relative z-10 text-left">
-                                            <h2 className="text-white text-2xl font-bold">{t.name}</h2>
-                                            <p className="text-gray-200 mt-2 text-lg italic">“{t.quote}”</p>
+                                            <h2 className="text-cyan-950 text-2xl font-bold">{t.name}</h2>
+                                            <p className="text-cyan-950 mt-2 text-lg italic">“{t.quote}”</p>
                                         </div>
                                     </div>
                                 </SwiperSlide>
