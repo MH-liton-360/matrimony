@@ -4,15 +4,15 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 
 // Background 
-import BgTestimonials from "../../../assets/bg-image/Bg-Testimonials.jpg";
+import BgTestimonials from "../../../assets/BG/Bg-Testimonials.jpg";
 
 // Image 
-import Testimonials_bg_card_01 from "../../../assets/Testimonials/Testimonials-bg-card-01.png";
-import Testimonials_bg_card_02 from "../../../assets/Testimonials/Testimonials-bg-card-02.png";
-import Testimonials_bg_card_03 from "../../../assets/Testimonials/Testimonials-bg-card-03.png";
-import Testimonials_bg_card_04 from "../../../assets/Testimonials/Testimonials-bg-card-04.png";
-import Testimonials_bg_card_05 from "../../../assets/Testimonials/Testimonials-bg-card-05.png";
-import Testimonials_bg_card_06 from "../../../assets/Testimonials/Testimonials-bg-card-06.png";
+import Testimonials_card_01 from "../../../assets/Testimonials/Testimonials-card-01.png";
+import Testimonials_card_02 from "../../../assets/Testimonials/Testimonials-card-02.png";
+import Testimonials_card_03 from "../../../assets/Testimonials/Testimonials-card-03.png";
+import Testimonials_card_04 from "../../../assets/Testimonials/Testimonials-card-04.png";
+import Testimonials_card_05 from "../../../assets/Testimonials/Testimonials-card-05.png";
+import Testimonials_card_06 from "../../../assets/Testimonials/Testimonials-card-06.png";
 
 
 // section title 
@@ -22,32 +22,32 @@ const testimonials = [
     {
         name: "Aisha & Omar",
         quote: "We were searching for a meaningful connection for a long time. This platform helped us find each other and begin a beautiful journey together.",
-        image: Testimonials_bg_card_01,
+        image: Testimonials_card_01,
     },
     {
         name: "Sophia & Liam",
         quote: "The process was simple and trustworthy. We connected instantly and now we are planning our future together.",
-        image: Testimonials_bg_card_02,
+        image: Testimonials_card_02,
     },
     {
         name: "Fatima & Yusuf",
         quote: "We appreciated the secure and respectful environment. It helped us find the right partner with confidence.",
-        image: Testimonials_bg_card_03,
+        image: Testimonials_card_03,
     },
     {
         name: "Maria & Carlos",
         quote: "Even though we lived in different countries, this platform made it possible for us to meet and build a life together.",
-        image: Testimonials_bg_card_04,
+        image: Testimonials_card_04,
     },
     {
         name: "Hana & Kenji",
         quote: "The matching system was amazing. We quickly realized how compatible we were and our families are very happy.",
-        image: Testimonials_bg_card_05,
+        image: Testimonials_card_05,
     },
     {
         name: "Emma & Daniel",
         quote: "We were both serious about marriage and this platform connected us in the most genuine way.",
-        image: Testimonials_bg_card_06,
+        image: Testimonials_card_06,
     },
 ];
 

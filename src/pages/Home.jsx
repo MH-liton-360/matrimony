@@ -6,9 +6,11 @@ import Safety_and_Privacy from "../Components/Home_Components/Safety_and_Privacy
 import Success_Story from "../Components/Home_Components/Success_Story/Success_Story";
 import Why_it_Works from "../Components/Home_Components/Why_it_Works/Why_it_Works";
 import Navbar from "../shared/Navbar";
-
-import BgFeatures from "../assets/bg-image/Bg-Featured.png"
 import Testimonials from "../Components/Home_Components/Testimonials/Testimonials";
+
+
+// Background 
+import BgFeatures from "../assets/BG/Bg-Featured.png"
 
 
 // const fetchJoinMembers = async ()=>{

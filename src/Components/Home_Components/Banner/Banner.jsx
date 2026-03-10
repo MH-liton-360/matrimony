@@ -1,5 +1,9 @@
+// Background 
+import BgBanner from '../../../assets/BG/BG-Banner.png'
+
+// Image 
 import main_matrimony_banner from '../../../assets/Banner/main-matrimony-banner.png'
-import bgMatrimony from '../../../assets/bg-image/BG-Banner.png'
+
 
 const Banner = () => {
     return (
@@ -7,7 +11,7 @@ const Banner = () => {
 
             <div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: `url(${bgMatrimony})` }}
+                style={{ backgroundImage: `url(${BgBanner})` }}
             ></div>
 
             <div className="absolute inset-0 bg-linear-to-r from-white/70 via-white/50 to-transparent"></div>

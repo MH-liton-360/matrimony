@@ -13,13 +13,14 @@ import { FreeMode, Pagination } from 'swiper/modules';
 
 
 //Slide import image
-import slide01 from '../../../assets/Success-story-image/01 (1).jpg';
-import slide02 from '../../../assets/Success-story-image/01 (2).jpg';
-import slide03 from '../../../assets/Success-story-image/01 (3).jpg';
-import slide04 from '../../../assets/Success-story-image/01 (4).jpg';
-import slide05 from '../../../assets/Success-story-image/01 (5).jpg';
-import slide06 from '../../../assets/Success-story-image/01 (6).jpg';
-import slide07 from '../../../assets/Success-story-image/01 (7).jpg';
+import couple_success_story_card_01 from '../../../assets/Success-story/couple-success-story-card-01.png';
+import couple_success_story_card_02 from '../../../assets/Success-story/couple-success-story-card-02.png';
+import couple_success_story_card_03 from '../../../assets/Success-story/couple-success-story-card-03.png';
+import couple_success_story_card_04 from '../../../assets/Success-story/couple-success-story-card-04.png';
+import couple_success_story_card_05 from '../../../assets/Success-story/couple-success-story-card-05.png';
+import couple_success_story_card_06 from '../../../assets/Success-story/couple-success-story-card-06.png';
+import couple_success_story_card_07 from '../../../assets/Success-story/couple-success-story-card-07.png';
+
 
 
 import SectionTitle from '../SectionTitle/SectionTitle';
@@ -40,7 +41,7 @@ const Success_Story = () => {
         "William and Charlotte from England exemplify trust, understanding, and love."
     ];
 
-    const slides = [slide01, slide07, slide03, slide04, slide05, slide06, slide02];
+    const couple_success_story_cards = [couple_success_story_card_01, couple_success_story_card_02, couple_success_story_card_03, couple_success_story_card_04, couple_success_story_card_05, couple_success_story_card_06, couple_success_story_card_07];
 
     return (
         <div id='success_story'>
@@ -64,7 +65,7 @@ const Success_Story = () => {
                     1024: { slidesPerView: 3, spaceBetween: 30 },//Desktop view
                 }}
             >
-                {slides.map((slide, index) => (
+                {couple_success_story_cards.map((couple_success_story_card, index) => (
                     // slide.map -> slide on mapping
                     // slide -> current slide
                     // index -> position (0....6)
@@ -82,7 +83,7 @@ const Success_Story = () => {
 
                             <figure className="px-5 pt-5">
                                 <img
-                                    src={slide}     // current slide image
+                                    src={couple_success_story_card}     // current slide image
                                     alt={`Slide ${index + 1}`}    // index + 1 means slide number (1....7)
                                     className="rounded-xl w-full h-64 md:h-72 lg:h-80 object-cover"
                                 />

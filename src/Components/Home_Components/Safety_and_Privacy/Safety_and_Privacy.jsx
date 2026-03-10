@@ -1,12 +1,12 @@
-// background 
-import Bg_data_encryption from "../../../assets/bg-image/Bg-data-encryption.jpg";
-import Bg_safe_secure from "../../../assets/bg-image/Bg-safe-secure.jpg";
+// Background 
+import Bg_data_encryption from "../../../assets/BG/Bg-data-encryption.jpg";
+import Bg_safe_secure from "../../../assets/BG/Bg-safe-secure.jpg";
 
-// image 
+// Image 
 import Couple_data_encryption from "../../../assets/Safety_&_privacy/couple-data-encryption.png"
 import Couple_safe_secure from "../../../assets/Safety_&_privacy/Couple-Safe and secure.png"
 
-// section title 
+// Section title 
 import SectionTitle from "../SectionTitle/SectionTitle";
 
 const Safety_and_Privacy = () => {
