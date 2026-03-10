@@ -1,5 +1,5 @@
 import main_matrimony_banner from '../../../assets/Banner/main-matrimony-banner.png'
-import bgMatrimony from '../../../assets/bg-image/bg.png'
+import bgMatrimony from '../../../assets/bg-image/BG-Banner.png'
 
 const Banner = () => {
     return (

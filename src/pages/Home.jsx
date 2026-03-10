@@ -7,7 +7,7 @@ import Success_Story from "../Components/Home_Components/Success_Story/Success_S
 import Why_it_Works from "../Components/Home_Components/Why_it_Works/Why_it_Works";
 import Navbar from "../shared/Navbar";
 
-import FeaturesBg from "../assets/bg-image/Elegant green damask texture.png"
+import BgFeatures from "../assets/bg-image/Bg-Featured.png"
 import Testimonials from "../Components/Home_Components/Testimonials/Testimonials";
 
 
@@ -30,7 +30,7 @@ const Home = () => {
                 <div className="max-w-6xl mx-auto">
 
                     <section className="bg-cover bg-center relative"
-                        style={{ backgroundImage: `url(${FeaturesBg})` }}
+                        style={{ backgroundImage: `url(${BgFeatures})` }}
                     >
                         <div className="absolute inset-0 bg-black/60"></div>
                         <div>

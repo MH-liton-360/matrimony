@@ -1,5 +1,5 @@
-import couple1Bg from "../../../assets/bg-image/Safe-bg.jpg";
-import couple2Bg from "../../../assets/bg-image/Safe-Bg0.jpg";
+import Bg_data_encryption from "../../../assets/bg-image/Bg-data-encryption.jpg";
+import Bg_safe_secure from "../../../assets/bg-image/Bg-safe-secure.jpg";
 import safetyCouple from "../../../assets/Safety_&_privacy/couple-data-encryption.png"
 import safety_Couple from "../../../assets/Safety_&_privacy/Safe and secure.png"
 import SectionTitle from "../SectionTitle/SectionTitle";
@@ -19,7 +19,7 @@ const Safety_and_Privacy = () => {
 
                     {/* Optional background image behind gradient */}
                     <img
-                        src={couple1Bg}
+                        src={Bg_data_encryption}
                         alt="Background"
                         className="absolute inset-0 w-full h-full object-cover opacity-30"
                     />
@@ -46,7 +46,7 @@ const Safety_and_Privacy = () => {
                 >
                     {/* Optional background image behind gradient */}
                     <img
-                        src={couple2Bg}
+                        src={Bg_safe_secure}
                         alt="Background"
                         className="absolute inset-0 w-full h-full object-cover opacity-30"
                     />
