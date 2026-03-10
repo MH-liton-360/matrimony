@@ -1,7 +1,7 @@
 import couple1Bg from "../../../assets/bg-image/Safe-bg.jpg";
 import couple2Bg from "../../../assets/bg-image/Safe-Bg0.jpg";
-import safetyCouple from "../../../assets/extra/02.png"
-import safety_Couple from "../../../assets/Testimonials/Safe and secure.png"
+import safetyCouple from "../../../assets/Safety_&_privacy/couple-data-encryption.png"
+import safety_Couple from "../../../assets/Safety_&_privacy/Safe and secure.png"
 import SectionTitle from "../SectionTitle/SectionTitle";
 
 const Safety_and_Privacy = () => {
@@ -42,8 +42,7 @@ const Safety_and_Privacy = () => {
 
                 {/* Content number Safe and Secure .................................... */}
                 <div
-                    className="relative w-full flex items-center justify-between rounded-lg shadow-lg overflow-hidden bg-linear-to-br"
-                    style={{ background: "linear-gradient(to bottom right, #000E24, #000E24)" }}
+                    className="relative w-full flex items-center justify-between rounded-lg shadow-lg overflow-hidden bg-linear-to-br from-[#000E24] to-[#000E24]"
                 >
                     {/* Optional background image behind gradient */}
                     <img
@@ -65,7 +64,7 @@ const Safety_and_Privacy = () => {
                     <img src={safety_Couple} alt="" className="h-40 w-40 object-cover rounded-full" />
                 </div>
             </div>
-        </section>
+        </section >
 
 
     );

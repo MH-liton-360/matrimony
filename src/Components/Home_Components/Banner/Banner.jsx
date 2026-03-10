@@ -1,5 +1,5 @@
-import bannerImg from '../../../assets/Banner/BG-matrimony-image.png'
-import bgImg from '../../../assets/bg-image/bg.png'
+import main_matrimony_banner from '../../../assets/Banner/main-matrimony-banner.png'
+import bgMatrimony from '../../../assets/bg-image/bg.png'
 
 const Banner = () => {
     return (
@@ -7,7 +7,7 @@ const Banner = () => {
 
             <div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: `url(${bgImg})` }}
+                style={{ backgroundImage: `url(${bgMatrimony})` }}
             ></div>
 
             <div className="absolute inset-0 bg-linear-to-r from-white/70 via-white/50 to-transparent"></div>
@@ -38,7 +38,7 @@ const Banner = () => {
 
             <div className="relative z-10 mt-6 md:mt-0 md:self-end">
                 <img
-                    src={bannerImg}
+                    src={main_matrimony_banner}
                     alt="Muslim Couple"
                     className='w-full max-w-xs sm:max-w-md md:max-w-full h-auto object-cover mx-auto md:mx-0'
                 />

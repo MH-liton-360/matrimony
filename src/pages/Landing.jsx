@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import bg_image from "../assets/Banner/Warm embrace under golden lights.png";
+import Welcome_Banner from "../assets/Banner/Welcome-Banner.png";
 import image_logo from "../assets/logo/Interlocked hands forming a heart.png"
 
 const Landing = () => {
@@ -7,7 +7,7 @@ const Landing = () => {
         <section
 
             style={{
-                backgroundImage: `url(${bg_image})`,
+                backgroundImage: `url(${Welcome_Banner})`,
                 backgroundSize: "cover",
                 backgroundPosition: "10% 15%",
                 minHeight: "100vh",

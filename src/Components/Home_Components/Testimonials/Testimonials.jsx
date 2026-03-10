@@ -3,11 +3,13 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 
-
+// Background 
 import TestimonialsBg from "../../../assets/Testimonials/Testimonials-bg.jpg";
+
+// Image 
 import safety_Couple1 from "../../../assets/Testimonials/Testimonials-bg-card-01.png";
-import safety_Couple2 from "../../../assets/Testimonials/Testimonials-bg-card-03.png";
-import safety_Couple3 from "../../../assets/Testimonials/Testimonials-bg-card-04.png";
+import safety_Couple2 from "../../../assets/Testimonials/Testimonials-bg-card-02.png";
+import safety_Couple3 from "../../../assets/Testimonials/Testimonials-bg-card-03.png";
 import SectionTitle from '../SectionTitle/SectionTitle';
 
 const testimonials = [
@@ -70,7 +72,7 @@ const Testimonials = () => {
                                             className="absolute inset-0 w-full h-full object-cover opacity-30"
                                         />
 
-                                        <img src={t.image} alt={t.name} className="h-20 w-20 object-cover rounded-full relative z-10" />
+                                        <img src={t.image} alt={t.name} className="h-20 w-20 object-cover rounded-full border-2 border-amber-50 relative z-10" />
 
                                         <div className="relative z-10 text-left">
                                             <h2 className="text-[#1D3C5B] text-2xl font-bold">{t.name}</h2>
