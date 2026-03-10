@@ -81,7 +81,6 @@ const Testimonials = () => {
                     </SwiperSlide>
 
 
-
                     {/* Inline style override for vertical pagination */}
                     <style>
                         {`
