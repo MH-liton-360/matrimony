@@ -4,7 +4,7 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 
 
-import couple2Bg from "../../../assets/bg-image/Safe-Bg0.jpg";
+import TestimonialsBg from "../../../assets/Testimonials/Testimonials-bg.jpg";
 import safety_Couple from "../../../assets/Safety_&_privacy/couple-02.jpg";
 import SectionTitle from '../SectionTitle/SectionTitle';
 
@@ -63,7 +63,7 @@ const Testimonials = () => {
                                         style={{ background: "linear-gradient(to bottom right, #000E24, #000E24)" }}
                                     >
                                         <img
-                                            src={couple2Bg}
+                                            src={TestimonialsBg}
                                             alt="Background"
                                             className="absolute inset-0 w-full h-full object-cover opacity-30"
                                         />
