@@ -4,29 +4,50 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 
 // Background 
-import TestimonialsBg from "../../../assets/Testimonials/Testimonials-bg.jpg";
+import BgTestimonials from "../../../assets/bg-image/Bg-Testimonials.jpg";
 
 // Image 
-import safety_Couple1 from "../../../assets/Testimonials/Testimonials-bg-card-01.png";
-import safety_Couple2 from "../../../assets/Testimonials/Testimonials-bg-card-02.png";
-import safety_Couple3 from "../../../assets/Testimonials/Testimonials-bg-card-03.png";
+import Testimonials_bg_card_01 from "../../../assets/Testimonials/Testimonials-bg-card-01.png";
+import Testimonials_bg_card_02 from "../../../assets/Testimonials/Testimonials-bg-card-02.png";
+import Testimonials_bg_card_03 from "../../../assets/Testimonials/Testimonials-bg-card-03.png";
+import Testimonials_bg_card_04 from "../../../assets/Testimonials/Testimonials-bg-card-04.png";
+import Testimonials_bg_card_05 from "../../../assets/Testimonials/Testimonials-bg-card-05.png";
+import Testimonials_bg_card_06 from "../../../assets/Testimonials/Testimonials-bg-card-06.png";
+
+
+// section title 
 import SectionTitle from '../SectionTitle/SectionTitle';
 
 const testimonials = [
     {
-        name: "Priya & Daniel",
-        quote: "We lived on different continents, but this platform brought us together.",
-        image: safety_Couple1,
-    },
-    {
         name: "Aisha & Omar",
-        quote: "Our families were hesitant at first, but the match was perfect and now everyone is happy.",
-        image: safety_Couple2,
+        quote: "We were searching for a meaningful connection for a long time. This platform helped us find each other and begin a beautiful journey together.",
+        image: Testimonials_bg_card_01,
     },
     {
-        name: "Maria & José",
-        quote: "Distance couldn’t keep us apart. This site introduced us, and now we share our lives together.",
-        image: safety_Couple3,
+        name: "Sophia & Liam",
+        quote: "The process was simple and trustworthy. We connected instantly and now we are planning our future together.",
+        image: Testimonials_bg_card_02,
+    },
+    {
+        name: "Fatima & Yusuf",
+        quote: "We appreciated the secure and respectful environment. It helped us find the right partner with confidence.",
+        image: Testimonials_bg_card_03,
+    },
+    {
+        name: "Maria & Carlos",
+        quote: "Even though we lived in different countries, this platform made it possible for us to meet and build a life together.",
+        image: Testimonials_bg_card_04,
+    },
+    {
+        name: "Hana & Kenji",
+        quote: "The matching system was amazing. We quickly realized how compatible we were and our families are very happy.",
+        image: Testimonials_bg_card_05,
+    },
+    {
+        name: "Emma & Daniel",
+        quote: "We were both serious about marriage and this platform connected us in the most genuine way.",
+        image: Testimonials_bg_card_06,
     },
 ];
 
@@ -67,7 +88,7 @@ const Testimonials = () => {
                                         style={{ background: "linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.5), transparent)" }}
                                     >
                                         <img
-                                            src={TestimonialsBg}
+                                            src={BgTestimonials}
                                             alt="Background"
                                             className="absolute inset-0 w-full h-full object-cover opacity-30"
                                         />
