@@ -4,25 +4,27 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 
 
-import TestimonialsBg from "../../../assets/Testimonials/anna-sullivan-ARrM9jUl780-unsplash.jpg";
-import safety_Couple from "../../../assets/Safety_&_privacy/couple-02.jpg";
+import TestimonialsBg from "../../../assets/Testimonials/Testimonials-bg.jpg";
+import safety_Couple1 from "../../../assets/Testimonials/Testimonials-bg-card-01.png";
+import safety_Couple2 from "../../../assets/Testimonials/Testimonials-bg-card-03.png";
+import safety_Couple3 from "../../../assets/Testimonials/Testimonials-bg-card-04.png";
 import SectionTitle from '../SectionTitle/SectionTitle';
 
 const testimonials = [
     {
         name: "Priya & Daniel",
         quote: "We lived on different continents, but this platform brought us together.",
-        image: safety_Couple,
+        image: safety_Couple1,
     },
     {
         name: "Aisha & Omar",
         quote: "Our families were hesitant at first, but the match was perfect and now everyone is happy.",
-        image: safety_Couple,
+        image: safety_Couple2,
     },
     {
         name: "Maria & José",
         quote: "Distance couldn’t keep us apart. This site introduced us, and now we share our lives together.",
-        image: safety_Couple,
+        image: safety_Couple3,
     },
 ];
 
@@ -68,7 +70,7 @@ const Testimonials = () => {
                                             className="absolute inset-0 w-full h-full object-cover opacity-30"
                                         />
 
-                                        <img src={t.image} alt={t.name} className="h-32 w-32 object-cover rounded-full relative z-10" />
+                                        <img src={t.image} alt={t.name} className="h-20 w-20 object-cover rounded-full relative z-10" />
 
                                         <div className="relative z-10 text-left">
                                             <h2 className="text-[#1D3C5B] text-2xl font-bold">{t.name}</h2>
@@ -88,7 +90,7 @@ const Testimonials = () => {
                                 position: absolute;
                                 right: 10px;
                                 top: 50%;
-                                transform: translateY(-50%);
+                                transform: translateY(-120%);
                                 display: flex;
                                 flex-direction: column;
                                 z-index: 20;

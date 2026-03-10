@@ -1,7 +1,7 @@
 import couple1Bg from "../../../assets/bg-image/Safe-bg.jpg";
 import couple2Bg from "../../../assets/bg-image/Safe-Bg0.jpg";
-import safetyCouple from "../../../assets/Safety_&_privacy/couple-01.png"
-import safety_Couple from "../../../assets/Safety_&_privacy/couple-02.jpg"
+import safetyCouple from "../../../assets/extra/02.png"
+import safety_Couple from "../../../assets/Testimonials/Safe and secure.png"
 import SectionTitle from "../SectionTitle/SectionTitle";
 
 const Safety_and_Privacy = () => {
