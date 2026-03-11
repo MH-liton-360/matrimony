@@ -14,12 +14,12 @@ import { FreeMode, Pagination } from 'swiper/modules';
 
 //Slide import image
 import couple_success_story_card_01 from '../../../assets/Success-story/couple-success-story-card-01.png';
-import couple_success_story_card_02 from '../../../assets/Success-story/couple-success-story-card-02.png';
+import couple_success_story_card_02 from '../../../assets/Success-story/couple-success-story-card-02.jpg';
 import couple_success_story_card_03 from '../../../assets/Success-story/couple-success-story-card-03.png';
-import couple_success_story_card_04 from '../../../assets/Success-story/couple-success-story-card-04.png';
-import couple_success_story_card_05 from '../../../assets/Success-story/couple-success-story-card-05.png';
-import couple_success_story_card_06 from '../../../assets/Success-story/couple-success-story-card-06.png';
-import couple_success_story_card_07 from '../../../assets/Success-story/couple-success-story-card-07.png';
+import couple_success_story_card_04 from '../../../assets/Success-story/couple-success-story-card-04.jpg';
+import couple_success_story_card_05 from '../../../assets/Success-story/couple-success-story-card-05.jpg';
+import couple_success_story_card_06 from '../../../assets/Success-story/couple-success-story-card-06.jpg';
+import couple_success_story_card_07 from '../../../assets/Success-story/couple-success-story-card-07.jpg';
 
 
 
@@ -81,7 +81,7 @@ const Success_Story = () => {
                         rounded-2xl 
                         flex flex-col w-full h-full">
 
-                            <figure className="px-5 pt-5">
+                            <figure className="px-5 pt-5 object-cover">
                                 <img
                                     src={couple_success_story_card}     // current slide image
                                     alt={`Slide ${index + 1}`}    // index + 1 means slide number (1....7)

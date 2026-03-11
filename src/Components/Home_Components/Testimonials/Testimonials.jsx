@@ -12,7 +12,6 @@ import Testimonials_card_02 from "../../../assets/Testimonials/Testimonials-card
 import Testimonials_card_03 from "../../../assets/Testimonials/Testimonials-card-03.png";
 import Testimonials_card_04 from "../../../assets/Testimonials/Testimonials-card-04.png";
 import Testimonials_card_05 from "../../../assets/Testimonials/Testimonials-card-05.png";
-import Testimonials_card_06 from "../../../assets/Testimonials/Testimonials-card-06.png";
 
 
 // section title 
@@ -40,14 +39,9 @@ const testimonials = [
         image: Testimonials_card_04,
     },
     {
-        name: "Hana & Kenji",
-        quote: "The matching system was amazing. We quickly realized how compatible we were and our families are very happy.",
-        image: Testimonials_card_05,
-    },
-    {
         name: "Emma & Daniel",
         quote: "We were both serious about marriage and this platform connected us in the most genuine way.",
-        image: Testimonials_card_06,
+        image: Testimonials_card_05,
     },
 ];
 
@@ -61,7 +55,7 @@ const Testimonials = () => {
             <div>
                 <Swiper
                     className="mySwiper swiper-h"
-                    spaceBetween={50}
+                    spaceBetween={10}
                     pagination={{ clickable: true }}
                     modules={[Pagination]}
                     breakpoints={{
@@ -76,10 +70,10 @@ const Testimonials = () => {
                         <Swiper
                             className="mySwiper2 swiper-v"
                             direction="vertical"
-                            spaceBetween={50}
+                            spaceBetween={10}
                             pagination={{ clickable: true }}
                             modules={[Pagination]}
-                            style={{ height: "200px", position: "relative" }}
+                            style={{ height: "130px", position: "relative" }}
                         >
                             {testimonials.map((t, index) => (
                                 <SwiperSlide key={index}>
@@ -113,13 +107,13 @@ const Testimonials = () => {
                                 position: absolute;
                                 right: 10px;
                                 top: 50%;
-                                transform: translateY(-120%);
+                                transform: translateY(-50%);
                                 display: flex;
                                 flex-direction: column;
                                 z-index: 20;
                             }
                             .swiper-v .swiper-pagination-bullet {
-                                background: #fff;
+                                background: #080808;
                                 margin: 6px 0;
                             }
                             .swiper-v .swiper-pagination-bullet-active {
