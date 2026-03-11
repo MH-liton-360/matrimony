@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import Welcome_Banner from "../assets/Banner/Welcome-Banner.png";
 import image_logo from "../assets/logo/Interlocked hands forming a heart.png"
+import { useState } from "react";
 
 const Landing = () => {
+
+    const [age, setAge] = useState(18);
+
     return (
         <section
 
@@ -54,7 +58,10 @@ const Landing = () => {
                     {/* Age Selector */}
                     <div className="mt-2">
                         <label className="text-gray-700 mr-2">How old are you?</label>
-                        <select className="select select-bordered select-sm">
+                        <select
+                            value={age}
+                            onChange={(e) => setAge(Number(e.target.value))}
+                            className="select select-bordered select-sm">
                             {Array.from({ length: 83 }, (_, i) => i + 18).map((age) => (
                                 <option key={age} value={age}>{age}</option>
                             ))}
@@ -62,9 +69,21 @@ const Landing = () => {
                     </div>
 
                     {/* View Singles Button */}
-                    <Link to="/home"><button className="btn btn-teal-600 bg-teal-600 text-white mt-3 hover:bg-teal-700 transition w-full">
-                        Welcome Now
-                    </button></Link>
+                    <Link to={age >= 23 ? "/home" : "#"}>
+                        <button
+                            disabled={age < 23}
+                            className={`mt-3 w-full text-white transition btn 
+                            ${age < 23 ? "bg-gray-400 cursor-not-allowed" : "bg-teal-600 hover:bg-teal-700"}`}
+                        >
+                            Welcome Now
+                        </button></Link>
+
+                    {age < 23 && (
+                        <p className="text-red-500 text-xs">
+                            You must be at least 23 years old to continue.
+                        </p>
+                    )}
+
 
                 </div>
             </div>
