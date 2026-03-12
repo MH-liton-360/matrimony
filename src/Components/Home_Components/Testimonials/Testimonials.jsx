@@ -3,7 +3,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 
-// Background 
+// Background image import 
 import BgTestimonials from "../../../assets/BG/Bg-Testimonials.jpg";
 
 // Image import testimonials
