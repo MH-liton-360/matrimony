@@ -6,7 +6,7 @@ import { Pagination } from 'swiper/modules';
 // Background 
 import BgTestimonials from "../../../assets/BG/Bg-Testimonials.jpg";
 
-// Image 
+// Image import testimonials
 import Testimonials_card_01 from "../../../assets/Testimonials/Testimonials-card-01.png";
 import Testimonials_card_02 from "../../../assets/Testimonials/Testimonials-card-02.png";
 import Testimonials_card_03 from "../../../assets/Testimonials/Testimonials-card-03.png";
