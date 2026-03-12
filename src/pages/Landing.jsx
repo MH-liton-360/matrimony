@@ -5,7 +5,6 @@ import Welcome_Banner from "../assets/Banner/Welcome-Banner.png";
 
 // logo import for landing 
 import image_logo from "../assets/logo/Interlocked hands forming a heart.png"
-
 import { useState } from "react";
 
 const Landing = () => {
