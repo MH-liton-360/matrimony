@@ -1,4 +1,4 @@
-// Background 
+// Background import for safety and privacy 
 import Bg_data_encryption from "../../../assets/BG/Bg-data-encryption.jpg";
 import Bg_safe_secure from "../../../assets/BG/Bg-safe-secure.jpg";
 
