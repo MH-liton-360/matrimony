@@ -8,24 +8,13 @@ import Home from "../pages/Home";
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: <Main></Main>,
+        Component: Main,
         children: [
-            {
-                path: "/",
-                element: <Landing></Landing>,
-            },
-            {
-                path: "login",
-                element: <Login></Login>,
-            },
-            {
-                path: "signup",
-                element: <SignUp></SignUp>
-            },
-            {
-                path: "home",
-                element: <Home></Home>
-            }
+            { path: "/", Component: Landing },
+            { path: "login", Component: Login },
+            { path: "signup", Component: SignUp },
+            { path: "home", Component: Home },
+            { path: "login", Component: Login },
         ]
     },
 ]);
