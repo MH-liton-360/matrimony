@@ -9,22 +9,22 @@ const Navbar = () => {
     const navOptions = (
         <>
             <li>
-                <ScrollLink to="home" smooth={true} duration={500} className="cursor-pointer hover:text-yellow-400 transition">
+                <ScrollLink to="home" smooth={true} duration={500} className="cursor-pointer text-black hover:text-yellow-400 transition">
                     Home
                 </ScrollLink>
             </li>
             <li>
-                <ScrollLink to="blog" smooth={true} duration={500} className="cursor-pointer hover:text-yellow-400 transition">
+                <ScrollLink to="blog" smooth={true} duration={500} className="cursor-pointer text-black hover:text-yellow-400 transition">
                     Profiles
                 </ScrollLink>
             </li>
             <li>
-                <ScrollLink to="success_story" smooth={true} duration={500} className="cursor-pointer hover:text-yellow-400 transition">
+                <ScrollLink to="success_story" smooth={true} duration={500} className="cursor-pointer text-black hover:text-yellow-400 transition">
                     Stories
                 </ScrollLink>
             </li>
             <li>
-                <ScrollLink to="FAQ" smooth={true} duration={500} className="cursor-pointer hover:text-yellow-400 transition">
+                <ScrollLink to="FAQ" smooth={true} duration={500} className="cursor-pointer text-black hover:text-yellow-400 transition">
                     FAQ
                 </ScrollLink>
             </li>
@@ -47,8 +47,6 @@ const Navbar = () => {
                             </div>
                             <ul tabIndex={0} className="menu menu-sm dropdown-content bg-white/90 backdrop-blur-md rounded-box mt-3 w-56 p-2 shadow">
                                 {navOptions}
-                                <li><Link to="/login">Login</Link></li>
-                                <li><Link to="/signup">Create Account</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -72,7 +70,7 @@ const Navbar = () => {
                             <div tabIndex={0} className="w-10 h-10 rounded-full overflow-hidden border-2 border-white cursor-pointer hover:border-yellow-400 transition">
                                 <img src={UserIcon} alt="User" className="w-full h-full object-cover" />
                             </div>
-                            <ul tabIndex={0} className="dropdown-content mt-4 z-100 w-52 rounded-xl bg-black shadow-xl p-3 space-y-2">
+                            <ul tabIndex={0} className="dropdown-content mt-4 z-100 w-52 rounded-xl bg-white shadow-xl p-3 space-y-2">
                                 <li>
                                     <Link to="/login" className="block text-center py-2 rounded-lg bg-black hover:bg-yellow-400 hover:text-black transition">
                                         Login
