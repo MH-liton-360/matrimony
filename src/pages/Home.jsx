@@ -1,13 +1,13 @@
-import Banner from "../Components/Home_Components/Banner/Banner";
-import FAQ from "../Components/Home_Components/FAQ/FAQ";
-import Featured_Premium from "../Components/Home_Components/Featured_Premium/Featured_Premium";
-import Recently_Join_Members from "../Components/Home_Components/Recently_Join_Members/Recently_Join_Members";
-import Safety_and_Privacy from "../Components/Home_Components/Safety_and_Privacy/Safety_and_Privacy";
-import Success_Story from "../Components/Home_Components/Success_Story/Success_Story";
-import Why_it_Works from "../Components/Home_Components/Why_it_Works/Why_it_Works";
-import Navbar from "../shared/Navbar";
-import Testimonials from "../Components/Home_Components/Testimonials/Testimonials";
 
+import Banner from "../Components/Home/Banner/Banner"
+import Featured_Premium from "../Components/Home/Featured_Premium/Featured_Premium"
+import Recently_Join_Members from "../Components/Home/Recently_Join_Members/Recently_Join_Members"
+import Safety_and_Privacy from "../Components/Home/Safety_and_Privacy/Safety_and_Privacy"
+import Success_Story from "../Components/Home/Success_Story/Success_Story"
+import Testimonials from "../Components/Home/Testimonials/Testimonials"
+import Why_it_Works from "../Components/Home/Why_it_Works/Why_it_Works"
+import FAQ from "../Components/Home/FAQ/FAQ"
+import Navbar from "../shared/Navbar"
 
 // Background 
 import BgFeatures from "../assets/BG/Bg-Featured.png"
