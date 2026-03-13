@@ -1,80 +1,90 @@
-// Navbar.jsx
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
-import logoMat from "../assets/logo/Interlocked hands forming a heart.png"
+
+import logoMat from "../assets/logo/Interlocked hands forming a heart.png";
+import UserIcon from "../assets/logo/user.png";
 
 const Navbar = () => {
+
     const navOptions = (
         <>
             <li>
-                <ScrollLink to="home" smooth={true} duration={500} className="hover:text-yellow-400 transition-colors cursor-pointer">Home</ScrollLink>
+                <ScrollLink to="home" smooth={true} duration={500} className="cursor-pointer hover:text-yellow-400 transition">
+                    Home
+                </ScrollLink>
             </li>
             <li>
-                <ScrollLink to="blog" smooth={true} duration={500} className="hover:text-yellow-400 transition-colors cursor-pointer">Profiles</ScrollLink>
+                <ScrollLink to="blog" smooth={true} duration={500} className="cursor-pointer hover:text-yellow-400 transition">
+                    Profiles
+                </ScrollLink>
             </li>
             <li>
-                <ScrollLink to="success_story" smooth={true} duration={500} className="hover:text-yellow-400 transition-colors cursor-pointer">Stories</ScrollLink>
+                <ScrollLink to="success_story" smooth={true} duration={500} className="cursor-pointer hover:text-yellow-400 transition">
+                    Stories
+                </ScrollLink>
             </li>
             <li>
-                <ScrollLink to="FAQ" smooth={true} duration={500} className="hover:text-yellow-400 transition-colors cursor-pointer">FAQ</ScrollLink>
+                <ScrollLink to="FAQ" smooth={true} duration={500} className="cursor-pointer hover:text-yellow-400 transition">
+                    FAQ
+                </ScrollLink>
             </li>
         </>
     );
 
     return (
         <section>
-            <div className="navbar fixed z-10 bg-gradient-to-r from-white/40 via-white/50 to-transparent backdrop-blur-md shadow-sm">
-                <div className="w-full max-w-7xl mx-auto flex items-center justify-center px-4 sm:px-6 relative">
+            <div className="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md shadow-sm">
+                <div className="max-w-7xl mx-auto flex items-center justify-between px-4 h-16">
 
-                    <div className="absolute lg:left-0 flex items-center gap-1">
-                        <img
-                            src={logoMat}
-                            alt="Logo"
-                            className="h-10 w-10 sm:h-12 sm:w-12 md:h-10 md:w-10 object-contain"
-                        />
-                        <Link
-                            to="/"
-                            className="text-xl sm:text-2xl md:text-2xl font-bold text-black hover:text-amber-400 transition-colors"
-                        >
-                            Matrimony
+                    {/* --- Left --- */}
+                    <div className="flex items-center lg:hidden">
+                        {/* Hamburger menu (mobile) */}
+                        <div className="dropdown">
+                            <div tabIndex={0} className="btn btn-ghost p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
+                                </svg>
+                            </div>
+                            <ul tabIndex={0} className="menu menu-sm dropdown-content bg-white/90 backdrop-blur-md rounded-box mt-3 w-56 p-2 shadow">
+                                {navOptions}
+                                <li><Link to="/login">Login</Link></li>
+                                <li><Link to="/signup">Create Account</Link></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {/* --- Center Logo --- */}
+                    <div className="flex-1 flex justify-center lg:justify-start">
+                        <Link to="/" className="flex items-center gap-2">
+                            <img src={logoMat} alt="Logo" className="h-10 w-10 object-contain" />
+                            <span className="text-xl font-bold text-black hover:text-amber-400 transition">Matrimony</span>
                         </Link>
                     </div>
 
-                    <ul className="hidden lg:flex menu menu-horizontal gap-6">
+                    {/* --- Center Menu (Desktop) --- */}
+                    <ul className="hidden lg:flex menu menu-horizontal gap-6 absolute left-1/2 transform -translate-x-1/2">
                         {navOptions}
                     </ul>
 
-                    <div className="absolute right-4 hidden lg:flex gap-2">
-                        <Link to="/login">
-                            <span className="btn btn-outline text-white bg-accent-content border-white hover:bg-yellow-400 hover:border-yellow-400 hover:text-black">Login</span>
-                        </Link>
-                        <Link to="/signup">
-                            <span className="btn btn-outline text-black bg-amber-50 border-white hover:bg-yellow-400 hover:border-yellow-400 hover:text-black">Create Account</span>
-                        </Link>
-                    </div>
-
-                    <div className="dropdown absolute left-0 lg:hidden">
-                        <div tabIndex={0} className="btn btn-ghost text-amber-950">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
-                            </svg>
+                    {/* --- Right: User Icon --- */}
+                    <div className="flex items-center gap-3">
+                        <div className="dropdown dropdown-end">
+                            <div tabIndex={0} className="w-10 h-10 rounded-full overflow-hidden border-2 border-white cursor-pointer hover:border-yellow-400 transition">
+                                <img src={UserIcon} alt="User" className="w-full h-full object-cover" />
+                            </div>
+                            <ul tabIndex={0} className="dropdown-content mt-4 z-100 w-52 rounded-xl bg-black shadow-xl p-3 space-y-2">
+                                <li>
+                                    <Link to="/login" className="block text-center py-2 rounded-lg bg-black hover:bg-yellow-400 hover:text-black transition">
+                                        Login
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/signup" className="block text-center py-2 rounded-lg bg-black hover:bg-yellow-400 hover:text-black transition">
+                                        Create Account
+                                    </Link>
+                                </li>
+                            </ul>
                         </div>
-                        <ul
-                            tabIndex="-1"
-                            className="menu menu-sm dropdown-content bg-white/80 backdrop-blur-md rounded-box mt-3 w-72 p-2 shadow flex flex-col gap-2"
-                        >
-                            {navOptions}
-                            <li>
-                                <Link to="/login">
-                                    <span className="btn btn-outline w-full text-white bg-accent-content border-white hover:bg-yellow-400 hover:border-yellow-400 hover:text-black">Login</span>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="/signup">
-                                    <span className="btn btn-outline w-full text-black bg-amber-50 border-white hover:bg-yellow-400 hover:border-yellow-400 hover:text-black">Create Account</span>
-                                </Link>
-                            </li>
-                        </ul>
                     </div>
 
                 </div>

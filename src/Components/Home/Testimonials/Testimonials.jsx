@@ -55,7 +55,7 @@ const Testimonials = () => {
             <div>
                 <Swiper
                     className="mySwiper swiper-h"
-                    spaceBetween={10}
+                    spaceBetween={50}
                     pagination={{ clickable: true }}
                     modules={[Pagination]}
                     breakpoints={{
@@ -73,7 +73,10 @@ const Testimonials = () => {
                             spaceBetween={10}
                             pagination={{ clickable: true }}
                             modules={[Pagination]}
-                            style={{ height: "130px", position: "relative" }}
+                            style={{
+                                position: "relative",
+                                height: window.innerWidth < 768 ? "200px" : "130px",
+                            }}
                         >
                             {testimonials.map((t, index) => (
                                 <SwiperSlide key={index}>
