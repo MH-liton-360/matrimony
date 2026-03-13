@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 
@@ -5,48 +6,53 @@ import logoMat from "../assets/logo/Interlocked hands forming a heart.png";
 import UserIcon from "../assets/logo/user.png";
 
 const Navbar = () => {
+    const [activeMenu, setActiveMenu] = useState("home");
 
-    const navOptions = (
-        <>
-            <li>
-                <ScrollLink to="home" smooth={true} duration={500} className="cursor-pointer text-black hover:text-yellow-400 transition">
-                    Home
+    const menuItems = [
+        { name: "Home", to: "home" },
+        { name: "Profiles", to: "blog" },
+        { name: "Stories", to: "success_story" },
+        { name: "FAQ", to: "FAQ" },
+    ];
+
+    const renderNavItems = (isMobile = false) => {
+        return menuItems.map((item) => (
+            <li key={item.to}>
+                <ScrollLink
+                    to={item.to}
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    onSetActive={() => setActiveMenu(item.to)}
+                    className={`cursor-pointer px-4 py-2 block transition rounded-lg ${activeMenu === item.to
+                        ? "bg-yellow-400 text-black font-bold"
+                        : "text-black hover:text-yellow-400"
+                        } ${isMobile ? "w-full text-center" : ""}`}
+                >
+                    {item.name}
                 </ScrollLink>
             </li>
-            <li>
-                <ScrollLink to="blog" smooth={true} duration={500} className="cursor-pointer text-black hover:text-yellow-400 transition">
-                    Profiles
-                </ScrollLink>
-            </li>
-            <li>
-                <ScrollLink to="success_story" smooth={true} duration={500} className="cursor-pointer text-black hover:text-yellow-400 transition">
-                    Stories
-                </ScrollLink>
-            </li>
-            <li>
-                <ScrollLink to="FAQ" smooth={true} duration={500} className="cursor-pointer text-black hover:text-yellow-400 transition">
-                    FAQ
-                </ScrollLink>
-            </li>
-        </>
-    );
+        ));
+    };
 
     return (
         <section>
             <div className="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md shadow-sm">
                 <div className="max-w-7xl mx-auto flex items-center justify-between px-4 h-16">
 
-                    {/* --- Left --- */}
+                    {/* --- Left: Hamburger (Mobile) --- */}
                     <div className="flex items-center lg:hidden">
-                        {/* Hamburger menu (mobile) */}
                         <div className="dropdown">
                             <div tabIndex={0} className="btn btn-ghost p-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
                                 </svg>
                             </div>
-                            <ul tabIndex={0} className="menu menu-sm dropdown-content bg-white/90 backdrop-blur-md rounded-box mt-3 w-56 p-2 shadow">
-                                {navOptions}
+                            <ul
+                                tabIndex={0}
+                                className="menu menu-sm dropdown-content bg-white/90 backdrop-blur-md rounded-box mt-3 w-56 p-2 shadow flex flex-col gap-1"
+                            >
+                                {renderNavItems(true)}
                             </ul>
                         </div>
                     </div>
@@ -61,7 +67,7 @@ const Navbar = () => {
 
                     {/* --- Center Menu (Desktop) --- */}
                     <ul className="hidden lg:flex menu menu-horizontal gap-6 absolute left-1/2 transform -translate-x-1/2">
-                        {navOptions}
+                        {renderNavItems()}
                     </ul>
 
                     {/* --- Right: User Icon --- */}
