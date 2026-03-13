@@ -6,6 +6,7 @@ import Welcome_Banner from "../../assets/Banner/Welcome-Banner.png";
 // logo import for landing 
 import image_logo from "../../assets/logo/Interlocked hands forming a heart.png"
 import { useState } from "react";
+import Marquee from "react-fast-marquee";
 
 const Landing = () => {
 
@@ -88,7 +89,9 @@ const Landing = () => {
 
                     {age < 23 && (
                         <p className="text-red-500 text-xs">
-                            You must be at least 23 years old to continue.
+                            <Marquee>
+                                You must be at least 23 years old to continue.
+                            </Marquee>
                         </p>
                     )}
 
