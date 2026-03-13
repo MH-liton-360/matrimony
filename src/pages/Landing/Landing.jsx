@@ -78,16 +78,16 @@ const Landing = () => {
                     </div>
 
                     {/* View Singles Button */}
-                    <Link to={age >= 23 ? "/home" : "#"}>
+                    <Link to={age >= 22 ? "/home" : "#"}>
                         <button
-                            disabled={age < 23}
+                            disabled={age < 22}
                             className={`mt-3 w-full text-white transition btn 
-                            ${age < 23 ? "bg-gray-400 cursor-not-allowed" : "bg-teal-600 hover:bg-teal-700"}`}
+                            ${age < 22 ? "bg-gray-400 cursor-not-allowed" : "bg-teal-600 hover:bg-teal-700"}`}
                         >
                             Welcome Now
                         </button></Link>
 
-                    {age < 23 && (
+                    {age < 22 && (
                         <p className="text-red-500 text-xs">
                             <Marquee>
                                 You must be at least 22 years old to continue
