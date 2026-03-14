@@ -1,5 +1,7 @@
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+
+// Link with google and facebook 
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF } from "react-icons/fa";
 
