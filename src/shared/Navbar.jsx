@@ -57,7 +57,6 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    {/* --- Center Logo --- */}
                     <div className="flex-1 flex justify-center lg:justify-start">
                         <Link to="/" className="flex items-center gap-2">
                             <img src={logoMat} alt="Logo" className="h-10 w-10 object-contain" />
@@ -65,12 +64,10 @@ const Navbar = () => {
                         </Link>
                     </div>
 
-                    {/* --- Center Menu (Desktop) --- */}
                     <ul className="hidden lg:flex menu menu-horizontal gap-6 absolute left-1/2 transform -translate-x-1/2">
                         {renderNavItems()}
                     </ul>
 
-                    {/* --- Right: User Icon --- */}
                     <div className="flex items-center gap-3">
                         <div className="dropdown dropdown-end">
                             <div tabIndex={0} className="w-10 h-10 rounded-full overflow-hidden border-2 border-white cursor-pointer hover:border-yellow-400 transition">
