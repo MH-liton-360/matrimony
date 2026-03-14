@@ -38,7 +38,6 @@ const Landing = () => {
                 <span className="mr-12">✔ Trusted Matrimony Platform</span>
             </marquee>
 
-
             {/* Content Card - Left Center */}
             <div className="relative z-10 bg-white rounded-xl shadow-xl w-full max-w-md p-6 text-center">
                 <div className="flex flex-col gap-4">
