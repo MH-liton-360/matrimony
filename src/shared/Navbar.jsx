@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 
 import logoMat from "../assets/logo/Interlocked hands forming a heart.png";
 import UserIcon from "../assets/logo/user.png";
+import { AuthContext } from "../context/AuthContext";
 
 const Navbar = () => {
     const [activeMenu, setActiveMenu] = useState("home");
@@ -34,6 +35,9 @@ const Navbar = () => {
             </li>
         ));
     };
+
+
+    const { user } = useContext(AuthContext);
 
     return (
         <section>
@@ -73,6 +77,13 @@ const Navbar = () => {
                             <div tabIndex={0} className="w-10 h-10 rounded-full overflow-hidden border-2 border-white cursor-pointer hover:border-yellow-400 transition">
                                 <img src={UserIcon} alt="User" className="w-full h-full object-cover" />
                             </div>
+
+
+                            {/* Demo div.........................  */}
+                            <div>{user && user.name} </div>
+
+
+
                             <ul tabIndex={0} className="dropdown-content mt-4 z-100 w-52 rounded-xl bg-white shadow-xl p-3 space-y-2">
                                 <li>
                                     <Link to="/login" className="block text-center py-2 rounded-lg bg-black hover:bg-yellow-400 hover:text-black transition">
