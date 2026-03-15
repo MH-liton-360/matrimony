@@ -10,7 +10,7 @@ const Login = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        loadCaptchaEnginge(6); // Captcha load
+        loadCaptchaEnginge(6);
     }, []);
 
     const handleLogin = (event) => {
