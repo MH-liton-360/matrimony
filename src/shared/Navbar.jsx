@@ -78,7 +78,11 @@ const Navbar = () => {
 
 
                             {/* Demo div.........................  */}
-                            <div>{user && user.name} </div>
+                            {user && (
+                                <div className="text-sm font-semibold">
+                                    {user.displayName}
+                                </div>
+                            )}
 
 
 

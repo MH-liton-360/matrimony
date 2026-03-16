@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF } from "react-icons/fa";
+import { updateProfile } from "firebase/auth";
 
 const SignUp = () => {
     const { createNewUser, setUser } = useContext(AuthContext);
@@ -12,11 +13,17 @@ const SignUp = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = async (data) => {
-        const { email, password } = data;
+        const { email, password, name } = data;
         try {
             const result = await createNewUser(email, password);
             const user = result.user;
-            setUser(user);
+
+            // firebase profile update
+            await updateProfile(user, {
+                displayName: name,
+            });
+            setUser({ ...user, displayName: name });
+
             console.log("User created:", result.user);
             navigate("/home");
         } catch (error) {
