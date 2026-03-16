@@ -97,6 +97,15 @@ const Navbar = () => {
                                     </li>
 
                                     <li>
+                                        <Link
+                                            to="/profile"
+                                            className="block text-center py-2 rounded-lg bg-black text-white hover:bg-yellow-400 hover:text-black transition"
+                                        >
+                                            Profile
+                                        </Link>
+                                    </li>
+
+                                    <li>
                                         <button
                                             onClick={logOut}
                                             className="w-full py-2 rounded-lg bg-black text-white hover:bg-yellow-400 hover:text-black transition"
@@ -145,7 +154,7 @@ const Navbar = () => {
 
                 </div>
             </div>
-        </section>
+        </section >
     );
 };
 

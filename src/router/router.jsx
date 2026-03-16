@@ -6,6 +6,7 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Authentication/Login";
 import SignUp from "../pages/Authentication/SignUp";
 import Error from "../Components/Error/Errors/Error";
+import Profile from "../Components/profile/My-profile/Profile";
 
 export const router = createBrowserRouter([
     {
@@ -17,6 +18,7 @@ export const router = createBrowserRouter([
             { path: "login", Component: Login },
             { path: "signup", Component: SignUp },
             { path: "*", Component: Error },
+            { path: "profile", Component: Profile }
         ]
     },
 ]);
