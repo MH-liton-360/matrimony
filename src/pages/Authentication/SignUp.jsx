@@ -6,7 +6,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF } from "react-icons/fa";
 
 const SignUp = () => {
-    const { createNewUser } = useContext(AuthContext);
+    const { createNewUser, setUser } = useContext(AuthContext);
     const navigate = useNavigate();
 
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -15,6 +15,8 @@ const SignUp = () => {
         const { email, password } = data;
         try {
             const result = await createNewUser(email, password);
+            const user = result.user;
+            setUser(user);
             console.log("User created:", result.user);
             navigate("/home");
         } catch (error) {
