@@ -80,7 +80,7 @@ const Navbar = () => {
                             {/* Demo div.........................  */}
                             {user && (
                                 <div className="text-sm font-semibold">
-                                    {user.displayName}
+                                    {user.email}
                                 </div>
                             )}
 
