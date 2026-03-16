@@ -7,6 +7,7 @@ import UserIcon from "../assets/logo/user.png";
 import { AuthContext } from "../context/AuthContext";
 
 const Navbar = () => {
+    const { user } = useContext(AuthContext);
     const [activeMenu, setActiveMenu] = useState("home");
 
     const menuItems = [
@@ -35,9 +36,6 @@ const Navbar = () => {
             </li>
         ));
     };
-
-
-    const { user } = useContext(AuthContext);
 
     return (
         <section>
