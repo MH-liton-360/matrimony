@@ -6,29 +6,41 @@ import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF } from "react-icons/fa";
 
 const Login = () => {
-    const { user } = useContext(AuthContext);
+    const { setUser, userLogin } = useContext(AuthContext);
     const navigate = useNavigate();
 
     useEffect(() => {
         loadCaptchaEnginge(6);
     }, []);
-
-    const handleLogin = (event) => {
+    const handleLogin = async (event) => {
         event.preventDefault();
+
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
         const captcha = form.captcha.value;
 
+        // captcha check first
         if (!validateCaptcha(captcha)) {
             alert("Captcha does not match!");
             return;
         }
 
-        console.log(email, password);
-        navigate("/home");
-    };
+        try {
+            const result = await userLogin(email, password);
+            const user = result.user;
 
+            setUser(user);
+
+            console.log("Login success:", user);
+
+            navigate("/home");
+
+        } catch (error) {
+            console.error(error.message);
+            alert(error.message);
+        }
+    };
     return (
         <section className="min-h-screen flex items-center justify-center bg-base-200 p-24">
             <title>Login - Our Matrimony</title>
