@@ -31,9 +31,7 @@ const Login = () => {
             const user = result.user;
 
             setUser(user);
-
             console.log("Login success:", user);
-
             navigate("/home");
 
         } catch (error) {
