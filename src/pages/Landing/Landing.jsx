@@ -31,12 +31,14 @@ const Landing = () => {
             <div className="absolute inset-0 bg-black/40"></div>
 
             {/* Marquee - Top Right */}
-            <marquee className="absolute top-8 right-5 z-20 bg-teal-600 text-white px-8 py-2 rounded-xl max-w-1/3">
-                <span className="mr-12">✔ Verified Profiles</span>
-                <span className="mr-12">✔ Privacy Protected</span>
-                <span className="mr-12">✔ Thousands of Success Stories</span>
-                <span className="mr-12">✔ Trusted Matrimony Platform</span>
-            </marquee>
+            <div className="absolute top-8 right-5 z-20 bg-teal-600 text-white px-8 py-2 rounded-xl w-1/3">
+                <Marquee pauseOnHover={true} speed={50}>
+                    <span className="mr-12">✔ Verified Profiles</span>
+                    <span className="mr-12">✔ Privacy Protected</span>
+                    <span className="mr-12">✔ Thousands of Success Stories</span>
+                    <span className="mr-12">✔ Trusted Matrimony Platform</span>
+                </Marquee>
+            </div>
 
             {/* Content Card - Left Center */}
             <div className="relative z-10 bg-white rounded-xl shadow-xl w-full max-w-md p-6 text-center">
