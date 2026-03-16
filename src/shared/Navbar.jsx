@@ -110,7 +110,7 @@ const Navbar = () => {
                                             onClick={logOut}
                                             className="w-full py-2 rounded-lg bg-black text-white hover:bg-yellow-400 hover:text-black transition"
                                         >
-                                            Logout
+                                            Sign out
                                         </button>
                                     </li>
                                 </ul>
