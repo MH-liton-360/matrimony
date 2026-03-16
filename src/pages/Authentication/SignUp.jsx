@@ -34,17 +34,14 @@ const SignUp = () => {
                     <h1 className="text-3xl font-bold text-center mb-2">Sign Up</h1>
 
                     {/* Name */}
-                    <label className="label">Name</label>
                     <input type="text" {...register("name", { required: true })} className="input input-bordered" placeholder="Name" />
                     {errors.name && <span className="text-red-600">Name is required</span>}
 
                     {/* Email */}
-                    <label className="label">Email</label>
                     <input type="email" {...register("email", { required: true })} className="input input-bordered" placeholder="Email" />
                     {errors.email && <span className="text-red-600">Email is required</span>}
 
                     {/* Password */}
-                    <label className="label">Password</label>
                     <input type="password" {...register("password", { required: true, minLength: 6, maxLength: 20 })} className="input input-bordered" placeholder="Password" />
                     {errors.password?.type === "required" && <p className="text-red-600">Password is required</p>}
                     {errors.password?.type === "minLength" && <p className="text-red-600">Password must be at least 6 characters</p>}
@@ -54,7 +51,7 @@ const SignUp = () => {
 
                     <div className="divider">OR</div>
 
-                    {/* Social Buttons (UI בלבד, firebase implement করতে হবে) */}
+                    {/* Social button implement from firebase  */}
                     <div className="flex flex-col gap-2">
                         <button type="button" className="btn btn-outline btn-neutral flex items-center justify-center gap-2">
                             <FcGoogle size={20} /> Continue with Google
