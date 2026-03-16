@@ -7,7 +7,7 @@ import UserIcon from "../assets/logo/user.png";
 import { AuthContext } from "../context/AuthContext";
 
 const Navbar = () => {
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
     const [activeMenu, setActiveMenu] = useState("home");
 
     const menuItems = [
@@ -70,36 +70,78 @@ const Navbar = () => {
                         {renderNavItems()}
                     </ul>
 
-                    <div className="flex items-center gap-3">
-                        <div className="dropdown dropdown-end">
-                            <div tabIndex={0} className="w-10 h-10 rounded-full overflow-hidden border-2 border-white cursor-pointer hover:border-yellow-400 transition">
-                                <img src={UserIcon} alt="User" className="w-full h-full object-cover" />
-                            </div>
 
 
-                            {/* Demo div.........................  */}
-                            {user && (
-                                <div className="text-sm font-semibold">
-                                    {user.email}
+                    {
+                        user ? (
+                            <div className="dropdown dropdown-end">
+
+                                {/* Avatar */}
+                                <div tabIndex={0} className="flex items-center gap-2 cursor-pointer">
+                                    <div className="w-10 h-10 rounded-full overflow-hidden border-2 hover:border-yellow-400">
+                                        <img
+                                            src={user.photoURL || UserIcon}
+                                            alt="User"
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
                                 </div>
-                            )}
+
+                                {/* Dropdown */}
+                                <ul
+                                    tabIndex={0}
+                                    className="dropdown-content mt-4 w-52 rounded-xl bg-white shadow-xl p-3 space-y-2"
+                                >
+                                    <li className="text-center font-semibold">
+                                        {user.displayName || "User"}
+                                    </li>
+
+                                    <li>
+                                        <button
+                                            onClick={logOut}
+                                            className="w-full py-2 rounded-lg bg-black text-white hover:bg-yellow-400 hover:text-black transition"
+                                        >
+                                            Logout
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        ) : (
+                            <div className="dropdown dropdown-end">
+                                <div
+                                    tabIndex={0}
+                                    className="w-10 h-10 rounded-full overflow-hidden border-2 cursor-pointer hover:border-yellow-400"
+                                >
+                                    <img src={UserIcon} alt="User" />
+                                </div>
+
+                                <ul
+                                    tabIndex={0}
+                                    className="dropdown-content mt-4 w-52 rounded-xl bg-white shadow-xl p-3 space-y-2"
+                                >
+                                    <li>
+                                        <Link
+                                            to="/login"
+                                            className="block text-center py-2 rounded-lg bg-black hover:bg-yellow-400 hover:text-black transition"
+                                        >
+                                            Login
+                                        </Link>
+                                    </li>
+
+                                    <li>
+                                        <Link
+                                            to="/signup"
+                                            className="block text-center py-2 rounded-lg bg-black hover:bg-yellow-400 hover:text-black transition"
+                                        >
+                                            Create Account
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        )
+                    }
 
 
-
-                            <ul tabIndex={0} className="dropdown-content mt-4 z-100 w-52 rounded-xl bg-white shadow-xl p-3 space-y-2">
-                                <li>
-                                    <Link to="/login" className="block text-center py-2 rounded-lg bg-black hover:bg-yellow-400 hover:text-black transition">
-                                        Login
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to="/signup" className="block text-center py-2 rounded-lg bg-black hover:bg-yellow-400 hover:text-black transition">
-                                        Create Account
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
 
                 </div>
             </div>
