@@ -40,23 +40,23 @@ const Login = () => {
         }
     };
     return (
-        <section className="min-h-screen flex items-center justify-center bg-base-200 p-24">
+        <section className="min-h-screen flex items-center justify-center bg-base-200">
             <title>Login - Our Matrimony</title>
             <div className="card bg-base-100 w-full max-w-sm shadow-2xl">
+
+                {/* Form Start  */}
                 <form onSubmit={handleLogin} className="card-body">
                     <h1 className="text-3xl font-bold text-center mb-2">Login Now!</h1>
 
-                    <label className="label">Email</label>
+                    {/* Email and password  */}
                     <input type="email" name="email" className="input input-bordered" placeholder="Email" />
-
-                    <label className="label">Password</label>
                     <input type="password" name="password" className="input input-bordered" placeholder="Password" />
 
                     <div className="flex justify-end mb-2">
                         <a className="link link-hover text-sm">Forgot password?</a>
                     </div>
 
-                    <label className="label mt-2">
+                    <label className="label">
                         <LoadCanvasTemplate />
                     </label>
                     <input type="text" name="captcha" className="input input-bordered" placeholder="Captcha" />
