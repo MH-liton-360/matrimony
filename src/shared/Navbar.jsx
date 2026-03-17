@@ -80,7 +80,7 @@ const Navbar = () => {
                                 <div tabIndex={0} className="flex items-center gap-2 cursor-pointer">
                                     <div className="w-10 h-10 rounded-full overflow-hidden border-2 hover:border-yellow-400">
                                         <img
-                                            src={user.photoURL || UserIcon}
+                                            src={user?.photoURL || UserIcon}
                                             alt="User"
                                             className="w-full h-full object-cover"
                                         />

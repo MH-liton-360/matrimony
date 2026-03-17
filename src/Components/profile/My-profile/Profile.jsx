@@ -1,4 +1,45 @@
+import { useContext, useState } from "react";
+import { AuthContext } from "../../../context/AuthContext";
+import { storage } from "../../../firebase/Firebase.config";
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { updateProfile } from "firebase/auth";
+
 const Profile = () => {
+    const { user, setUser } = useContext(AuthContext);
+    const [loading, setLoading] = useState(false);
+    const [progress, setProgress] = useState(0);
+
+    const handleImageUpload = (file) => {
+        if (!file) return;
+        console.log("hello", file);
+        setLoading(true);
+        setProgress(0);
+
+        const storageRef = ref(storage, `profileImages/${user.uid}_${Date.now()}`);
+        const uploadTask = uploadBytesResumable(storageRef, file);
+
+        uploadTask.on(
+            "state_changed",
+            (snapshot) => {
+                const percent = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
+                setProgress(percent);
+            },
+            (error) => {
+                console.error(error);
+                alert("Error uploading image");
+                setLoading(false);
+            },
+            async () => {
+                const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
+                await updateProfile(user, { photoURL: downloadURL });
+                setUser({ ...user, photoURL: downloadURL });
+                alert("Profile photo updated");
+                setLoading(false);
+                setProgress(0);
+            }
+        );
+    };
+
     return (
         <div className="min-h-screen bg-gray-100 py-10 px-4">
             <div className="max-w-4xl mx-auto bg-white shadow-xl rounded-2xl p-6">
@@ -9,19 +50,43 @@ const Profile = () => {
                     {/* Profile Image */}
                     <div className="relative">
                         <img
-                            src="https://i.ibb.co/4pDNDk1/avatar.png"
+                            src={user?.photoURL || "https://i.ibb.co/4pDNDk1/avatar.png"}
                             alt="Profile"
                             className="w-32 h-32 rounded-full object-cover border-4 border-yellow-400"
                         />
-                        <button className="absolute bottom-0 right-0 bg-black text-white text-xs px-3 py-1 rounded-full hover:bg-yellow-400 hover:text-black transition">
-                            Change
+
+                        {/* Hidden Input */}
+                        <input
+                            type="file"
+                            accept="image/*"
+                            className="hidden"
+                            id="upload"
+                            onChange={(e) => handleImageUpload(e.target.files[0])}
+                        />
+
+                        {/* Change Button */}
+                        <button
+                            onClick={() => document.getElementById("upload").click()}
+                            className="absolute bottom-0 right-0 bg-black text-white text-xs px-3 py-1 rounded-full hover:bg-yellow-400 hover:text-black transition"
+                        >
+                            {loading ? `Uploading... ${progress}%` : "Change"}
                         </button>
+
+                        {/* Optional Progress Bar */}
+                        {loading && (
+                            <div className="w-32 h-2 bg-gray-200 rounded-full mt-1">
+                                <div
+                                    className="h-2 bg-yellow-400 rounded-full"
+                                    style={{ width: `${progress}%` }}
+                                ></div>
+                            </div>
+                        )}
                     </div>
 
                     {/* Basic Info */}
                     <div className="text-center md:text-left">
-                        <h2 className="text-2xl font-bold">John Doe</h2>
-                        <p className="text-gray-600">john@email.com</p>
+                        <h2 className="text-2xl font-bold">{user?.displayName || "John Doe"}</h2>
+                        <p className="text-gray-600">{user?.email || "john@email.com"}</p>
                         <span className="inline-block mt-2 px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">
                             Premium Member
                         </span>

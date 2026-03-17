@@ -1,12 +1,12 @@
 const Footer = () => {
     return (
         <section>
-            <div>
+            <div className="">
                 <footer className="bg-amber-100 text-emerald-950 rounded-t-xl pt-10">
                     <div className="max-w-6xl mx-auto flex flex-col items-center gap-6">
 
                         {/* Navigation Links */}
-                        <nav class="flex flex-wrap justify-center gap-6">
+                        <nav className="flex flex-wrap justify-center gap-6">
                             <a className="link link-hover">About us</a>
                             <a className="link link-hover">Terms of Use</a>
                             <a className="link link-hover">Privacy Statement</a>
