@@ -6,18 +6,24 @@ import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF } from "react-icons/fa";
 
 const SignUp = () => {
-    const { createNewUser, setUser } = useContext(AuthContext);
+    const { createNewUser, setUser, updateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate();
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = async (data) => {
-        const { email, password } = data;
+        const { email, password, photoURL } = data;
         try {
             const result = await createNewUser(email, password);
             const user = result.user;
             setUser(user);
             console.log("User created:", result.user);
+
+            await updateUserProfile({
+                displayName: data.name,
+                photoURL: data.photoURL,
+            });
+
             navigate("/home");
 
         } catch (error) {
@@ -38,11 +44,16 @@ const SignUp = () => {
                     {errors.name && <span className="text-red-600">Name is required</span>}
 
                     {/* Email */}
-                    <input type="email" {...register("email", { required: true })} className="input input-bordered" placeholder="Email" />
+                    <input type="text" {...register("email", { required: true })} className="input input-bordered" placeholder="Email" />
                     {errors.email && <span className="text-red-600">Email is required</span>}
 
+                    {/* PhotoUrl  */}
+                    <input type="text" {...register("photoURL", { required: true })} className="input input-bordered" placeholder="Photo URL" />
+                    {errors.photoURL && <span className="text-red-600">Photo is required</span>}
+
+
                     {/* Password */}
-                    <input type="password" {...register("password", { required: true, minLength: 6, maxLength: 20 })} className="input input-bordered" placeholder="Password" />
+                    <input type="text" {...register("password", { required: true, minLength: 6, maxLength: 20 })} className="input input-bordered" placeholder="Password" />
                     {errors.password?.type === "required" && <p className="text-red-600">Password is required</p>}
                     {errors.password?.type === "minLength" && <p className="text-red-600">Password must be at least 6 characters</p>}
                     {errors.password?.type === "maxLength" && <p className="text-red-600">Password must not exceed 20 characters</p>}
