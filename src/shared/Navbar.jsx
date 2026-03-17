@@ -87,8 +87,7 @@ const Navbar = () => {
                                     </div>
                                 </div>
 
-
-                                {/* Dropdown */}
+                                {/* Dropdown user and admin profile */}
                                 <ul
                                     tabIndex={0}
                                     className="dropdown-content mt-4 w-52 rounded-xl bg-white shadow-xl p-3 space-y-2"
