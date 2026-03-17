@@ -71,7 +71,7 @@ const Navbar = () => {
                     </ul>
 
 
-
+                    {/* Avatar dropdown and (if user stay or user not stay)  */}
                     {
                         user ? (
                             <div className="dropdown dropdown-end">
