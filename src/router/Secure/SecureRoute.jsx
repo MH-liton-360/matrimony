@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { Navigate } from "react-router-dom";
+import Loading from "../../shared/Loading";
 
 const SecureRoute = ({ children }) => {
 
@@ -8,7 +9,7 @@ const SecureRoute = ({ children }) => {
 
     // loading state handle
     if (loading) {
-        return <div className="text-center mt-10">Loading...</div>;
+        return <Loading></Loading>
     }
 
     // user check
