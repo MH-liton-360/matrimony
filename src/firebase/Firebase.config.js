@@ -19,7 +19,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-
+// Others 
 const auth = getAuth(app);
 const storage = getStorage(app);
 
