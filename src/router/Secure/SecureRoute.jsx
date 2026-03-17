@@ -4,12 +4,19 @@ import { Navigate } from "react-router-dom";
 
 const SecureRoute = ({ children }) => {
 
-    const { user } = useContext(AuthContext);
+    const { user, loading } = useContext(AuthContext);
 
-    if (user && user?.email) {
-        return children;
+    // loading state handle
+    if (loading) {
+        return <div className="text-center mt-10">Loading...</div>;
     }
-    return <Navigate to={ }></Navigate>
+
+    // user check
+    if (!user) {
+        return <Navigate to="/login" />;
+    }
+
+    return children;
 };
 
 export default SecureRoute;
