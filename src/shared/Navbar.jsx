@@ -109,7 +109,7 @@ const Navbar = () => {
 
             {/* Sidebar Drawer */}
             {openSidebar && (
-                <div className="fixed inset-0 z-50">
+                <div className="">
                     {/* Overlay */}
                     <div
                         onClick={() => setOpenSidebar(false)}

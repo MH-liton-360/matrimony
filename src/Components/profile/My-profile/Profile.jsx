@@ -85,7 +85,7 @@ const Profile = () => {
 
                     {/* Basic Info */}
                     <div className="text-center md:text-left">
-                        <h2 className="text-2xl font-bold">{user?.displayName || "John Doe"}</h2>
+                        {/* <h2 className="text-2xl font-bold">{user?.displayName || "John Doe"}</h2> */}
                         <p className="text-gray-600">{user?.email || "john@email.com"}</p>
                         <span className="inline-block mt-2 px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">
                             Premium Member
