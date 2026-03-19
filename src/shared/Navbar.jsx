@@ -7,6 +7,8 @@ import UserIcon from "../assets/logo/user.png";
 import { AuthContext } from "../context/AuthContext";
 
 import { LiaSignOutAltSolid } from "react-icons/lia";
+import { IoMdContact } from "react-icons/io";
+
 
 
 const Navbar = () => {
@@ -102,9 +104,10 @@ const Navbar = () => {
                                     <li>
                                         <Link
                                             to="/profile"
-                                            className="block text-center py-2 rounded-lg bg-black text-white hover:bg-yellow-400 hover:text-black transition"
+                                            className="flex items-center justify-center gap-2 py-2 rounded-lg bg-black text-white hover:bg-yellow-400 hover:text-black transition"
                                         >
-                                            Profile
+                                            <IoMdContact className="text-lg" />
+                                            <span>Profile</span>
                                         </Link>
                                     </li>
 
