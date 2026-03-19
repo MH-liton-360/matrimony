@@ -6,7 +6,7 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Authentication/Login";
 import SignUp from "../pages/Authentication/SignUp";
 import Error from "../Components/Error/Errors/Error";
-import Profile from "../Components/profile/My-profile/Profile";
+import Profile from "../Components/profile/Profile";
 
 export const router = createBrowserRouter([
     {
