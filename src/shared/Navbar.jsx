@@ -12,7 +12,7 @@ const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
 
     const [activeMenu, setActiveMenu] = useState("home");
-    const [openSidebar, setOpenSidebar] = useState(false); // 👈 new
+    const [openSidebar, setOpenSidebar] = useState(false);
 
     const menuItems = [
         { name: "Home", to: "home" },
@@ -120,14 +120,14 @@ const Navbar = () => {
                     <div
                         className="absolute right-0 w-64 bg-[#0d1117] p-6 flex flex-col gap-4 rounded-2xl z-20"
                         style={{
-                            top: "64px", // navbar height
-                            height: "calc(80vh - 64px)", // hero section height minus navbar
+                            top: "64px",
+                            height: "calc(80vh - 64px)",
                         }}
                     >
                         <Sidebar
                             user={user}
                             logOut={logOut}
-                            closeSidebar={() => setOpenSidebar(false)} // ✅ add this
+                            closeSidebar={() => setOpenSidebar(false)}
                         />
                     </div>
                 </div>
