@@ -96,7 +96,6 @@ const Profile = () => {
                 {/* Divider */}
                 <div className="divider my-6"></div>
 
-                {/* Biodata Section */}
                 <div>
                     <h3 className="text-xl font-semibold mb-4">Biodata</h3>
 
