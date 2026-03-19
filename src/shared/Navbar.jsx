@@ -6,14 +6,13 @@ import logoMat from "../assets/logo/Interlocked hands forming a heart.png";
 import UserIcon from "../assets/logo/user.png";
 import { AuthContext } from "../context/AuthContext";
 
-import { LiaSignOutAltSolid } from "react-icons/lia";
-import { IoMdContact } from "react-icons/io";
-
-
+import Sidebar from "./Sidebar";
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
+
     const [activeMenu, setActiveMenu] = useState("home");
+    const [openSidebar, setOpenSidebar] = useState(false); // 👈 new
 
     const menuItems = [
         { name: "Home", to: "home" },
@@ -30,10 +29,11 @@ const Navbar = () => {
                     smooth={true}
                     duration={500}
                     spy={true}
+                    offset={-70}
                     onSetActive={() => setActiveMenu(item.to)}
-                    className={`cursor-pointer px-4 py-2 block transition rounded-lg ${activeMenu === item.to
-                        ? "bg-yellow-400 text-black font-bold"
-                        : "text-black hover:text-yellow-400"
+                    className={`cursor-pointer px-4 py-2 block rounded-lg transition ${activeMenu === item.to
+                        ? "bg-yellow-400 text-black font-semibold"
+                        : "text-black hover:text-yellow-500"
                         } ${isMobile ? "w-full text-center" : ""}`}
                 >
                     {item.name}
@@ -43,123 +43,96 @@ const Navbar = () => {
     };
 
     return (
-        <section>
-            <div className="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md shadow-sm">
-                <div className="max-w-7xl mx-auto flex items-center justify-between px-4 h-16">
+        <>
+            {/* Navbar */}
+            <section>
+                <div className="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md shadow-sm">
+                    <div className="max-w-7xl mx-auto flex items-center justify-between px-4 h-16">
 
-                    {/* --- Left: Hamburger (Mobile) --- */}
-                    <div className="flex items-center lg:hidden">
-                        <div className="dropdown">
-                            <div tabIndex={0} className="btn btn-ghost p-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
-                                </svg>
-                            </div>
-                            <ul
-                                tabIndex={0}
-                                className="menu menu-sm dropdown-content bg-white/90 backdrop-blur-md rounded-box mt-3 w-56 p-2 shadow flex flex-col gap-1"
-                            >
-                                {renderNavItems(true)}
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div className="flex-1 flex justify-center lg:justify-start">
-                        <Link to="/" className="flex items-center gap-2">
-                            <img src={logoMat} alt="Logo" className="h-10 w-10 object-contain" />
-                            <span className="text-xl font-bold text-black hover:text-amber-400 transition">Matrimony</span>
-                        </Link>
-                    </div>
-
-                    <ul className="hidden lg:flex menu menu-horizontal gap-6 absolute left-1/2 transform -translate-x-1/2">
-                        {renderNavItems()}
-                    </ul>
-
-
-                    {/* Avatar dropdown and (if user stay or user not stay)  */}
-                    {
-                        user ? (
-                            <div className="dropdown dropdown-end">
-
-                                {/* Avatar */}
-                                <div tabIndex={0} className="flex items-center gap-2 cursor-pointer">
-                                    <div className="w-8 h-8 rounded-full overflow-hidden hover:border-yellow-400">
-                                        <img
-                                            src={user?.photoURL || UserIcon}
-                                            alt="User"
-                                            className="w-full h-full object-cover"
-                                        />
-                                    </div>
+                        {/* Mobile Menu */}
+                        <div className="lg:hidden">
+                            <div className="dropdown">
+                                <div tabIndex={0} className="btn btn-ghost p-2">
+                                    ☰
                                 </div>
-
-                                {/* Dropdown user and admin profile */}
-                                <ul
-                                    tabIndex={0}
-                                    className="dropdown-content mt-4 w-52 rounded-xl bg-white shadow-xl p-3 space-y-2"
-                                >
-                                    <li className="text-center font-semibold">
-                                        {user.displayName || "User"}
-                                    </li>
-
-                                    <li>
-                                        <Link
-                                            to="/profile"
-                                            className="flex items-center justify-center gap-2 py-2 rounded-lg bg-black text-white hover:bg-yellow-400 hover:text-black transition"
-                                        >
-                                            <IoMdContact className="text-lg" />
-                                            <span>Profile</span>
-                                        </Link>
-                                    </li>
-
-                                    <li>
-                                        <button
-                                            onClick={logOut}
-                                            className="flex items-center justify-center gap-2 w-full py-2 rounded-lg bg-black text-white hover:bg-yellow-400 hover:text-black transition"
-                                        >
-                                            <LiaSignOutAltSolid className="text-lg" />
-                                            <span>Sign Out</span>
-                                        </button>
-                                    </li>
-
+                                <ul className="dropdown-content bg-white rounded-box mt-3 w-56 p-2 shadow">
+                                    {renderNavItems(true)}
                                 </ul>
+                            </div>
+                        </div>
+
+                        {/* Logo */}
+                        <div className="flex-1 flex justify-center lg:justify-start">
+                            <Link to="/" className="flex items-center gap-2">
+                                <img src={logoMat} className="h-10 w-10" />
+                                <span className="text-xl font-bold text-black hover:text-yellow-500">
+                                    Matrimony
+                                </span>
+                            </Link>
+                        </div>
+
+                        {/* Desktop Menu */}
+                        <ul className="hidden lg:flex gap-6 absolute left-1/2 -translate-x-1/2">
+                            {renderNavItems()}
+                        </ul>
+
+                        {/* Right Side */}
+                        {user ? (
+                            <div
+                                onClick={() => setOpenSidebar(true)}
+                                className="cursor-pointer"
+                            >
+                                <img
+                                    src={user?.photoURL || UserIcon}
+                                    className="w-9 h-9 rounded-full border-2 hover:border-yellow-400"
+                                />
                             </div>
                         ) : (
-                            <div className="dropdown dropdown-end">
-                                <div
-                                    tabIndex={0}
-                                    className="w-10 h-10 rounded-full overflow-hidden border-2 cursor-pointer hover:border-yellow-400"
+                            <div className="flex gap-3">
+                                <Link
+                                    to="/login"
+                                    className="px-4 py-1 bg-black text-white rounded-lg hover:bg-yellow-400 hover:text-black"
                                 >
-                                    <img src={UserIcon} alt="User" />
-                                </div>
-
-                                <ul
-                                    tabIndex={0}
-                                    className="dropdown-content mt-4 w-52 rounded-xl bg-white shadow-xl p-3 space-y-2"
+                                    Login
+                                </Link>
+                                <Link
+                                    to="/signup"
+                                    className="px-4 py-1 bg-black text-white rounded-lg hover:bg-yellow-400 hover:text-black"
                                 >
-                                    <li>
-                                        <Link
-                                            to="/login"
-                                            className="block text-center py-2 rounded-lg bg-black hover:bg-yellow-400 hover:text-black transition"
-                                        >
-                                            Login
-                                        </Link>
-                                    </li>
-
-                                    <li>
-                                        <Link
-                                            to="/signup"
-                                            className="block text-center py-2 rounded-lg bg-black hover:bg-yellow-400 hover:text-black transition"
-                                        >
-                                            Create Account
-                                        </Link>
-                                    </li>
-                                </ul>
+                                    Sign Up
+                                </Link>
                             </div>
-                        )
-                    }
+                        )}
+                    </div>
                 </div>
-            </div>
-        </section >
+            </section>
+
+            {/* Sidebar Drawer */}
+            {openSidebar && (
+                <div className="fixed inset-0 z-50">
+                    {/* Overlay */}
+                    <div
+                        onClick={() => setOpenSidebar(false)}
+                        className="absolute inset-0 bg-black/50 cursor-pointer z-10"
+                    ></div>
+
+                    {/* Sidebar */}
+                    <div
+                        className="absolute right-0 w-64 bg-[#0d1117] p-6 flex flex-col gap-4 rounded-2xl z-20"
+                        style={{
+                            top: "64px", // navbar height
+                            height: "calc(80vh - 64px)", // hero section height minus navbar
+                        }}
+                    >
+                        <Sidebar
+                            user={user}
+                            logOut={logOut}
+                            closeSidebar={() => setOpenSidebar(false)} // ✅ add this
+                        />
+                    </div>
+                </div>
+            )}
+        </>
     );
 };
 
