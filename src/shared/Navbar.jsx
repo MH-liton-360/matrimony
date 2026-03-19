@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
+import { useRef, useEffect } from "react";
+
 
 import logoMat from "../assets/logo/Interlocked hands forming a heart.png";
 import UserIcon from "../assets/logo/user.png";
@@ -41,6 +43,23 @@ const Navbar = () => {
             </li>
         ));
     };
+    const sidebarRef = useRef();
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+                setOpenSidebar(false);
+            }
+        };
+
+        if (openSidebar) {
+            document.addEventListener("mousedown", handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [openSidebar]);
 
     return (
         <>
@@ -118,6 +137,7 @@ const Navbar = () => {
 
                     {/* Sidebar */}
                     <div
+                        ref={sidebarRef} // ✅ add this
                         className="absolute right-0 w-64 bg-[#0d1117] p-6 flex flex-col gap-4 rounded-2xl z-20"
                         style={{
                             top: "64px",
