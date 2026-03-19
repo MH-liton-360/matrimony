@@ -6,6 +6,9 @@ import logoMat from "../assets/logo/Interlocked hands forming a heart.png";
 import UserIcon from "../assets/logo/user.png";
 import { AuthContext } from "../context/AuthContext";
 
+import { LiaSignOutAltSolid } from "react-icons/lia";
+
+
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
     const [activeMenu, setActiveMenu] = useState("home");
@@ -108,11 +111,13 @@ const Navbar = () => {
                                     <li>
                                         <button
                                             onClick={logOut}
-                                            className="w-full py-2 rounded-lg bg-black text-white hover:bg-yellow-400 hover:text-black transition"
+                                            className="flex items-center justify-center gap-2 w-full py-2 rounded-lg bg-black text-white hover:bg-yellow-400 hover:text-black transition"
                                         >
-                                            Sign out
+                                            <LiaSignOutAltSolid className="text-lg" />
+                                            <span>Sign Out</span>
                                         </button>
                                     </li>
+
                                 </ul>
                             </div>
                         ) : (
