@@ -137,7 +137,7 @@ const Navbar = () => {
 
                     {/* Sidebar */}
                     <div
-                        ref={sidebarRef} // ✅ add this
+                        ref={sidebarRef}
                         className="absolute right-0 w-64 bg-[#0d1117] p-6 flex flex-col gap-4 rounded-2xl z-20"
                         style={{
                             top: "64px",
