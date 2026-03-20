@@ -14,7 +14,7 @@ const Sidebar = ({ user, logOut, closeSidebar }) => {
                             className="w-full h-full object-cover"
                         />
                     ) : (
-                        <FaUserCircle />
+                        <FaUserCircle></FaUserCircle>
                     )}
                 </div>
 
@@ -39,7 +39,7 @@ const Sidebar = ({ user, logOut, closeSidebar }) => {
                         onClick={closeSidebar}
                         className="flex items-center gap-3 px-5 py-4 text-gray-700 hover:bg-gray-100 transition border-b"
                     >
-                        <FaUser className="text-lg" />
+                        <FaUser className="text-lg" ></FaUser>
                         <span className="font-medium">My Profile</span>
                     </Link>
                 </li>
@@ -50,7 +50,7 @@ const Sidebar = ({ user, logOut, closeSidebar }) => {
                         onClick={closeSidebar}
                         className="flex items-center gap-3 px-5 py-4 text-gray-700 hover:bg-gray-100 transition border-b"
                     >
-                        <FaTachometerAlt className="text-lg" />
+                        <FaTachometerAlt className="text-lg" ></FaTachometerAlt>
                         <span className="font-medium">Dashboard</span>
                     </Link>
                 </li>
@@ -61,7 +61,7 @@ const Sidebar = ({ user, logOut, closeSidebar }) => {
                         onClick={closeSidebar}
                         className="flex items-center gap-3 px-5 py-4 text-gray-700 hover:bg-gray-100 transition"
                     >
-                        <FaCog className="text-lg" />
+                        <FaCog className="text-lg" ></FaCog>
                         <span className="font-medium">Settings</span>
                     </Link>
                 </li>
@@ -76,7 +76,7 @@ const Sidebar = ({ user, logOut, closeSidebar }) => {
                     }}
                     className="w-full flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white font-semibold py-3 rounded-xl transition"
                 >
-                    <FaSignOutAlt />
+                    <FaSignOutAlt></FaSignOutAlt>
                     Logout
                 </button>
             </div>
