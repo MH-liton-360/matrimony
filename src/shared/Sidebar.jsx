@@ -1,44 +1,85 @@
 import { Link } from "react-router-dom";
+import { FaUserCircle, FaUser, FaTachometerAlt, FaCog, FaSignOutAlt } from "react-icons/fa";
 
 const Sidebar = ({ user, logOut, closeSidebar }) => {
     return (
-        <div className="flex flex-col h-full">
-            <div className="mb-6">
-                <h2 className="text-xl font-bold text-white">
-                    {user?.displayName || "User"}
-                </h2>
+        <div className="w-72 bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
+            {/* Top User Info */}
+            <div className="flex items-center gap-4 p-5 border-b border-gray-200">
+                <div className="w-14 h-14 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center text-3xl text-gray-500">
+                    {user?.photoURL ? (
+                        <img
+                            src={user.photoURL}
+                            alt="User"
+                            className="w-full h-full object-cover"
+                        />
+                    ) : (
+                        <FaUserCircle />
+                    )}
+                </div>
+
+                <div>
+                    <h2 className="text-lg font-bold text-gray-800">
+                        {user?.displayName || "User"}
+                    </h2>
+                    <p className="text-sm text-gray-500">
+                        {user?.email || "No Email"}
+                    </p>
+                    <span className="inline-block mt-2 text-xs font-semibold bg-yellow-400 text-black px-3 py-1 rounded-full">
+                        Premium Member
+                    </span>
+                </div>
             </div>
 
-            <ul className="flex flex-col gap-3 flex-1">
+            {/* Menu Items */}
+            <ul className="flex flex-col">
                 <li>
                     <Link
                         to="/profile"
-                        onClick={closeSidebar} // sidebar close
-                        className="block hover:bg-yellow-400 hover:text-black p-2 rounded transition"
+                        onClick={closeSidebar}
+                        className="flex items-center gap-3 px-5 py-4 text-gray-700 hover:bg-gray-100 transition border-b"
                     >
-                        Profile
+                        <FaUser className="text-lg" />
+                        <span className="font-medium">My Profile</span>
                     </Link>
                 </li>
+
+                <li>
+                    <Link
+                        to="/dashboard"
+                        onClick={closeSidebar}
+                        className="flex items-center gap-3 px-5 py-4 text-gray-700 hover:bg-gray-100 transition border-b"
+                    >
+                        <FaTachometerAlt className="text-lg" />
+                        <span className="font-medium">Dashboard</span>
+                    </Link>
+                </li>
+
                 <li>
                     <Link
                         to="/settings"
-                        onClick={closeSidebar} // sidebar close
-                        className="block hover:bg-yellow-400 hover:text-black p-2 rounded transition"
+                        onClick={closeSidebar}
+                        className="flex items-center gap-3 px-5 py-4 text-gray-700 hover:bg-gray-100 transition"
                     >
-                        Settings
+                        <FaCog className="text-lg" />
+                        <span className="font-medium">Settings</span>
                     </Link>
                 </li>
             </ul>
 
-            <button
-                onClick={() => {
-                    logOut();
-                    closeSidebar(); // sidebar close on logout
-                }}
-                className="bg-yellow-400 text-black px-3 py-2 rounded mt-auto"
-            >
-                Logout
-            </button>
+            {/* Logout Button */}
+            <div className="p-4 border-t border-gray-200">
+                <button
+                    onClick={() => {
+                        logOut();
+                        closeSidebar();
+                    }}
+                    className="w-full flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white font-semibold py-3 rounded-xl transition"
+                >
+                    <FaSignOutAlt />
+                    Logout
+                </button>
+            </div>
         </div>
     );
 };
