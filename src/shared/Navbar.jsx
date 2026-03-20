@@ -138,10 +138,10 @@ const Navbar = () => {
                     {/* Sidebar */}
                     <div
                         ref={sidebarRef}
-                        className="absolute right-8 top-14 w76 bg-[#0d1117] p-6 flex flex-col gap-4 rounded-2xl z-50"
+                        className="absolute right-2 w76 bg-[#0d1117] p-2 flex flex-col gap-4 rounded-2xl z-20"
                         style={{
                             top: "64px",
-                            height: "calc(80vh - 64px)",
+                            //height: "calc(80vh - 64px)",
                         }}
                     >
                         <Sidebar
