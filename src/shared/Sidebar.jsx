@@ -3,7 +3,7 @@ import { FaUserCircle, FaUser, FaTachometerAlt, FaCog, FaSignOutAlt } from "reac
 
 const Sidebar = ({ user, logOut, closeSidebar }) => {
     return (
-        <div className="w-72 bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
+        <div className="w-64 bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
             {/* Top User Info */}
             <div className="flex items-center gap-4 p-5 border-b border-gray-200">
                 <div className="w-14 h-14 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center text-3xl text-gray-500">
@@ -22,7 +22,7 @@ const Sidebar = ({ user, logOut, closeSidebar }) => {
                     <h2 className="text-lg font-bold text-gray-800">
                         {user?.displayName || "User"}
                     </h2>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-500 break-all">
                         {user?.email || "No Email"}
                     </p>
                     <span className="inline-block mt-2 text-xs font-semibold bg-yellow-400 text-black px-3 py-1 rounded-full">
