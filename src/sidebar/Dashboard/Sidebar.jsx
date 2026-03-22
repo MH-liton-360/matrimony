@@ -3,7 +3,7 @@ import { FaSignOutAlt, FaUserCircle } from "react-icons/fa";
 
 const Sidebar = ({ user, logOut, menus }) => {
     return (
-        <div className="w-64 min-h-screen bg-white border-r border-gray-200 shadow-sm flex flex-col">
+        <div className="w-72 min-h-screen bg-white border-r border-gray-200 shadow-sm flex flex-col">
             <div className="p-5 border-b border-gray-200">
                 <div className="flex items-center gap-3">
                     <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center text-2xl text-gray-500">

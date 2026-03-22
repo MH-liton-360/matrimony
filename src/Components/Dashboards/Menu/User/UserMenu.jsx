@@ -1,4 +1,4 @@
-import { FaUser, FaHeart, FaAddressBook, FaCrown, FaCog, FaHome } from "react-icons/fa";
+import { FaUser, FaHeart, FaAddressBook, FaCrown, FaCog, FaHome, FaIdCard } from "react-icons/fa";
 
 const UserMenu = [
     {
@@ -10,6 +10,11 @@ const UserMenu = [
         name: "My Profile",
         path: "/dashboard/user/my-profile",
         icon: FaUser,
+    },
+    {
+        name: "Create Biodata",
+        path: "/dashboard/biodata",
+        icon: FaIdCard,
     },
     {
         name: "Favorites",
@@ -32,4 +37,5 @@ const UserMenu = [
         icon: FaCog,
     },
 ];
+
 export default UserMenu;
