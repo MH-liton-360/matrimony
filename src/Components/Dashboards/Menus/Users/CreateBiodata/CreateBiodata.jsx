@@ -1,7 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import { AuthContext } from "../../../../../context/AuthContext";
 
-const divisions = ["Dhaka", "Chattogram", "Rajshahi", "Khulna", "Barishal", "Sylhet", "Rangpur", "Mymensingh"];
+const countries = ["Bangladesh", "India", "USA", "UK", "Canada", "Australia", "Germany", "France"];
 const biodataTypes = ["Male", "Female"];
 const maritalStatuses = ["Unmarried", "Divorced", "Widowed"];
 const familyStatuses = ["Lower Middle Class", "Middle Class", "Upper Middle Class", "Rich"];
@@ -140,18 +140,20 @@ const CreateBiodata = () => {
                         </div>
                     )}
 
+
                     {/* Step 3 */}
                     {step === 3 && (
                         <div className="space-y-4">
-                            <select name="division" value={formData.division} onChange={handleChange} className="w-full border p-2 rounded">
-                                <option value="">Division</option>
-                                {divisions.map(d => <option key={d} value={d}>{d}</option>)}
+                            <select name="country" value={formData.country} onChange={handleChange} className="w-full border p-2 rounded">
+                                <option value="">Country</option>
+                                {countries.map(c => <option key={c} value={c}>{c}</option>)}
                             </select>
                             <input type="text" name="district" value={formData.district} onChange={handleChange} placeholder="District" className="w-full border p-2 rounded" />
                             <input type="text" name="presentAddress" value={formData.presentAddress} onChange={handleChange} placeholder="Present Address" className="w-full border p-2 rounded" />
                             <input type="text" name="permanentAddress" value={formData.permanentAddress} onChange={handleChange} placeholder="Permanent Address" className="w-full border p-2 rounded" />
                         </div>
                     )}
+
 
                     {/* Step 4 */}
                     {step === 4 && (
