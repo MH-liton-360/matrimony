@@ -3,7 +3,7 @@ import { userMenu } from "../menu/userMenu";
 import { adminMenu } from "../menu/adminMenu";
 import { Outlet } from "react-router-dom";
 
-const DashboardLayout = ({ user, role, logOut }) => {
+const Dashboard = ({ user, role, logOut }) => {
     const menus = role === "admin" ? adminMenu : userMenu;
 
     return (
@@ -17,4 +17,4 @@ const DashboardLayout = ({ user, role, logOut }) => {
     );
 };
 
-export default DashboardLayout;
+export default Dashboard;
