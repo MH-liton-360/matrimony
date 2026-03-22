@@ -1,10 +1,14 @@
 import Sidebar from "../../sidebar/Dashboard/Sidebar";
-import userMenu from "../../Components/Dashboards/User/UserMenu/UserMenu";
-import adminMenu from "../../Components/Dashboards/Admin/AdminMenu/AdminMenu";
+import userMenu from "../../Components/Dashboards/Menu/User/UserMenu";
+import adminMenu from "../../Components/Dashboards/Menu/Admin/AdminMenu";
 import { Outlet } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 
-const Dashboard = ({ user, role, logOut }) => {
+const Dashboard = ({ role }) => {
     // const role = "admin";
+    const { user, logOut } = useContext(AuthContext);
+
     const menus = role === "admin" ? adminMenu : userMenu;
 
     return (
