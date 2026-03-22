@@ -120,23 +120,39 @@ const CreateBiodata = () => {
                                 <option value="">Marital Status</option>
                                 {maritalStatuses.map(s => <option key={s} value={s}>{s}</option>)}
                             </select>
-                            <input type="text" name="profession" value={formData.profession} onChange={handleChange} placeholder="Profession" className="w-full border p-2 rounded" />
-                            <input type="text" name="monthlyIncome" value={formData.monthlyIncome} onChange={handleChange} placeholder="Monthly Income" className="w-full border p-2 rounded" />
+
+                            <div className="flex">
+                                <input type="date" name="dateOfBirth" value={formData.dateOfBirth} onChange={handleChange} className="w-full border p-2 rounded" />
+                                <input type="number" name="age" value={formData.age} readOnly className="w-full border p-2 rounded bg-black text-white" />
+                            </div>
+
+                            <div className="flex">
+                                <input type="text" name="height" value={formData.height} onChange={handleChange} placeholder="Height" className="w-full border p-2 rounded" />
+                                <input type="text" name="weight" value={formData.weight} onChange={handleChange} placeholder="Weight" className="w-full border p-2 rounded" />
+                            </div>
+
+                            <div className="flex">
+                                <input type="text" name="profession" value={formData.profession} onChange={handleChange} placeholder="Profession" className="w-full border p-2 rounded" />
+                                <input type="text" name="monthlyIncome" value={formData.monthlyIncome} onChange={handleChange} placeholder="Monthly Income" className="w-full border p-2 rounded" />
+                            </div>
                             <input type="text" name="profileImage" value={formData.profileImage} onChange={handleChange} placeholder="Profile Image URL" className="w-full border p-2 rounded" />
-                            <input type="date" name="dateOfBirth" value={formData.dateOfBirth} onChange={handleChange} className="w-full border p-2 rounded" />
-                            <input type="number" name="age" value={formData.age} readOnly className="w-full border p-2 rounded bg-black text-white" />
-                            <input type="text" name="height" value={formData.height} onChange={handleChange} placeholder="Height" className="w-full border p-2 rounded" />
-                            <input type="text" name="weight" value={formData.weight} onChange={handleChange} placeholder="Weight" className="w-full border p-2 rounded" />
+
+
                         </div>
                     )}
 
                     {/* Step 2 */}
                     {step === 2 && (
-                        <div className="flex gap-4 flex-nowrap overflow-x-auto mb-4">
-                            <input type="text" name="fatherName" value={formData.fatherName} onChange={handleChange} placeholder="Father Name" className="flex-none w-52 border p-2 rounded" />
-                            <input type="text" name="fatherProfession" value={formData.fatherProfession} onChange={handleChange} placeholder="Father Profession" className="flex-none w-52 border p-2 rounded" />
-                            <input type="text" name="motherName" value={formData.motherName} onChange={handleChange} placeholder="Mother Name" className="flex-none w-52 border p-2 rounded" />
-                            <input type="text" name="motherProfession" value={formData.motherProfession} onChange={handleChange} placeholder="Mother Profession" className="flex-none w-52 border p-2 rounded" />
+                        <div>
+                            <div className="flex gap-4 mb-4">
+                                <input type="text" name="fatherName" value={formData.fatherName} onChange={handleChange} placeholder="Father Name" className="flex-none w-52 border p-2 rounded" />
+                                <input type="text" name="fatherProfession" value={formData.fatherProfession} onChange={handleChange} placeholder="Father Profession" className="flex-none w-52 border p-2 rounded" />
+                            </div>
+
+                            <div className="flex gap-4 mb-4">
+                                <input type="text" name="motherName" value={formData.motherName} onChange={handleChange} placeholder="Mother Name" className="flex-none w-52 border p-2 rounded" />
+                                <input type="text" name="motherProfession" value={formData.motherProfession} onChange={handleChange} placeholder="Mother Profession" className="flex-none w-52 border p-2 rounded" />
+                            </div>
                             <select name="familyStatus" value={formData.familyStatus} onChange={handleChange} className="flex-none w-52 border p-2 rounded">
                                 <option value="">Family Status</option>
                                 {familyStatuses.map(s => <option key={s} value={s}>{s}</option>)}
