@@ -23,7 +23,7 @@ const CreateBiodata = () => {
         biodataType: "", profileImage: "", dateOfBirth: "", age: "",
         height: "", weight: "", maritalStatus: "", profession: "", monthlyIncome: "",
         fatherName: "", motherName: "", fatherProfession: "", motherProfession: "",
-        familyStatus: "", familyType: "", division: "", district: "",
+        familyStatus: "", familyType: "", country: "", district: "",
         presentAddress: "", permanentAddress: "", highestEducation: "",
         institutionName: "", passingYear: "", aboutMe: "",
         expectedAge: "", expectedHeight: "", expectedEducation: "",
