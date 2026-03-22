@@ -11,7 +11,7 @@ const steps = ["Basic Info", "Family Info", "Address Info", "Education", "Partne
 const requiredFields = {
     1: ["biodataType", "profileImage", "dateOfBirth", "height", "weight"],
     2: ["fatherName", "motherName", "familyStatus", "familyType"],
-    3: ["division", "district", "presentAddress", "permanentAddress"],
+    3: ["country", "district", "presentAddress", "permanentAddress"],
     4: ["highestEducation", "aboutMe"],
     5: []
 };
