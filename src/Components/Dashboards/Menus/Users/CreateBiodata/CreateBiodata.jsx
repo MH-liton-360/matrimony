@@ -116,6 +116,12 @@ const CreateBiodata = () => {
                                 <option value="">Select Type</option>
                                 {biodataTypes.map(t => <option key={t} value={t}>{t}</option>)}
                             </select>
+                            <select name="maritalStatus" value={formData.maritalStatus} onChange={handleChange} className="w-full border p-2 rounded">
+                                <option value="">Marital Status</option>
+                                {maritalStatuses.map(s => <option key={s} value={s}>{s}</option>)}
+                            </select>
+                            <input type="text" name="profession" value={formData.profession} onChange={handleChange} placeholder="Profession" className="w-full border p-2 rounded" />
+                            <input type="text" name="monthlyIncome" value={formData.monthlyIncome} onChange={handleChange} placeholder="Monthly Income" className="w-full border p-2 rounded" />
                             <input type="text" name="profileImage" value={formData.profileImage} onChange={handleChange} placeholder="Profile Image URL" className="w-full border p-2 rounded" />
                             <input type="date" name="dateOfBirth" value={formData.dateOfBirth} onChange={handleChange} className="w-full border p-2 rounded" />
                             <input type="number" name="age" value={formData.age} readOnly className="w-full border p-2 rounded bg-black text-white" />
