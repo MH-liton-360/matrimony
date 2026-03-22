@@ -6,7 +6,7 @@ const biodataTypes = ["Male", "Female"];
 const maritalStatuses = ["Unmarried", "Divorced", "Widowed"];
 const familyStatuses = ["Lower Middle Class", "Middle Class", "Upper Middle Class", "Rich"];
 const familyTypes = ["Nuclear", "Joint"];
-const steps = ["Basic Info", "Family Info", "Address Info", "Education/About Me", "Partner Preferences"];
+const steps = ["Basic Info", "Family Info", "Address Info", "Education", "Partner Preferences"];
 
 const requiredFields = {
     1: ["biodataType", "profileImage", "dateOfBirth", "height", "weight"],
