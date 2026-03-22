@@ -1,9 +1,10 @@
-import Sidebar from "../components/Sidebar";
-import { userMenu } from "../menu/userMenu";
-import { adminMenu } from "../menu/adminMenu";
+import Sidebar from "../../sidebar/Dashboard/Sidebar";
+import userMenu from "../../Components/Dashboards/User/UserMenu/UserMenu";
+import adminMenu from "../../Components/Dashboards/Admin/AdminMenu/AdminMenu";
 import { Outlet } from "react-router-dom";
 
 const Dashboard = ({ user, role, logOut }) => {
+    // const role = "admin";
     const menus = role === "admin" ? adminMenu : userMenu;
 
     return (

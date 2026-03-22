@@ -1,6 +1,6 @@
 import { FaUser, FaHeart, FaAddressBook, FaCrown, FaCog, FaHome } from "react-icons/fa";
 
-export const UserMenu = [
+const UserMenu = [
     {
         name: "Overview",
         path: "/dashboard/user/overview",
@@ -32,3 +32,4 @@ export const UserMenu = [
         icon: FaCog,
     },
 ];
+export default UserMenu;

@@ -7,6 +7,7 @@ import Login from "../pages/Authentication/Login";
 import SignUp from "../pages/Authentication/SignUp";
 import Error from "../Components/Error/Errors/Error";
 import Profile from "../pages/Profile/Profile";
+import Dashboard from "../layouts/Dashboard/Dashboard";
 
 export const router = createBrowserRouter([
     {
@@ -19,8 +20,14 @@ export const router = createBrowserRouter([
             { path: "signup", Component: SignUp },
             { path: "*", Component: Error },
             { path: "profile", Component: Profile }
+
         ]
     },
+    {
+        path: "dashboard",
+        Component: Dashboard,
+    }
+
 ]);
 
 export default router;

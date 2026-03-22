@@ -8,7 +8,7 @@ import logoMat from "../assets/logo/Interlocked hands forming a heart.png";
 import UserIcon from "../assets/logo/user.png";
 import { AuthContext } from "../context/AuthContext";
 
-import Sidebar from "../Components/Profiles/Profile-sidebar/Sidebar";
+import Sidebar from "../sidebar/profile/Sidebar";
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
