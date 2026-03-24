@@ -1,7 +1,17 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { FaSignOutAlt, FaUserCircle } from "react-icons/fa";
 
 const Sidebar = ({ user, logOut, menus }) => {
+    const navigate = useNavigate();
+
+    const handleLogout = async () => {
+        try {
+            await logOut();
+            navigate("/", { replace: true });
+        } catch (error) {
+            console.error("Logout failed:", error);
+        }
+    }
     return (
         <div className="w-72 min-h-screen bg-white border-r border-gray-200 shadow-sm flex flex-col">
             <div className="p-5 border-b border-gray-200">
@@ -50,18 +60,18 @@ const Sidebar = ({ user, logOut, menus }) => {
                         </li>
                     );
                 })}
-            </ul>
 
-            <div className="p-4 border-t border-gray-200">
                 <button
-                    onClick={logOut}
+                    onClick={handleLogout}
                     className="w-full flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white font-semibold py-3 rounded-xl transition"
                 >
                     <FaSignOutAlt />
                     Logout
                 </button>
-            </div>
+            </ul>
+
         </div>
+
     );
 };
 
