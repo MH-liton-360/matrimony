@@ -8,7 +8,7 @@ const UserMenu = [
     },
     {
         name: "My Profile",
-        path: "/dashboard/user/my-profile",
+        path: "/dashboard/profile",
         icon: FaUser,
     },
     {

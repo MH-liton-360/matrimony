@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
-import { AuthContext } from "../../context/AuthContext";
-import { storage } from "../../firebase/Firebase.config";
+import { AuthContext } from "../../../../../context/AuthContext";
+import { storage } from "../../../../../firebase/Firebase.config";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { updateProfile } from "firebase/auth";
 

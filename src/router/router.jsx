@@ -6,7 +6,7 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Authentication/Login";
 import SignUp from "../pages/Authentication/SignUp";
 import Error from "../Components/Error/Errors/Error";
-import Profile from "../pages/Profile/Profile";
+import Profile from "../Components/Dashboards/Menus/Users/Profile/Profile";
 import Dashboard from "../layouts/Dashboard/Dashboard";
 import CreateBiodata from "../Components/Dashboards/Menus/Users/CreateBiodata/CreateBiodata";
 
@@ -20,7 +20,6 @@ export const router = createBrowserRouter([
             { path: "login", Component: Login },
             { path: "signup", Component: SignUp },
             { path: "*", Component: Error },
-            { path: "profile", Component: Profile }
 
         ]
     },
@@ -29,6 +28,8 @@ export const router = createBrowserRouter([
         Component: Dashboard,
         children: [
             { path: "biodata", Component: CreateBiodata },
+            { path: "profile", Component: Profile },
+
         ]
     }
 
