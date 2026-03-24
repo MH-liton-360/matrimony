@@ -12,10 +12,10 @@ const Dashboard = ({ role }) => {
     const menus = role === "admin" ? adminMenu : userMenu;
 
     return (
-        <div className="flex">
+        <div className="bg-gray-50 min-h-screen">
             <Sidebar user={user} logOut={logOut} menus={menus} />
 
-            <div className="flex-1 p-6 bg-gray-50 min-h-screen">
+            <div className="ml-72 min-h-screen p-6">
                 <Outlet />
             </div>
         </div>

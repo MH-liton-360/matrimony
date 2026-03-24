@@ -7,13 +7,14 @@ const Sidebar = ({ user, logOut, menus }) => {
     const handleLogout = async () => {
         try {
             await logOut();
-            navigate("/home", { replace: true });
+            navigate("/", { replace: true });
         } catch (error) {
             console.error("Logout failed:", error);
         }
-    }
+    };
+
     return (
-        <div className="w-72 min-h-screen bg-white border-r border-gray-200 shadow-sm flex flex-col">
+        <div className="fixed top-0 left-0 w-72 h-screen bg-white border-r border-gray-200 shadow-sm flex flex-col">
             <div className="p-5 border-b border-gray-200">
                 <div className="flex items-center gap-3">
                     <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center text-2xl text-gray-500">
@@ -61,17 +62,17 @@ const Sidebar = ({ user, logOut, menus }) => {
                     );
                 })}
 
-                <button
-                    onClick={handleLogout}
-                    className="w-full flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white font-semibold py-3 rounded-xl transition"
-                >
-                    <FaSignOutAlt />
-                    Logout
-                </button>
+                <li>
+                    <button
+                        onClick={handleLogout}
+                        className="w-full flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white font-semibold py-3 rounded-xl transition"
+                    >
+                        <FaSignOutAlt />
+                        Logout
+                    </button>
+                </li>
             </ul>
-
         </div>
-
     );
 };
 
