@@ -81,7 +81,6 @@ const CreateBiodata = () => {
         console.log(biodataInfo);
         alert("Biodata submitted successfully!");
     }
-
     const progress = (step / steps.length) * 100;
 
     return (
