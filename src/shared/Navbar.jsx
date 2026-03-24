@@ -127,21 +127,16 @@ const Navbar = () => {
 
             {/* Sidebar Drawer */}
             {openSidebar && (
-                <div className="">
+                <>
                     {/* Overlay */}
                     <div
                         onClick={() => setOpenSidebar(false)}
-                        className="absolute inset-0 bg-black/50 cursor-pointer z-10"
+                        className="fixed inset-0 bg-black/50 cursor-pointer z-50"
                     ></div>
 
                     {/* Sidebar */}
                     <div
-                        ref={sidebarRef}
-                        className="absolute right-2 w76 bg-[#0d1117] p-2 flex flex-col gap-4 rounded-2xl z-20"
-                        style={{
-                            top: "64px",
-                            //height: "calc(80vh - 64px)",
-                        }}
+                        className="fixed top-16 right-4 w-72 bg-white rounded-2xl shadow-2xl z-60"
                     >
                         <Sidebar
                             user={user}
@@ -149,7 +144,7 @@ const Navbar = () => {
                             closeSidebar={() => setOpenSidebar(false)}
                         />
                     </div>
-                </div>
+                </>
             )}
         </>
     );
