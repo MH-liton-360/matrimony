@@ -108,7 +108,6 @@ const CreateBiodata = () => {
                 {error && <p className="text-red-600 mb-4">{error}</p>}
 
                 <form onSubmit={handleSubmit}>
-
                     {/* Step 1 */}
                     {step === 1 && (
                         <div className="space-y-4">
