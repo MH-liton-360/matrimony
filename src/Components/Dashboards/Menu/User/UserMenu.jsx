@@ -1,10 +1,15 @@
-import { FaUser, FaHeart, FaAddressBook, FaCrown, FaCog, FaHome, FaIdCard } from "react-icons/fa";
+import { FaUser, FaHeart, FaAddressBook, FaCrown, FaCog, FaHome, FaIdCard, FaTachometerAlt } from "react-icons/fa";
 
 const UserMenu = [
     {
-        name: "Overview",
-        path: "/dashboard/user/overview",
+        name: "Home",
+        path: "home",
         icon: FaHome,
+    },
+    {
+        name: "Overview",
+        path: "/dashboard/admin/overview",
+        icon: FaTachometerAlt,
     },
     {
         name: "My Profile",

@@ -1,10 +1,15 @@
-import { FaUsers, FaList, FaCrown, FaChartBar, FaCog, FaHome } from "react-icons/fa";
+import { FaUsers, FaList, FaCrown, FaChartBar, FaCog, FaHome, FaTachometerAlt, } from "react-icons/fa";
 
 const AdminMenu = [
     {
+        name: "Home",
+        path: "home",
+        icon: FaHome,
+    },
+    {
         name: "Overview",
         path: "/dashboard/admin/overview",
-        icon: FaHome,
+        icon: FaTachometerAlt,
     },
     {
         name: "Manage Users",
