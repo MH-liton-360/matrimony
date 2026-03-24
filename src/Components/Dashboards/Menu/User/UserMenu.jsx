@@ -3,7 +3,7 @@ import { FaUser, FaHeart, FaAddressBook, FaCrown, FaCog, FaHome, FaIdCard, FaTac
 const UserMenu = [
     {
         name: "Home",
-        path: "home",
+        path: "/home",
         icon: FaHome,
     },
     {

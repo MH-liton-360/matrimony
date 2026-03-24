@@ -7,12 +7,14 @@ const Sidebar = ({ user, logOut, menus }) => {
     const handleLogout = async () => {
         try {
             await logOut();
-            navigate("/", { replace: true });
+            navigate("/home", { replace: true });
         } catch (error) {
             console.error("Logout failed:", error);
         }
     };
-
+    const goHome = () => {
+        navigate("/home", { replace: true }); // Dashboard → Main Home
+    };
     return (
         <div className="fixed top-0 left-0 w-72 h-screen bg-white border-r border-gray-200 shadow-sm flex flex-col">
             <div className="p-5 border-b border-gray-200">
@@ -44,6 +46,19 @@ const Sidebar = ({ user, logOut, menus }) => {
                 {menus.map((item) => {
                     const Icon = item.icon;
 
+                    if (item.path === "/home") {
+                        return (
+                            <li key={item.path}>
+                                <button
+                                    onClick={goHome}
+                                    className="flex items-center gap-3 px-4 py-3 rounded-xl transition text-gray-700 hover:bg-gray-100 w-full"
+                                >
+                                    <Icon className="text-lg" />
+                                    <span>{item.name}</span>
+                                </button>
+                            </li>
+                        );
+                    }
                     return (
                         <li key={item.path}>
                             <NavLink

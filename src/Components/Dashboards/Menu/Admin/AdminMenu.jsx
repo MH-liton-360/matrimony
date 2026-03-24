@@ -3,7 +3,7 @@ import { FaUsers, FaList, FaCrown, FaChartBar, FaCog, FaHome, FaTachometerAlt, }
 const AdminMenu = [
     {
         name: "Home",
-        path: "home",
+        path: "/home",
         icon: FaHome,
     },
     {
