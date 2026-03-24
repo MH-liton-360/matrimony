@@ -15,6 +15,7 @@ const Dashboard = ({ role }) => {
         <div className="bg-gray-50 min-h-screen">
             <Sidebar user={user} logOut={logOut} menus={menus} />
 
+            {/* Outlet  */}
             <div className="ml-72 min-h-screen p-6">
                 <Outlet />
             </div>
