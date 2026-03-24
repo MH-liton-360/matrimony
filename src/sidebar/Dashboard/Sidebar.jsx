@@ -7,7 +7,7 @@ const Sidebar = ({ user, logOut, menus }) => {
     const handleLogout = async () => {
         try {
             await logOut();
-            navigate("/", { replace: true });
+            navigate("/home", { replace: true });
         } catch (error) {
             console.error("Logout failed:", error);
         }
