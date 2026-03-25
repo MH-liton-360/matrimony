@@ -51,7 +51,7 @@ const Sidebar = ({ user, logOut, menus }) => {
                             <li key={item.path}>
                                 <button
                                     onClick={goHome}
-                                    className="flex items-center gap-3 px-4 py-3 rounded-xl transition text-gray-700 hover:bg-gray-100 w-full"
+                                    className="flex items-center gap-3 px-4 py-1 rounded-xl transition text-gray-700 hover:bg-gray-100 w-full"
                                 >
                                     <Icon className="text-lg" />
                                     <span>{item.name}</span>
@@ -64,8 +64,8 @@ const Sidebar = ({ user, logOut, menus }) => {
                             <NavLink
                                 to={item.path}
                                 className={({ isActive }) =>
-                                    `flex items-center gap-3 px-4 py-3 rounded-xl transition ${isActive
-                                        ? "bg-yellow-400 text-black font-semibold"
+                                    `flex items-center gap-3 px-4 py-1 rounded-xl transition ${isActive
+                                        ? "bg-yellow-400 text-black"
                                         : "text-gray-700 hover:bg-gray-100"
                                     }`
                                 }

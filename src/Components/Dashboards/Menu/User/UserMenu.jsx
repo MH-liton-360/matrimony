@@ -1,4 +1,4 @@
-import { FaUser, FaHeart, FaAddressBook, FaCrown, FaCog, FaHome, FaIdCard, FaTachometerAlt } from "react-icons/fa";
+import { FaUser, FaHeart, FaAddressBook, FaCrown, FaCog, FaHome, FaIdCard, FaTachometerAlt, FaEye } from "react-icons/fa";
 
 const UserMenu = [
     {
