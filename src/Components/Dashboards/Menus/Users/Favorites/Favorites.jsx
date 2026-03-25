@@ -1,8 +1,12 @@
 const Favorites = () => {
     return (
-        <div>
+        <section>
+            <title>Favorites - Matrimony</title>
 
-        </div>
+            <div>
+                <h1>This is favorites</h1>
+            </div>
+        </section>
     );
 };
 
