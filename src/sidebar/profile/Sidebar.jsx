@@ -69,6 +69,17 @@ const Sidebar = ({ user, logOut, closeSidebar }) => {
 
                 <li>
                     <Link
+                        to="/support"
+                        onClick={closeSidebar}
+                        className="flex items-center gap-3 px-5 py-4 text-gray-700 hover:bg-gray-100 transition border-b"
+                    >
+                        <FaHeadset className="text-lg" /> {/* Support icon */}
+                        <span className="font-medium">Support</span>
+                    </Link>
+                </li>
+
+                <li>
+                    <Link
                         to="/settings"
                         onClick={closeSidebar}
                         className="flex items-center gap-3 px-5 py-4 text-gray-700 hover:bg-gray-100 transition"
