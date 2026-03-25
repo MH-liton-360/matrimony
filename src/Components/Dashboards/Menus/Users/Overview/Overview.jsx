@@ -1,9 +1,12 @@
 
 const Overview = () => {
     return (
-        <div>
-            <h1 className="text-black">this is line</h1>
-        </div>
+        <section>
+            <title>Overview - Matrimony</title>
+            <div>
+                <h1 className="text-black">this is line</h1>
+            </div>
+        </section>
     );
 };
 
