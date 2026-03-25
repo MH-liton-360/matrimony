@@ -3,6 +3,7 @@ import { AuthContext } from "../../../../../context/AuthContext";
 import { storage } from "../../../../../firebase/Firebase.config";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { updateProfile } from "firebase/auth";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
     const { user, setUser } = useContext(AuthContext);
@@ -136,9 +137,9 @@ const Profile = () => {
 
                     {/* Edit Button */}
                     <div className="mt-6 text-center">
-                        <button className="btn btn-primary px-8">
+                        <Link to={"/dashboard/biodata"} className="btn btn-primary px-8">
                             Edit Profile
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>
