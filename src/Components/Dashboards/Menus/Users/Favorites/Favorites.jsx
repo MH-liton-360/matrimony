@@ -7,6 +7,7 @@ const Favorites = () => {
             <div>
                 <h1>This is favorites</h1>
             </div>
+
         </section>
     );
 };
