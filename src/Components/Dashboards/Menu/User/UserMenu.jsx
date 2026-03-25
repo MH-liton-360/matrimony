@@ -24,6 +24,7 @@ const UserMenu = [
     {
         name: "View Biodata",
         path: "/dashboard/ViewBiodata",
+        // eslint-disable-next-line no-undef
         icon: FaEye,
     },
     {
