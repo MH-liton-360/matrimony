@@ -8,7 +8,7 @@ const UserMenu = [
     },
     {
         name: "Overview",
-        path: "/dashboard/admin/overview",
+        path: "/dashboard/overview",
         icon: FaTachometerAlt,
     },
     {

@@ -1,4 +1,5 @@
 // Background 
+import { Link } from 'react-router-dom'
 import BgBanner from '../../../assets/BG/BG-Banner.png'
 
 // Image 
@@ -31,9 +32,9 @@ const Banner = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-2 pt-3 justify-center md:justify-start">
-                    <button className="btn btn-outline btn-secondary w-full sm:w-auto">
+                    <Link to={"/extra"} className="btn btn-outline btn-secondary w-full sm:w-auto">
                         Create Free Profile
-                    </button>
+                    </Link>
                     <button className="btn btn-outline btn-secondary w-full sm:w-auto">
                         Browse Profile
                     </button>
