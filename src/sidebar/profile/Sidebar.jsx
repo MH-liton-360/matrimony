@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaUserCircle, FaUser, FaTachometerAlt, FaCog, FaSignOutAlt } from "react-icons/fa";
+import { FaUserCircle, FaUser, FaTachometerAlt, FaCog, FaSignOutAlt, FaLifeRing } from "react-icons/fa";
 
 const Sidebar = ({ user, logOut, closeSidebar }) => {
     return (
@@ -53,6 +53,17 @@ const Sidebar = ({ user, logOut, closeSidebar }) => {
                     >
                         <FaTachometerAlt className="text-lg" ></FaTachometerAlt>
                         <span className="font-medium">Dashboard</span>
+                    </Link>
+                </li>
+
+                <li>
+                    <Link
+                        to="/helpdesk"
+                        onClick={closeSidebar}
+                        className="flex items-center gap-3 px-5 py-4 text-gray-700 hover:bg-gray-100 transition border-b"
+                    >
+                        <FaLifeRing className="text-lg" /> {/* Help Desk icon */}
+                        <span className="font-medium">Help Desk</span>
                     </Link>
                 </li>
 
