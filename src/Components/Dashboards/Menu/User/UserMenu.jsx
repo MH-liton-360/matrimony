@@ -22,6 +22,11 @@ const UserMenu = [
         icon: FaIdCard,
     },
     {
+        name: "View Biodata",
+        path: "/dashboard/ViewBiodata",
+        icon: FaEye,
+    },
+    {
         name: "Favorites",
         path: "/dashboard/user/favorites",
         icon: FaHeart,
