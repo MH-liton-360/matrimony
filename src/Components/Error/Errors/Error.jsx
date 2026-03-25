@@ -4,7 +4,7 @@ const Error = () => {
     return (
         <section>
             <title>
-
+                404 - Page no found Matrimony
             </title>
             <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-[#000E24] via-[#001a40] to-[#000E24] px-4">
                 <div className="text-center max-w-xl">
