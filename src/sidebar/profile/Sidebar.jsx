@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaUserCircle, FaUser, FaTachometerAlt, FaCog, FaSignOutAlt, FaLifeRing } from "react-icons/fa";
+import { FaUserCircle, FaUser, FaTachometerAlt, FaCog, FaSignOutAlt, FaLifeRing, FaHeadset } from "react-icons/fa";
 
 const Sidebar = ({ user, logOut, closeSidebar }) => {
     return (
