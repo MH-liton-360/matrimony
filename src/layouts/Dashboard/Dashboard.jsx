@@ -5,8 +5,8 @@ import { Outlet } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 
-const Dashboard = () => {
-    const role = "admin";
+const Dashboard = ({ role }) => {
+    // const role = "admin";
     const { user, logOut } = useContext(AuthContext);
 
     const menus = role === "admin" ? adminMenu : userMenu;

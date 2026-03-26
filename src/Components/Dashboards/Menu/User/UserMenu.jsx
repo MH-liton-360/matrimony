@@ -44,7 +44,7 @@ const UserMenu = [
     },
     {
         name: "Settings",
-        path: "/dashboard/user/settings",
+        path: "/dashboard/settings",
         icon: FaCog,
     },
 ];

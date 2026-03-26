@@ -11,6 +11,7 @@ import Dashboard from "../layouts/Dashboard/Dashboard";
 import CreateBiodata from "../Components/Dashboards/Menus/Users/CreateBiodata/CreateBiodata";
 import Overview from "../Components/Dashboards/Menus/Users/Overview/Overview";
 import Setting from "../pages/Setting/Setting";
+import UserSetting from "../Components/Dashboards/Menus/Users/Setting/UserSetting";
 
 export const router = createBrowserRouter([
     {
@@ -32,6 +33,7 @@ export const router = createBrowserRouter([
             { path: "biodata", Component: CreateBiodata },
             { path: "profile", Component: Profile },
             { path: "overview", Component: Overview },
+            { path: "settings", Component: UserSetting },
         ]
     },
     { path: "*", Component: Error },
