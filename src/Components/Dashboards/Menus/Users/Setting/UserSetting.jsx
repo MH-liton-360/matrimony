@@ -1,7 +1,7 @@
 import { useState } from "react";
-// import ThemeToggle from "../components/ThemeToggle";
-// import FileUpload from "../components/FileUpload";
-// import NotificationToggle from "../components/NotificationToggle";
+import FileUpload from "../../../../UserToggle/FileUpload/FileUpload";
+import NotificationToggle from "../../../../UserToggle/NotificationToggle/NotificationToggle";
+import ThemeToggle from "../../../../UserToggle/ThemeToggle/ThemeToggle";
 
 const UserSetting = () => {
     const [profile, setProfile] = useState({
@@ -31,14 +31,14 @@ const UserSetting = () => {
             <h1 className="text-3xl font-bold mb-6">User Settings</h1>
 
             <div className="mb-6">
-                {/* <ThemeToggle /> */}
+                <ThemeToggle></ThemeToggle>
             </div>
 
             <form
                 onSubmit={handleSubmit}
                 className="max-w-lg bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md space-y-4"
             >
-                {/* <FileUpload file={file} setFile={setFile} /> */}
+                <FileUpload file={file} setFile={setFile}></FileUpload>
 
                 <div>
                     <label className="block mb-1 font-medium">Name</label>
@@ -84,7 +84,7 @@ const UserSetting = () => {
                     />
                 </div>
 
-                {/* <NotificationToggle enabled={notifications} setEnabled={setNotifications} /> */}
+                <NotificationToggle enabled={notifications} setEnabled={setNotifications}></NotificationToggle>
 
                 <button
                     type="submit"
