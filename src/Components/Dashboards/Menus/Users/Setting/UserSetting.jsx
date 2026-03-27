@@ -23,6 +23,7 @@ const UserSetting = () => {
             file,
             notifications,
         });
+
         // Backend API call can be added here
     };
 
