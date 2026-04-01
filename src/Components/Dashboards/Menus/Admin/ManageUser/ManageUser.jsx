@@ -1,9 +1,9 @@
 
 const ManageUser = () => {
     return (
-        <div>
-            <h1>This is manage user</h1>
-        </div>
+        <section>
+            <title>Dashboard/Manage Users - Matrimony</title>
+        </section>
     );
 };
 
