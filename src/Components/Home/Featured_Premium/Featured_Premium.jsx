@@ -13,7 +13,6 @@ const Featured_Premium = () => {
                 className="text-center text-4xl"
             />
 
-
             <div className="card bg-base-100 w-96 shadow-sm">
                 <figure>
                     <img
