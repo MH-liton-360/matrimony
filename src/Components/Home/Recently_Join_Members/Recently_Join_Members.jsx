@@ -10,7 +10,7 @@ const Recently_Join_Members = () => {
 
             {/* Demo  */}
 
-            <div className="bg-white rounded-lg shadow-md p-4 w-64">
+            <div className="bg-white rounded-lg shadow-md p-4 w-56">
                 {/* Image placeholder */}
                 <div className="h-32 w-full bg-gray-200 rounded-md mb-4 flex items-center justify-center">
                     <span className="text-gray-500">Photo</span>
