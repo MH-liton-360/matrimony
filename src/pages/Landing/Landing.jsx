@@ -90,9 +90,7 @@ const Landing = () => {
 
                     {age < 22 && (
                         <p className="text-red-500 text-xs">
-                            <Marquee>
-                                You must be at least 22 years old to continue
-                            </Marquee>
+                            You must be at least 22 years old to continue
                         </p>
                     )}
 
