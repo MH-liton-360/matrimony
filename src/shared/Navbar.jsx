@@ -18,7 +18,7 @@ const Navbar = () => {
 
     const menuItems = [
         { name: "Home", to: "home" },
-        { name: "Profiles", to: "extra" },
+        { name: "Profiles", to: "Features_Members" },
         { name: "Stories", to: "success_story" },
         { name: "FAQ", to: "FAQ" },
     ];

@@ -35,7 +35,7 @@ const Home = () => {
                         style={{ backgroundImage: `url(${BgFeatures})` }}
                     >
                         <div className="absolute inset-0 bg-black/60"></div>
-                        <div>
+                        <div id="Features_Members">
                             {/* Featured Premium Profiles  */}
                             <Featured_Premium></Featured_Premium>
 
