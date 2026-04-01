@@ -12,14 +12,17 @@ const Dashboard = ({ role }) => {
     const menus = role === "admin" ? adminMenu : userMenu;
 
     return (
-        <div className="bg-gray-50 min-h-screen">
-            <Sidebar user={user} logOut={logOut} menus={menus} />
+        <section>
+            <title>Dashboard - Matrimony</title>
+            <div className="bg-gray-50 min-h-screen">
+                <Sidebar user={user} logOut={logOut} menus={menus} />
 
-            {/* Outlet  */}
-            <div className="ml-72 min-h-screen p-6">
-                <Outlet />
+                {/* Outlet  */}
+                <div className="ml-72 min-h-screen p-6">
+                    <Outlet />
+                </div>
             </div>
-        </div>
+        </section>
     );
 };
 
