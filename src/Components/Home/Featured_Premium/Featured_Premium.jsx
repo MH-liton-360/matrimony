@@ -13,19 +13,33 @@ const Featured_Premium = () => {
                 className="text-center text-4xl"
             />
 
-            <div className="card bg-base-100 w-96 shadow-sm">
-                <figure>
-                    <img
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                        alt="Shoes" />
-                </figure>
-                <div className="card-body">
-                    <h2 className="card-title">Card Title</h2>
-                    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                    <div className="card-actions justify center">
-                        <button className="btn btn-primary">Buy Now</button>
-                    </div>
+
+            <div className="bg-white rounded-lg shadow-md p-4 w-64">
+                {/* Image placeholder */}
+                <div className="h-32 w-full bg-gray-200 rounded-md mb-4 flex items-center justify-center">
+                    <span className="text-gray-500">Photo</span>
                 </div>
+
+                {/* Name & Title */}
+                <h2 className="text-lg font-semibold text-gray-800">Seheba Khan</h2>
+                <p className="text-sm text-gray-600">Fieldder</p>
+
+                {/* Description */}
+                <p className="text-xs text-gray-500 mt-2">Introducer Fielders</p>
+
+                {/* Location */}
+                <p className="text-xs text-gray-500 mt-1">📍 Dhaka, Bangladesh</p>
+
+                {/* Rating */}
+                <div className="flex items-center mt-2">
+                    <span className="text-yellow-500">★★★★★</span>
+                    <span className="ml-2 text-xs text-gray-600">18 items</span>
+                </div>
+
+                {/* Button */}
+                <button className="mt-4 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition">
+                    View Profile
+                </button>
             </div>
         </section>
     );
