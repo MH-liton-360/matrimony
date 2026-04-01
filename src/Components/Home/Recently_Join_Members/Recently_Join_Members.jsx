@@ -17,8 +17,10 @@ const Recently_Join_Members = () => {
                 </div>
 
                 {/* Name & Title */}
-                <h2 className="text-lg font-semibold text-gray-800">Seheba Khan</h2>
-                <p className="text-sm text-gray-600">Fieldder</p>
+                <div className="flex items-center justify-between">
+                    <h2 className="text-lg font-semibold text-gray-800">Seheba Khan</h2>
+                    <p className="text-sm text-gray-600">Fieldder</p>
+                </div>
 
                 {/* Description */}
                 <p className="text-xs text-gray-500 mt-2">Introducer Fielders</p>
