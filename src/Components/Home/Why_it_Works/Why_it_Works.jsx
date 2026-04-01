@@ -3,9 +3,11 @@ import SectionTitle from "../SectionTitle/SectionTitle";
 const Why_it_Works = () => {
     return (
         <section className="">
+
             <SectionTitle
                 heading={"Why It Works"}
             ></SectionTitle>
+
             <div className="justify-around gap-2 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
 
                 <div className="relative bg-amber-200 rounded-lg shadow-md p-6 w-full max-w-sm mx-auto 
