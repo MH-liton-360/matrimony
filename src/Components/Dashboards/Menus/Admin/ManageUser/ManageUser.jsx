@@ -1,4 +1,3 @@
-
 const ManageUser = () => {
     return (
         <section>
@@ -6,5 +5,4 @@ const ManageUser = () => {
         </section>
     );
 };
-
 export default ManageUser;
