@@ -12,6 +12,7 @@ const Why_it_Works = () => {
 
                 <div className="relative bg-amber-200 rounded-lg shadow-md p-6 w-full max-w-sm mx-auto 
                    [clip-path:polygon(0_0,calc(100%-50px)_0,100%_50%,calc(100%-50px)_100%,0_100%)]">
+                    
                     {/* Step Number */}
                     <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-lg">

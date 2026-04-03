@@ -8,7 +8,7 @@ const AdminMenu = [
     },
     {
         name: "Overview",
-        path: "/dashboard/adminn/overview",
+        path: "/dashboard/admin/overview",
         icon: FaTachometerAlt,
     },
     {
