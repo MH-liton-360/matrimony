@@ -24,7 +24,7 @@ export const router = createBrowserRouter([
             { path: "login", Component: Login },
             { path: "signup", Component: SignUp },
             { path: "settings", Component: Setting },
-            { path: "/biodata/:id", Component: BiodataDetails },
+            { path: "biodata/:id", Component: BiodataDetails },
 
         ]
     },
