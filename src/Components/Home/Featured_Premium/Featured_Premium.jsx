@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import SectionTitle from "../SectionTitle/SectionTitle";
+import { Navigate } from "react-router-dom";
 
 const Featured_Premium = () => {
     const [biodatas, setBiodatas] = useState([]);
@@ -74,7 +75,7 @@ const Featured_Premium = () => {
 
                         {/* button */}
                         <button
-                            onClick={() => console.log(item._id)}
+                            onClick={() => Navigate(`/biodata/${item._id}`)}
                             className="mt-4 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition"
                         >
                             View Profile
