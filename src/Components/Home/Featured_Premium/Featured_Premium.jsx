@@ -2,83 +2,85 @@ import { useEffect, useState } from "react";
 import SectionTitle from "../SectionTitle/SectionTitle";
 
 const Featured_Premium = () => {
-
-    //  state e data rakha hobe
     const [biodatas, setBiodatas] = useState([]);
 
     useEffect(() => {
-        // backend theke data ana
-        fetch('http://localhost:5000/api/biodata')
+        fetch("http://localhost:5000/api/biodata")
             .then(res => res.json())
-            .then(data => {
-                console.log(data);
-
-                setBiodatas(data.slice(0, 4));
-            })
+            .then(data => setBiodatas(data.slice(0, 4)))
+            .catch(err => console.error(err));
     }, []);
 
     return (
-        <section>
+        <section className="py-8 px-4 md:px-8 lg:px-16">
             <SectionTitle
                 heading={
                     <>
-                        <span className="font-semibold text-white ">Featured</span> Premium Numbers
+                        <span className="font-semibold text-white">Featured</span> Premium Numbers
                     </>
                 }
-                className="text-center text-4xl"
+                className="text-center text-4xl mb-8"
             />
 
-            {/*  grid layout */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-                {/*  dynamic map */}
+            {/* responsive grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
                 {biodatas.map(item => (
-
-                    <div key={item._id} className="bg-white rounded-lg shadow-md p-4">
-
-                        {/*  image */}
-                        <div className="h-32 w-full bg-gray-200 rounded-md mb-4 flex items-center justify-center">
-                            <img
-                                src={item.profileImage}
-                                alt=""
-                                className="h-full w-full object-cover rounded-md"
-                            />
+                    <div
+                        key={item._id}
+                        className="bg-white rounded-lg shadow-md p-4 w-full max-w-xs h-[28rem] flex flex-col"
+                    >
+                        {/* image */}
+                        <div className="h-48 w-full overflow-hidden rounded-md mb-4">
+                            {item.profileImage ? (
+                                <img
+                                    src={item.profileImage}
+                                    alt={item.name}
+                                    className="w-full h-full object-cover object-[center_25%]"
+                                />
+                            ) : (
+                                <div className="h-full w-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                    Photo
+                                </div>
+                            )}
                         </div>
 
-                        {/*  name + profession */}
+                        {/* name + profession */}
                         <div className="flex items-center justify-between">
                             <h2 className="text-lg font-semibold text-gray-800">
-                                {item.name}
+                                {item.name || "No Name"}
                             </h2>
                             <p className="text-sm text-gray-600">
-                                {item.profession}
+                                {item.profession || "N/A"}
                             </p>
                         </div>
 
-                        {/*  about */}
-                        <p className="text-xs text-gray-500 mt-2">
-                            {item.aboutMe?.slice(0, 40)}...
+                        {/* description */}
+                        <p className="text-xs text-gray-500 mt-2 flex-1">
+                            {item.aboutMe
+                                ? item.aboutMe.slice(0, 60) + "..."
+                                : "No description"}
                         </p>
 
-                        {/*  location */}
+                        {/* location */}
                         <p className="text-xs text-gray-500 mt-1">
-                            📍 {item.district}, {item.country}
+                            📍 {item.district || "Unknown"}, {item.country || ""}
                         </p>
 
-                        {/*  button */}
+                        {/* rating */}
+                        <div className="flex items-center mt-2">
+                            <span className="text-yellow-500">★★★★★</span>
+                            <span className="ml-2 text-xs text-gray-600">New</span>
+                        </div>
+
+                        {/* button */}
                         <button
-                            onClick={() => {
-                                //  details page e jawar jonno (later use)
-                                console.log(item._id);
-                            }}
+                            onClick={() => console.log(item._id)}
                             className="mt-4 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition"
                         >
                             View Profile
                         </button>
-
                     </div>
                 ))}
-
             </div>
         </section>
     );
