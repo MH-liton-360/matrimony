@@ -74,12 +74,33 @@ const CreateBiodata = () => {
         }
     }
 
-    const handleSubmit = e => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (!validateStep()) return;
-        const biodataInfo = { ...formData, name: user?.displayName || "", email: user?.email || "" };
-        console.log(biodataInfo);
-        alert("Biodata submitted successfully!");
+
+        const biodataInfo = {
+            ...formData,
+            name: user?.displayName || "",
+            email: user?.email || ""
+        };
+
+        //  backend e send
+        fetch('http://localhost:5000/api/biodata', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(biodataInfo)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+
+                alert("Biodata submitted successfully!");
+
+                //  home e niye jawa (optional)
+                // navigate('/')
+            });
     }
     const progress = (step / steps.length) * 100;
 
