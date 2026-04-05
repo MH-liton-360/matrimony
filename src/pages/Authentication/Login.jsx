@@ -1,5 +1,5 @@
 import { useEffect, useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 import { AuthContext } from "../../context/AuthContext";
 import { FcGoogle } from "react-icons/fc";
@@ -8,6 +8,9 @@ import { FaFacebookF } from "react-icons/fa";
 const Login = () => {
     const { setUser, userLogin } = useContext(AuthContext);
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || "/home";
 
     useEffect(() => {
         loadCaptchaEnginge(6);
@@ -31,11 +34,10 @@ const Login = () => {
             const user = result.user;
 
             setUser(user);
-            console.log("Login success:", user);
-            navigate("/home");
+
+            navigate(from, { replace: true });
 
         } catch (error) {
-            console.error(error.message);
             alert(error.message);
         }
     };
