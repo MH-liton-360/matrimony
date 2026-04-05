@@ -1,43 +1,86 @@
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import SectionTitle from "../SectionTitle/SectionTitle";
 
 const Recently_Join_Members = () => {
+    const navigate = useNavigate();
+    const [biodatas, setBiodatas] = useState([]);
+
+    useEffect(() => {
+        const fetchBiodatas = () => {
+            fetch("http://localhost:5000/api/biodata")
+                .then((res) => res.json())
+                .then((data) => {
+                    // latest added first
+                    const latest = data.reverse().slice(0, 4);
+                    setBiodatas(latest);
+                })
+                .catch((err) => console.error(err));
+        };
+
+        fetchBiodatas();
+
+        const interval = setInterval(fetchBiodatas, 5000);
+
+        return () => clearInterval(interval); // cleanup
+    }, []);
+
     return (
-        <section className="">
-            <SectionTitle
-                heading={"Recently Join Members"}
-            >
-            </SectionTitle>
+        <section className="py-8 px-4 md:px-8 lg:px-16">
+            <SectionTitle heading={"Recently Join Members"} />
 
-            {/* Demo  */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
+                {biodatas.map((item) => (
+                    <div
+                        key={item._id}
+                        className="bg-white rounded-lg shadow-md p-4 w-full max-w-xs flex flex-col hover:shadow-xl transition"
+                    >
+                        {/* Image */}
+                        <div className="w-full overflow-hidden rounded-md mb-4 shrink-0">
+                            {item.profileImage ? (
+                                <img
+                                    src={item.profileImage}
+                                    alt={item.name}
+                                    className="w-full h-48 object-cover object-[center_25%] rounded-md"
+                                />
+                            ) : (
+                                <div className="h-48 w-full bg-gray-200 flex items-center justify-center text-gray-500 rounded-md">
+                                    Photo
+                                </div>
+                            )}
+                        </div>
 
-            <div className="bg-white rounded-lg shadow-md p-4 w-56">
-                {/* Image placeholder */}
-                <div className="h-32 w-full bg-gray-200 rounded-md mb-4 flex items-center justify-center">
-                    <span className="text-gray-500">Photo</span>
-                </div>
+                        {/* Name & Profession */}
+                        <div className="flex items-center justify-between mb-2">
+                            <h2 className="text-lg font-semibold text-gray-800">{item.name || "No Name"}</h2>
+                            <p className="text-sm text-gray-600">{item.profession || "N/A"}</p>
+                        </div>
 
-                {/* Name & Title */}
-                <div className="flex items-center justify-between">
-                    <h2 className="text-lg font-semibold text-gray-800">Seheba Khan</h2>
-                    <p className="text-sm text-gray-600">Fieldder</p>
-                </div>
+                        {/* Description */}
+                        <p className="text-xs text-gray-500 mt-2">
+                            {item.aboutMe ? item.aboutMe.slice(0, 60) + "..." : "No description"}
+                        </p>
 
-                {/* Description */}
-                <p className="text-xs text-gray-500 mt-2">Introducer Fielders</p>
+                        {/* Location */}
+                        <p className="text-xs text-gray-500 mt-1">
+                            📍 {item.district || "Unknown"}, {item.country || ""}
+                        </p>
 
-                {/* Location */}
-                <p className="text-xs text-gray-500 mt-1">📍 Dhaka, Bangladesh</p>
+                        {/* Rating */}
+                        <div className="flex items-center mt-2">
+                            <span className="text-yellow-500">★★★★★</span>
+                            <span className="ml-2 text-xs text-gray-600">New</span>
+                        </div>
 
-                {/* Rating */}
-                <div className="flex items-center mt-2">
-                    <span className="text-yellow-500">★★★★★</span>
-                    <span className="ml-2 text-xs text-gray-600">18 items</span>
-                </div>
-
-                {/* Button */}
-                <button className="mt-4 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition">
-                    View Profile
-                </button>
+                        {/* View Button */}
+                        <button
+                            onClick={() => navigate(`/biodata/${item._id}`)}
+                            className="mt-4 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition"
+                        >
+                            View Profile
+                        </button>
+                    </div>
+                ))}
             </div>
         </section>
     );

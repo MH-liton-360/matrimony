@@ -62,7 +62,7 @@ const Featured_Premium = () => {
 
                             {/* ✅ Premium badge */}
                             {isPremium && (
-                                <span className="bg-orange-500 text-amber-200 text-xs px-2 py-1 rounded mb-2 w-fit">
+                                <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded mb-2 w-fit">
                                     Premium
                                 </span>
                             )}
