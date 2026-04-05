@@ -39,7 +39,8 @@ const Home = () => {
                             <Featured_Premium></Featured_Premium>
 
                             {/* Recently_Join_Members  */}
-                            <Recently_Join_Members className="mt-8"></Recently_Join_Members>                        </div>
+                            <Recently_Join_Members></Recently_Join_Members>
+                        </div>
                     </section>
 
                     {/* Why it Works  */}

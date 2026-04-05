@@ -75,7 +75,7 @@ const Recently_Join_Members = () => {
                         {/* View Button */}
                         <button
                             onClick={() => navigate(`/biodata/${item._id}`)}
-                            className="mt-4 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition"
+                            className="mt-auto w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition z-10"
                         >
                             View Profile
                         </button>
