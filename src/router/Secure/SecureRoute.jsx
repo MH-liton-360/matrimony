@@ -14,11 +14,13 @@ const SecureRoute = ({ children }) => {
 
     // user check
     if (!user) {
-        <Navigate
-            to="/login"
-            state={{ from: location }}
-            replace
-        />
+        return (
+            <Navigate
+                to="/login"
+                state={{ from: location }}
+                replace
+            />
+        )
     }
 
     return children;
