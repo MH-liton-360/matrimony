@@ -33,7 +33,7 @@ const Home = () => {
                     <section className="bg-cover bg-center relative"
                         style={{ backgroundImage: `url(${BgFeatures})` }}
                     >
-                        <div className="absolute inset-0 bg-black/60"></div>
+                        <div className="absolute inset-0 bg-black/50"></div>
                         <div id="Features_Members">
                             {/* Featured Premium Profiles  */}
                             <Featured_Premium></Featured_Premium>
