@@ -1,5 +1,6 @@
 import { useContext, useState, useEffect } from "react";
 import { AuthContext } from "../../../../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const countries = ["Bangladesh", "India", "USA", "UK", "Canada", "Australia", "Germany", "France"];
 const biodataTypes = ["Male", "Female"];
@@ -17,6 +18,7 @@ const requiredFields = {
 };
 
 const CreateBiodata = () => {
+    const navigate = useNavigate();
     const { user } = useContext(AuthContext);
     const [step, setStep] = useState(1);
     const [formData, setFormData] = useState({
@@ -99,7 +101,7 @@ const CreateBiodata = () => {
                 alert("Biodata submitted successfully!");
 
                 //  home e niye jawa (optional)
-                // navigate('/')
+                navigate('/home')
             });
     }
     const progress = (step / steps.length) * 100;
