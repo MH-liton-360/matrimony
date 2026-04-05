@@ -22,11 +22,11 @@ const Recently_Join_Members = () => {
 
         const interval = setInterval(fetchBiodatas, 5000);
 
-        return () => clearInterval(interval); // cleanup
+        return () => clearInterval(interval);
     }, []);
 
     return (
-        <section className="py-8 px-4 md:px-8 lg:px-16">
+        <section className="pb-8 px-4 md:px-8 lg:px-16">
             <SectionTitle heading={"Recently Join Members"} />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">

@@ -16,14 +16,14 @@ const Featured_Premium = () => {
     const specialProfessions = ["doctor", "professor", "engineer", "actor", "sportsman"];
 
     return (
-        <section className="py-8 px-4 md:px-8 lg:px-16">
+        <section className="pt-8 px-4 md:px-8 lg:px-16">
             <SectionTitle
                 heading={
                     <>
                         <span className="font-semibold text-white">Featured</span> Premium Numbers
                     </>
                 }
-                className="text-center text-4xl mb-8"
+                className="text-center text-4xl"
             />
 
             {/* responsive grid */}
