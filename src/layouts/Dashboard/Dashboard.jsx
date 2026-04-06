@@ -31,7 +31,7 @@ const Dashboard = ({ role }) => {
                         padding: "12px 20px",
                         zIndex: 1000
                     }}>
-                        Dashboard Navbar
+                        <DashboardNavbar></DashboardNavbar>
                     </div>
                 </div>
 
