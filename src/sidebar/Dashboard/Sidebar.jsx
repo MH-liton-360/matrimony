@@ -1,8 +1,13 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import { FaSignOutAlt, FaUserCircle } from "react-icons/fa";
+import { FaSignOutAlt } from "react-icons/fa";
 
-const Sidebar = ({ user, logOut, menus }) => {
+const Sidebar = ({ name, logOut, menus }) => {
     const navigate = useNavigate();
+
+    // Dashboard → Main Home
+    const goHome = () => {
+        navigate("/home", { replace: true });
+    };
 
     const handleLogout = async () => {
         try {
@@ -12,30 +17,18 @@ const Sidebar = ({ user, logOut, menus }) => {
             console.error("Logout failed:", error);
         }
     };
-    const goHome = () => {
-        navigate("/home", { replace: true }); // Dashboard → Main Home
-    };
 
     return (
         <div className="fixed top-0 left-0 w-72 h-screen bg-white border-r border-gray-200 shadow-sm flex flex-col">
-            {/* Sidebar Header */}
-            <div className="p-5 border-b border-gray-200">
-                <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center text-2xl text-gray-500">
-                        {/* Fixed icon */}
-                        <FaUserCircle />
-                    </div>
 
-                    <div>
-                        {/* Fixed text */}
-                        <h2 className="text-base font-bold text-gray-800">
-                            Matrimony
-                        </h2>
-                        <p className="text-sm text-gray-500">
-                            Welcome!
-                        </p>
-                    </div>
-                </div>
+            {/* Top: Website name only */}
+            <div className="p-5 border-b border-gray-200">
+                <h2
+                    onClick={goHome}
+                    className="text-2xl font-bold text-gray-800 cursor-pointer"
+                >
+                    {name}
+                </h2>
             </div>
 
             {/* Menu Items */}
@@ -56,6 +49,7 @@ const Sidebar = ({ user, logOut, menus }) => {
                             </li>
                         );
                     }
+
                     return (
                         <li key={item.path}>
                             <NavLink
@@ -74,7 +68,7 @@ const Sidebar = ({ user, logOut, menus }) => {
                     );
                 })}
 
-                {/* Logout */}
+                {/* Logout Button */}
                 <li>
                     <button
                         onClick={handleLogout}
