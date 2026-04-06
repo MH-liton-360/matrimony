@@ -15,6 +15,7 @@ const Dashboard = ({ role }) => {
     return (
         <section>
             <title>Dashboard - Matrimony</title>
+
             <div className="bg-gray-50 min-h-screen">
                 <Sidebar user={user} logOut={logOut} menus={menus} />
 
@@ -28,7 +29,6 @@ const Dashboard = ({ role }) => {
                         width: "calc(100% - 288px)",
                         backgroundColor: "#333",
                         color: "#fff",
-                        padding: "12px 20px",
                         zIndex: 1000
                     }}>
                         <DashboardNavbar></DashboardNavbar>
@@ -36,7 +36,7 @@ const Dashboard = ({ role }) => {
                 </div>
 
                 {/* Outlet  */}
-                <div className="ml-72 min-h-screen p-6">
+                <div className="ml-72 min-h-screen pt-24 ">
                     <Outlet />
                 </div>
 
