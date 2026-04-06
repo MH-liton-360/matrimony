@@ -21,22 +21,24 @@ export default function DashboardNavbar() {
                 </button>
 
                 {/* User avatar + role */}
-                <div className="flex items-center space-x-2">
-                    {user?.photoURL ? (
-                        <img
-                            src={user.photoURL}
-                            alt="avatar"
-                            className="w-8 h-8 rounded-full object-cover"
-                        />
-                    ) : (
-                        <FaUserCircle className="w-8 h-8 text-gray-700" />
-                    )}
-                    <span className="font-medium text-gray-800">
-                        {user?.role === "admin" ? "Admin" : "User"}
-                    </span>
-                </div>
+                <div className="flex gap-1">
+                    <div className="flex items-center space-x-2 border-2">
+                        {user?.photoURL ? (
+                            <img
+                                src={user.photoURL}
+                                alt="avatar"
+                                className="w-8 h-8 rounded-full object-cover"
+                            />
+                        ) : (
+                            <FaUserCircle className="w-8 h-8 text-gray-700" />
+                        )}
+                        <span className="font-medium text-gray-800">
+                            {user?.role === "admin" ? "Admin" : "User"}
+                        </span>
+                    </div>
 
-                {/* Logout button optional */}
+                    <button className="px-4 py-1 bg-black text-white rounded-lg hover:bg-yellow-400 hover:text-black">logout</button>
+                </div>
             </div>
         </nav>
     );
