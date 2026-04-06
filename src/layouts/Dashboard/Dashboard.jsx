@@ -9,6 +9,8 @@ import DashboardNavbar from "../../shared/DashboardNavbar";
 const Dashboard = ({ role }) => {
     const { logOut } = useContext(AuthContext);
 
+    // const role = "admin";   //Just showing manually admin dashboard
+
     const menus = role === "admin" ? adminMenu : userMenu;
 
     return (

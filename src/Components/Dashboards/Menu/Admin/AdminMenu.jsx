@@ -1,15 +1,10 @@
-import { FaUsers, FaList, FaCrown, FaChartBar, FaCog, FaHome, FaTachometerAlt, } from "react-icons/fa";
+import { FaCog, FaUsers, FaCrown, FaHome, FaHourglassHalf } from "react-icons/fa";
 
 const AdminMenu = [
     {
-        name: "Home",
+        name: "Dashboard",
         path: "/home",
         icon: FaHome,
-    },
-    {
-        name: "Overview",
-        path: "/dashboard/admin/overview",
-        icon: FaTachometerAlt,
     },
     {
         name: "Manage Users",
@@ -17,19 +12,14 @@ const AdminMenu = [
         icon: FaUsers,
     },
     {
-        name: "Manage Biodatas",
-        path: "/dashboard/admin/manage-biodatas",
-        icon: FaList,
-    },
-    {
-        name: "Premium Requests",
+        name: "Pending Approvals",
         path: "/dashboard/admin/premium-requests",
-        icon: FaCrown,
+        icon: FaHourglassHalf,
     },
     {
-        name: "Reports",
-        path: "/dashboard/admin/reports",
-        icon: FaChartBar,
+        name: "SubscriptionS",
+        path: "/dashboard/subscription",
+        icon: FaCrown,
     },
     {
         name: "Settings",

@@ -6,11 +6,6 @@ const UserMenu = [
         path: "/home",
         icon: FaHome,
     },
-    // {
-    //     name: "Overview",
-    //     path: "/dashboard/overview",
-    //     icon: FaTachometerAlt,
-    // },
     {
         name: "Users",
         path: "/dashboard/profile",
@@ -21,7 +16,6 @@ const UserMenu = [
         path: "/dashboard/biodata",
         icon: FaSearch,
     },
-
     {
         name: "My Favorites",
         path: "/dashboard/user/favorites",
@@ -38,7 +32,7 @@ const UserMenu = [
         icon: FaCrown,
     },
     {
-        name: "Settings",
+        name: "Profile Settings",
         path: "/dashboard/settings",
         icon: FaCog,
     },

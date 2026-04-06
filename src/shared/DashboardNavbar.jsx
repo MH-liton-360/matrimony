@@ -18,8 +18,12 @@ export default function DashboardNavbar() {
 
     return (
         <nav className="bg-amber-100 px-4 py-2 flex items-center justify-between">
+
             {/* Left side */}
-            <div className="text-gray-950 font-semibold text-lg">Dashboard</div>
+            <div className="text-2xl font-bold bg-clip-text text-transparent
+                bg-linear-to-r from-orange-700 via-red-700 to-yellow-900">
+                {user?.role === "admin" ? "Admin Dashboard" : "User Dashboard"}
+            </div>
 
             {/* Right side */}
             <div className="flex items-center space-x-4">
