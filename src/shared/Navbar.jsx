@@ -33,9 +33,9 @@ const Navbar = () => {
                     spy={true}
                     offset={-70}
                     onSetActive={() => setActiveMenu(item.to)}
-                    className={`cursor-pointer px-4 py-2 block rounded-lg transition ${activeMenu === item.to
-                        ? "bg-yellow-400 text-black font-semibold"
-                        : "text-black hover:text-yellow-500"
+                    className={`cursor-pointer px-5 py-2 block rounded-full text-sm font-medium transition-all duration-300 ${activeMenu === item.to
+                        ? "bg-yellow-400 text-black shadow-md"
+                        : "text-gray-700 hover:bg-gray-100 hover:text-black"
                         } ${isMobile ? "w-full text-center" : ""}`}
                 >
                     {item.name}
@@ -106,16 +106,21 @@ const Navbar = () => {
                                 />
                             </div>
                         ) : (
-                            <div className="flex gap-3">
+                            <div className="flex items-center border border-gray-300 rounded-full overflow-hidden shadow-sm">
+
                                 <Link
                                     to="/login"
-                                    className="px-4 py-1 bg-black text-white rounded-lg hover:bg-yellow-400 hover:text-black"
+                                    className="px-4 py-1 text-sm font-medium text-gray-700 hover:bg-yellow-400 hover:text-black transition"
                                 >
                                     Login
                                 </Link>
+
+                                {/* Divider */}
+                                <div className="h-5 w-px bg-gray-300"></div>
+
                                 <Link
                                     to="/signup"
-                                    className="px-4 py-1 bg-black text-white rounded-lg hover:bg-yellow-400 hover:text-black"
+                                    className="px-4 py-1 text-sm font-medium text-white bg-black hover:bg-yellow-400 hover:text-black transition"
                                 >
                                     Sign Up
                                 </Link>

@@ -1,41 +1,36 @@
-import { FaUser, FaHeart, FaAddressBook, FaCrown, FaCog, FaHome, FaIdCard, FaTachometerAlt, FaEye } from "react-icons/fa";
+import { FaUser, FaHeart, FaEnvelope, FaCrown, FaCog, FaHome, FaSearch } from "react-icons/fa";
 
 const UserMenu = [
     {
-        name: "Home",
+        name: "Dashboard",
         path: "/home",
         icon: FaHome,
     },
+    // {
+    //     name: "Overview",
+    //     path: "/dashboard/overview",
+    //     icon: FaTachometerAlt,
+    // },
     {
-        name: "Overview",
-        path: "/dashboard/overview",
-        icon: FaTachometerAlt,
-    },
-    {
-        name: "My Profile",
+        name: "Users",
         path: "/dashboard/profile",
         icon: FaUser,
     },
     {
-        name: "Create Biodata",
+        name: "Search Biodata",
         path: "/dashboard/biodata",
-        icon: FaIdCard,
+        icon: FaSearch,
     },
+
     {
-        name: "View Biodata",
-        path: "/dashboard/ViewBiodata",
-        // eslint-disable-next-line no-undef
-        icon: FaEye,
-    },
-    {
-        name: "Favorites",
+        name: "My Favorites",
         path: "/dashboard/user/favorites",
         icon: FaHeart,
     },
     {
-        name: "Contact Requests",
+        name: "Message",
         path: "/dashboard/user/contact-requests",
-        icon: FaAddressBook,
+        icon: FaEnvelope,
     },
     {
         name: "Premium Plan",

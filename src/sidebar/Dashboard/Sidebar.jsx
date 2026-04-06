@@ -1,22 +1,12 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import { FaSignOutAlt } from "react-icons/fa";
 
 import logo from "../../assets/logo/Interlocked hands forming a heart.png"
 
-const Sidebar = ({ name, logOut, menus }) => {
+const Sidebar = ({ name, menus }) => {
     const navigate = useNavigate();
 
     const goHome = () => {
         navigate("/home", { replace: true });
-    };
-
-    const handleLogout = async () => {
-        try {
-            await logOut();
-            navigate("/home", { replace: true });
-        } catch (error) {
-            console.error("Logout failed:", error);
-        }
     };
 
     return (
@@ -69,17 +59,6 @@ const Sidebar = ({ name, logOut, menus }) => {
                         </li>
                     );
                 })}
-
-                {/* Logout Button */}
-                <li>
-                    <button
-                        onClick={handleLogout}
-                        className="w-full flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white font-semibold py-3 rounded-xl transition"
-                    >
-                        <FaSignOutAlt />
-                        Logout
-                    </button>
-                </li>
             </ul>
         </div>
     );

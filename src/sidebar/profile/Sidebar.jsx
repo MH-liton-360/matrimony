@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaUserCircle, FaUser, FaTachometerAlt, FaCog, FaSignOutAlt, FaLifeRing, FaHeadset } from "react-icons/fa";
+import { FaUserCircle, FaUser, FaTachometerAlt, FaCog, FaSignOutAlt, FaLifeRing, FaHeadset, FaIdCard } from "react-icons/fa";
 
 const Sidebar = ({ user, logOut, closeSidebar }) => {
     return (
@@ -42,6 +42,17 @@ const Sidebar = ({ user, logOut, closeSidebar }) => {
                     >
                         <FaUser className="text-lg" ></FaUser>
                         <span className="font-medium">My Profile</span>
+                    </Link>
+                </li>
+
+                <li>
+                    <Link
+                        to="/biodata"
+                        onClick={closeSidebar}
+                        className="flex items-center gap-3 px-5 py-4 text-gray-700 hover:bg-gray-100 transition border-b"
+                    >
+                        <FaIdCard className="text-lg" ></FaIdCard>
+                        <span className="font-medium">Create Bio</span>
                     </Link>
                 </li>
 

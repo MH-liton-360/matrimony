@@ -25,6 +25,8 @@ export const router = createBrowserRouter([
             { path: "login", Component: Login },
             { path: "signup", Component: SignUp },
             { path: "settings", Component: Setting },
+            { path: "biodata", Component: CreateBiodata },
+
             { path: "biodata/:id", element: (<SecureRoute> <BiodataDetails></BiodataDetails> </SecureRoute>) },
 
         ]
@@ -33,7 +35,6 @@ export const router = createBrowserRouter([
         path: "dashboard",
         Component: Dashboard,
         children: [
-            { path: "biodata", Component: CreateBiodata },
             { path: "profile", Component: Profile },
             { path: "overview", Component: Overview },
             { path: "settings", Component: UserSetting },
