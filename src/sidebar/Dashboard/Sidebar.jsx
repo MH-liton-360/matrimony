@@ -15,33 +15,30 @@ const Sidebar = ({ user, logOut, menus }) => {
     const goHome = () => {
         navigate("/home", { replace: true }); // Dashboard → Main Home
     };
+
     return (
         <div className="fixed top-0 left-0 w-72 h-screen bg-white border-r border-gray-200 shadow-sm flex flex-col">
+            {/* Sidebar Header */}
             <div className="p-5 border-b border-gray-200">
                 <div className="flex items-center gap-3">
                     <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center text-2xl text-gray-500">
-                        {user?.photoURL ? (
-                            <img
-                                src={user.photoURL}
-                                alt="User"
-                                className="w-full h-full object-cover"
-                            />
-                        ) : (
-                            <FaUserCircle />
-                        )}
+                        {/* Fixed icon */}
+                        <FaUserCircle />
                     </div>
 
                     <div>
+                        {/* Fixed text */}
                         <h2 className="text-base font-bold text-gray-800">
-                            {user?.displayName || "User"}
+                            Matrimony
                         </h2>
-                        <p className="text-sm text-gray-500 break-all">
-                            {user?.email || "No Email"}
+                        <p className="text-sm text-gray-500">
+                            Welcome!
                         </p>
                     </div>
                 </div>
             </div>
 
+            {/* Menu Items */}
             <ul className="flex-1 p-4 space-y-2">
                 {menus.map((item) => {
                     const Icon = item.icon;
@@ -77,6 +74,7 @@ const Sidebar = ({ user, logOut, menus }) => {
                     );
                 })}
 
+                {/* Logout */}
                 <li>
                     <button
                         onClick={handleLogout}

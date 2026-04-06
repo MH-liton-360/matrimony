@@ -1,38 +1,43 @@
+import { useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
+import { FaUserCircle } from "react-icons/fa";
 
-const DashboardNavbar = () => {
+export default function DashboardNavbar() {
+    const { user } = useContext(AuthContext); // Firebase user object
+
     return (
-        <div>
-            <div className="navbar bg-base-100 shadow-sm">
-                <div className="flex-1">
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
-                </div>
-                <div className="flex gap-2">
-                    <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
-                    <div className="dropdown dropdown-end">
-                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full">
-                                <img
-                                    alt="Tailwind CSS Navbar component"
-                                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-                            </div>
-                        </div>
-                        <ul
-                            tabIndex="-1"
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            <li>
-                                <a className="justify-between">
-                                    Profile
-                                    <span className="badge">New</span>
-                                </a>
-                            </li>
-                            <li><a>Settings</a></li>
-                            <li><a>Logout</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
-};
+        <nav className="bg-amber-100 px-4 py-2 flex items-center justify-between">
+            {/* Left side: Brand / Title */}
+            <div className="text-gray-950 font-semibold text-lg">Dashboard</div>
 
-export default DashboardNavbar;
+            {/* Right side: Icons + User */}
+            <div className="flex items-center space-x-4">
+                {/* Notification Bell */}
+                <button className="relative text-gray-700 hover:text-gray-900">
+                    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full px-1">
+                        1
+                    </span>
+                    🔔
+                </button>
+
+                {/* User avatar + role */}
+                <div className="flex items-center space-x-2">
+                    {user?.photoURL ? (
+                        <img
+                            src={user.photoURL}
+                            alt="avatar"
+                            className="w-8 h-8 rounded-full object-cover"
+                        />
+                    ) : (
+                        <FaUserCircle className="w-8 h-8 text-gray-700" />
+                    )}
+                    <span className="font-medium text-gray-800">
+                        {user?.role === "admin" ? "Admin" : "User"}
+                    </span>
+                </div>
+
+                {/* Logout button optional */}
+            </div>
+        </nav>
+    );
+}

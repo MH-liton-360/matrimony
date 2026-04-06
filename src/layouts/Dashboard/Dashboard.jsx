@@ -8,7 +8,7 @@ import DashboardNavbar from "../../shared/DashboardNavbar";
 
 const Dashboard = ({ role }) => {
     // const role = "admin";
-    const { user, logOut } = useContext(AuthContext);
+    const { logOut } = useContext(AuthContext);
 
     const menus = role === "admin" ? adminMenu : userMenu;
 
@@ -17,29 +17,28 @@ const Dashboard = ({ role }) => {
             <title>Dashboard - Matrimony</title>
 
             <div className="bg-gray-50 min-h-screen">
-                <Sidebar user={user} logOut={logOut} menus={menus} />
+                {/* Sidebar with just normal text */}
+                <Sidebar user={{ name: "Matrimony" }} logOut={logOut} menus={menus} />
 
-                {/* navbar  */}
+                {/* Navbar fixed */}
                 <div style={{ flex: 1, position: "relative" }}>
-                    {/* Navbar fixed with inline CSS */}
                     <div style={{
                         position: "fixed",
                         top: 0,
-                        left: 288,  // ml-72 = 18rem = 288px
+                        left: 288,
                         width: "calc(100% - 288px)",
                         backgroundColor: "#333",
                         color: "#fff",
                         zIndex: 1000
                     }}>
-                        <DashboardNavbar></DashboardNavbar>
+                        <DashboardNavbar />
                     </div>
                 </div>
 
-                {/* Outlet  */}
-                <div className="ml-72 min-h-screen pt-24 ">
+                {/* Outlet */}
+                <div className="ml-72 min-h-screen pt-24">
                     <Outlet />
                 </div>
-
             </div>
         </section>
     );
