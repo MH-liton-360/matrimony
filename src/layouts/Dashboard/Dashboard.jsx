@@ -7,7 +7,6 @@ import { AuthContext } from "../../context/AuthContext";
 import DashboardNavbar from "../../shared/DashboardNavbar";
 
 const Dashboard = ({ role }) => {
-    // const role = "admin";
     const { logOut } = useContext(AuthContext);
 
     const menus = role === "admin" ? adminMenu : userMenu;
@@ -18,7 +17,7 @@ const Dashboard = ({ role }) => {
 
             <div className="bg-gray-50 min-h-screen">
                 {/* Sidebar with just normal text */}
-                <Sidebar user={{ name: "Matrimony" }} logOut={logOut} menus={menus} />
+                <Sidebar name="Matrimony" logOut={logOut} menus={menus} />
 
                 {/* Navbar fixed */}
                 <div style={{ flex: 1, position: "relative" }}>

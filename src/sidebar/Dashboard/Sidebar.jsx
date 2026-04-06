@@ -1,10 +1,9 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import { FaSignOutAlt } from "react-icons/fa";
+import { FaSignOutAlt, FaUserCircle } from "react-icons/fa";
 
 const Sidebar = ({ name, logOut, menus }) => {
     const navigate = useNavigate();
 
-    // Dashboard → Main Home
     const goHome = () => {
         navigate("/home", { replace: true });
     };
@@ -21,12 +20,13 @@ const Sidebar = ({ name, logOut, menus }) => {
     return (
         <div className="fixed top-0 left-0 w-72 h-screen bg-white border-r border-gray-200 shadow-sm flex flex-col">
 
-            {/* Top: Website name only */}
-            <div className="p-5 border-b border-gray-200">
-                <h2
-                    onClick={goHome}
-                    className="text-2xl font-bold text-gray-800 cursor-pointer"
-                >
+            {/* Top: Website name + logo */}
+            <div className="p-5 border-b border-gray-200 flex items-center gap-3 cursor-pointer" onClick={goHome}>
+                {/* Logo/User Icon */}
+                <FaUserCircle className="w-10 h-10 text-gray-700" />
+
+                {/* Website Name */}
+                <h2 className="text-2xl font-bold text-gray-800">
                     {name}
                 </h2>
             </div>
