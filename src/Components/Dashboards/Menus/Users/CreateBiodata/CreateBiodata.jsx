@@ -5,12 +5,13 @@ import { useNavigate } from "react-router-dom";
 const countries = ["Bangladesh", "India", "USA", "UK", "Canada", "Australia", "Germany", "France"];
 const biodataTypes = ["Male", "Female"];
 const maritalStatuses = ["Unmarried", "Divorced", "Widowed"];
+const religions = ["Islam", "Hindu", "Christianity", "Buddhism", "Other"];
 const familyStatuses = ["Lower Middle Class", "Middle Class", "Upper Middle Class", "Rich"];
 const familyTypes = ["Nuclear", "Joint"];
 const steps = ["Basic Info", "Family Details", "Address Info", "Education", "Partner Preferences"];
 
 const requiredFields = {
-    1: ["biodataType", "profileImage", "dateOfBirth", "height", "weight"],
+    1: ["biodataType", "profileImage", "dateOfBirth", "height", "weight", "maritalStatus", "religion"],
     2: ["fatherName", "motherName", "familyStatus", "familyType"],
     3: ["country", "district", "presentAddress", "permanentAddress"],
     4: ["highestEducation", "aboutMe"],
@@ -20,10 +21,12 @@ const requiredFields = {
 const CreateBiodata = () => {
     const navigate = useNavigate();
     const { user } = useContext(AuthContext);
+
     const [step, setStep] = useState(1);
+    const [error, setError] = useState("");
     const [formData, setFormData] = useState({
         biodataType: "", profileImage: "", dateOfBirth: "", age: "",
-        height: "", weight: "", maritalStatus: "", profession: "", monthlyIncome: "",
+        height: "", weight: "", maritalStatus: "", religion: "", profession: "", monthlyIncome: "",
         fatherName: "", motherName: "", fatherProfession: "", motherProfession: "",
         familyStatus: "", familyType: "", country: "", district: "",
         presentAddress: "", permanentAddress: "", highestEducation: "",
@@ -32,8 +35,7 @@ const CreateBiodata = () => {
         expectedDistrict: "", expectedProfession: "", partnerPreferences: "",
     });
 
-    const [error, setError] = useState("");
-
+    // Auto-calculate age from dateOfBirth
     useEffect(() => {
         if (!formData.dateOfBirth) return setFormData(prev => ({ ...prev, age: "" }));
         const birthDate = new Date(formData.dateOfBirth);
@@ -49,7 +51,6 @@ const CreateBiodata = () => {
         setFormData(prev => ({ ...prev, [name]: value }));
     }
 
-    // Validate current step fields
     const validateStep = () => {
         const fields = requiredFields[step];
         for (let field of fields) {
@@ -69,11 +70,8 @@ const CreateBiodata = () => {
     const prevStep = () => setStep(prev => Math.max(prev - 1, 1));
 
     const jumpStep = (i) => {
-        if (i < step) { // allow going back anytime
-            setStep(i);
-        } else {
-            if (validateStep()) setStep(i); // forward only if current step valid
-        }
+        if (i < step) setStep(i);
+        else if (validateStep()) setStep(i);
     }
 
     const handleSubmit = async (e) => {
@@ -86,33 +84,24 @@ const CreateBiodata = () => {
             email: user?.email || ""
         };
 
-        //  backend e send
         fetch('http://localhost:5000/api/biodata', {
             method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
+            headers: { 'content-type': 'application/json' },
             body: JSON.stringify(biodataInfo)
         })
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-
                 alert("Biodata submitted successfully!");
-
-                //  home e niye jawa (optional)
-                navigate('/home')
+                navigate('/home');
             });
     }
+
     const progress = (step / steps.length) * 100;
 
     return (
         <section>
-
-            <title>
-                Create Biodata - Matrimony
-            </title>
-
+            <title>Create Biodata - Matrimony</title>
             <div className="max-w-4xl mx-auto p-4">
                 <div className="bg-black rounded-xl shadow p-6">
                     <h2 className="text-2xl font-bold text-center mb-4">Create Biodata</h2>
@@ -143,9 +132,15 @@ const CreateBiodata = () => {
                                     <option value="">Gender</option>
                                     {biodataTypes.map(t => <option key={t} value={t}>{t}</option>)}
                                 </select>
+
                                 <select name="maritalStatus" value={formData.maritalStatus} onChange={handleChange} className="w-full border p-2 rounded">
                                     <option value="">Marital Status</option>
                                     {maritalStatuses.map(s => <option key={s} value={s}>{s}</option>)}
+                                </select>
+
+                                <select name="religion" value={formData.religion} onChange={handleChange} className="w-full border p-2 rounded">
+                                    <option value="">Religion</option>
+                                    {religions.map(r => <option key={r} value={r}>{r}</option>)}
                                 </select>
 
                                 <div className="flex gap-3">
@@ -164,8 +159,6 @@ const CreateBiodata = () => {
                                 </div>
 
                                 <input type="text" name="profileImage" value={formData.profileImage} onChange={handleChange} placeholder="Profile Image URL" className="w-full border p-2 rounded" />
-
-
                             </div>
                         )}
 
@@ -181,17 +174,18 @@ const CreateBiodata = () => {
                                     <input type="text" name="motherName" value={formData.motherName} onChange={handleChange} placeholder="Mother Name" className="w-full border p-2 rounded" />
                                     <input type="text" name="motherProfession" value={formData.motherProfession} onChange={handleChange} placeholder="Mother Profession" className="w-full border p-2 rounded" />
                                 </div>
+
                                 <select name="familyStatus" value={formData.familyStatus} onChange={handleChange} className="w-full border p-2 rounded">
                                     <option value="">Family Status</option>
                                     {familyStatuses.map(s => <option key={s} value={s}>{s}</option>)}
                                 </select>
+
                                 <select name="familyType" value={formData.familyType} onChange={handleChange} className="w-full border p-2 rounded">
                                     <option value="">Family Type</option>
                                     {familyTypes.map(t => <option key={t} value={t}>{t}</option>)}
                                 </select>
                             </div>
                         )}
-
 
                         {/* Step 3 */}
                         {step === 3 && (
@@ -207,7 +201,6 @@ const CreateBiodata = () => {
                                 <input type="text" name="permanentAddress" value={formData.permanentAddress} onChange={handleChange} placeholder="Permanent Address" className="w-full border p-2 rounded" />
                             </div>
                         )}
-
 
                         {/* Step 4 */}
                         {step === 4 && (
@@ -237,7 +230,6 @@ const CreateBiodata = () => {
                             {step < steps.length && <button type="button" onClick={nextStep} className="bg-black text-white px-4 py-2 rounded">Next</button>}
                             {step === steps.length && <button type="submit" className="bg-green-600 text-white px-6 py-2 rounded">Submit</button>}
                         </div>
-
                     </form>
                 </div>
             </div>
