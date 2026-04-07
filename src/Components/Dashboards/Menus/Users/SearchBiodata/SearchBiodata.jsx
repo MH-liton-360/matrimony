@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SectionTitle from "../../../../Home/SectionTitle/SectionTitle";
+import Loading from "../../../../../shared/Loading";
 
 const SearchBiodata = () => {
     const navigate = useNavigate();
@@ -11,7 +12,7 @@ const SearchBiodata = () => {
         profession: "",
         district: "",
         gender: "",
-        religion: ""
+        religion: "",
     });
     const [loading, setLoading] = useState(false);
 
@@ -23,12 +24,10 @@ const SearchBiodata = () => {
     const fetchAllBiodata = () => {
         setLoading(true);
         fetch("http://localhost:5000/api/biodata")
-            .then(res => res.json())
-            .then(data => {
-                setBiodatas(data);
-                setLoading(false);
-            })
-            .catch(() => setLoading(false));
+            .then((res) => res.json())
+            .then((data) => setBiodatas(data))
+            .catch((err) => console.error(err))
+            .finally(() => setLoading(false));
     };
 
     // 🔹 Search function
@@ -36,12 +35,10 @@ const SearchBiodata = () => {
         setLoading(true);
         const query = new URLSearchParams(filters).toString();
         fetch(`http://localhost:5000/api/biodata/search?${query}`)
-            .then(res => res.json())
-            .then(data => {
-                setBiodatas(data);
-                setLoading(false);
-            })
-            .catch(() => setLoading(false));
+            .then((res) => res.json())
+            .then((data) => setBiodatas(data))
+            .catch((err) => console.error(err))
+            .finally(() => setLoading(false));
     };
 
     // 🔹 Reset filter
@@ -51,13 +48,11 @@ const SearchBiodata = () => {
     };
 
     return (
-        <section className="px-6 md:px-12">
+        <section className="px-6 md:px-12 relative">
 
-            <SectionTitle
-                heading={"Search Biodata"}
-            >
+            {/* Section title */}
+            <SectionTitle heading={"Search Biodata"} />
 
-            </SectionTitle>
             {/* 🔹 Filter Box */}
             <div className="bg-gray-400 text-gray-800 border border-gray-200 shadow-md rounded-lg p-6 mb-6 pr-12 grid grid-cols-1 md:grid-cols-6 gap-4 items-end">
 
@@ -132,11 +127,10 @@ const SearchBiodata = () => {
             </div>
 
             {/* 🔹 Loading */}
-            {loading && <p className="text-center text-gray-500">Loading...</p>}
+            {loading && <Loading />}
 
             {/* 🔹 Result Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-
                 {!loading && biodatas.length === 0 && (
                     <p className="col-span-full text-center text-gray-500">No biodata found 😢</p>
                 )}
@@ -167,8 +161,12 @@ const SearchBiodata = () => {
                         <p className="text-xs text-gray-500 mt-2 flex-1">{item.aboutMe ? item.aboutMe.slice(0, 60) + "..." : "No description"}</p>
 
                         {/* Button */}
-                        <button onClick={() => navigate(`/biodata/${item._id}`)}
-                            className="mt-3 bg-green-600 text-white py-2 rounded hover:bg-green-700">View Profile</button>
+                        <button
+                            onClick={() => navigate(`/biodata/${item._id}`)}
+                            className="mt-3 bg-green-600 text-white py-2 rounded hover:bg-green-700"
+                        >
+                            View Profile
+                        </button>
                     </div>
                 ))}
             </div>

@@ -1,16 +1,22 @@
+// Loading.jsx
+import loadingGif from "../assets/Loading-logo/4-conversion-blocks.gif";
+
 const Loading = () => {
     return (
-        <div className="fixed inset-0 flex items-center justify-center bg-white/60 backdrop-blur-md z-50">
-            <div className="flex flex-col items-center gap-4">
+        <div className="fixed inset-0 flex flex-col items-center justify-center bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50">
 
-                {/* Spinner */}
-                <span className="loading loading-spinner loading-lg text-primary"></span>
+            {/* Professional GIF */}
+            <img
+                src={loadingGif}
+                alt="Loading..."
+                className="w-32 h-32 md:w-40 md:h-40 mb-6"
+            />
 
-                {/* Text */}
-                <p className="text-gray-700 font-medium animate-pulse">
-                    Loading, please wait...
-                </p>
-            </div>
+            {/* Optional Text */}
+            <p className="text-gray-700 dark:text-gray-200 font-semibold text-lg animate-pulse">
+                Loading, please wait...
+            </p>
+
         </div>
     );
 };
