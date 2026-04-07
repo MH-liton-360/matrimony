@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SectionTitle from "../../../../Home/SectionTitle/SectionTitle";
 import Loading from "../../../../../shared/Loading";
+import NoData from "../../../../../shared/NoData";
 
 const SearchBiodata = () => {
     const navigate = useNavigate();
@@ -16,7 +17,7 @@ const SearchBiodata = () => {
     });
     const [loading, setLoading] = useState(false);
 
-    // 🔹 Load all biodata on mount
+    // Load all biodata on mount
     useEffect(() => {
         fetchAllBiodata();
     }, []);
@@ -30,7 +31,7 @@ const SearchBiodata = () => {
             .finally(() => setLoading(false));
     };
 
-    // 🔹 Search function
+    // Search function
     const handleSearch = () => {
         setLoading(true);
         const query = new URLSearchParams(filters).toString();
@@ -41,7 +42,7 @@ const SearchBiodata = () => {
             .finally(() => setLoading(false));
     };
 
-    // 🔹 Reset filter
+    // Reset filter
     const handleReset = () => {
         setFilters({ age: "", profession: "", district: "", gender: "", religion: "" });
         fetchAllBiodata();
@@ -53,7 +54,7 @@ const SearchBiodata = () => {
             {/* Section title */}
             <SectionTitle heading={"Search Biodata"} />
 
-            {/* 🔹 Filter Box */}
+            {/* Filter Box */}
             <div className="bg-gray-400 text-gray-800 border border-gray-200 shadow-md rounded-lg p-6 mb-6 pr-12 grid grid-cols-1 md:grid-cols-6 gap-4 items-end">
 
                 {/* Age */}
@@ -126,13 +127,16 @@ const SearchBiodata = () => {
                 </div>
             </div>
 
-            {/* 🔹 Loading */}
+            {/*Loading */}
             {loading && <Loading />}
 
-            {/* 🔹 Result Grid */}
+            {/* Result Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
                 {!loading && biodatas.length === 0 && (
-                    <p className="col-span-full text-center text-gray-500">No biodata found 😢</p>
+                    <div className="col-span-full flex flex-col items-center justify-center py-20">
+                        <NoData />
+                    </div>
                 )}
 
                 {biodatas.map((item) => (
