@@ -7,10 +7,10 @@ const Featured_Premium = () => {
     const [biodatas, setBiodatas] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/biodata")
-            .then((res) => res.json())
-            .then((data) => setBiodatas(data))
-            .catch((err) => console.error(err));
+        fetch("http://localhost:5000/api/biodata/featured")
+            .then(res => res.json())
+            .then(data => setBiodatas(data))
+            .catch(err => console.error(err));
     }, []);
 
     const specialProfessions = ["doctor", "professor", "engineer", "actor", "sportsman"];
@@ -20,13 +20,12 @@ const Featured_Premium = () => {
             <SectionTitle
                 heading={
                     <>
-                        <span className="font-semibold text-white">Featured</span> Premium Numbers
+                        <span className="font-semibold text-white">Featured</span> Premium Members
                     </>
                 }
                 className="text-center text-4xl"
             />
 
-            {/* responsive grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
 
                 {biodatas.map((item) => {
@@ -39,48 +38,54 @@ const Featured_Premium = () => {
                             key={item._id}
                             className="bg-white rounded-lg shadow-md p-4 w-full max-w-xs flex flex-col hover:shadow-xl transition"
                         >
-                            {/* image */}
-                            <div className="w-full overflow-hidden rounded-md mb-4 shrink-0">
+                            {/* Image */}
+                            <div className="w-full overflow-hidden rounded-md mb-4">
                                 {item.profileImage ? (
                                     <img
                                         src={item.profileImage}
                                         alt={item.name}
-                                        className="w-full h-48 object-cover object-[center_25%] rounded-md"
+                                        className="w-full h-48 object-cover rounded-md"
                                     />
                                 ) : (
-                                    <div className="h-48 w-full bg-gray-200 flex items-center justify-center text-gray-500 rounded-md">
+                                    <div className="h-48 w-full bg-gray-200 flex items-center justify-center text-gray-500">
                                         Photo
                                     </div>
                                 )}
                             </div>
 
-                            {/* name + profession */}
-                            <div className="flex items-center justify-between mb-2">
-                                <h2 className="text-lg font-semibold text-gray-800">{item.name || "No Name"}</h2>
-                                <p className="text-sm text-gray-600">{item.profession || "N/A"}</p>
+                            {/* Name + Profession */}
+                            <div className="flex justify-between items-center mb-2">
+                                <h2 className="text-lg font-semibold text-gray-800">
+                                    {item.name || "No Name"}
+                                </h2>
+                                <p className="text-sm text-gray-600">
+                                    {item.profession || "N/A"}
+                                </p>
                             </div>
 
-                            {/* ✅ Premium badge */}
+                            {/* Premium Badge */}
                             {isPremium && (
                                 <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded mb-2 w-fit">
                                     Premium
                                 </span>
                             )}
 
-                            {/* description */}
+                            {/* About */}
                             <p className="text-xs text-gray-500 mb-2 flex-1">
-                                {item.aboutMe ? item.aboutMe.slice(0, 60) + "..." : "No description"}
+                                {item.aboutMe
+                                    ? item.aboutMe.slice(0, 60) + "..."
+                                    : "No description"}
                             </p>
 
-                            {/* location */}
+                            {/* Location */}
                             <p className="text-xs text-gray-500 mb-2">
                                 📍 {item.district || "Unknown"}, {item.country || ""}
                             </p>
 
-                            {/* button */}
+                            {/* Button */}
                             <button
                                 onClick={() => navigate(`/biodata/${item._id}`)}
-                                className="mt-auto w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition z-10"
+                                className="mt-auto w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700"
                             >
                                 View Profile
                             </button>
