@@ -36,18 +36,18 @@ const Featured_Premium = () => {
                     return (
                         <div
                             key={item._id}
-                            className="bg-white rounded-lg shadow-md p-4 w-full max-w-xs flex flex-col hover:shadow-xl transition"
+                            className="bg-white rounded-lg shadow-md p-4 w-full max-w-xs flex flex-col hover:shadow-xl transition relative"
                         >
                             {/* Image */}
-                            <div className="w-full overflow-hidden rounded-md mb-4">
+                            <div className="w-full overflow-hidden rounded-md mb-4 shrink-0">
                                 {item.profileImage ? (
                                     <img
                                         src={item.profileImage}
                                         alt={item.name}
-                                        className="w-full h-48 object-cover rounded-md"
+                                        className="w-full h-48 object-cover object-[center_25%] rounded-md"
                                     />
                                 ) : (
-                                    <div className="h-48 w-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                    <div className="h-48 w-full bg-gray-200 flex items-center justify-center text-gray-500 rounded-md">
                                         Photo
                                     </div>
                                 )}
@@ -71,7 +71,7 @@ const Featured_Premium = () => {
                             )}
 
                             {/* About */}
-                            <p className="text-xs text-gray-500 mb-2 flex-1">
+                            <p className="text-xs text-gray-500 mb-2">
                                 {item.aboutMe
                                     ? item.aboutMe.slice(0, 60) + "..."
                                     : "No description"}
@@ -82,10 +82,10 @@ const Featured_Premium = () => {
                                 📍 {item.district || "Unknown"}, {item.country || ""}
                             </p>
 
-                            {/* Button */}
+                            {/* View Profile Button */}
                             <button
-                                onClick={() => navigate(`/biodata/${item._id}`)}
-                                className="mt-auto w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700"
+                                onClick={() => navigate(`/biodata/${item._id.toString()}`)}
+                                className="mt-auto w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 z-10 relative"
                             >
                                 View Profile
                             </button>

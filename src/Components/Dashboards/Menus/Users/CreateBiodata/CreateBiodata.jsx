@@ -84,17 +84,20 @@ const CreateBiodata = () => {
             email: user?.email || ""
         };
 
-        fetch('http://localhost:5000/api/biodata', {
-            method: 'POST',
-            headers: { 'content-type': 'application/json' },
-            body: JSON.stringify(biodataInfo)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                alert("Biodata submitted successfully!");
-                navigate('/home');
+        try {
+            const res = await fetch('http://localhost:5000/api/biodata', {
+                method: 'POST',
+                headers: { 'content-type': 'application/json' },
+                body: JSON.stringify(biodataInfo)
             });
+            const data = await res.json();
+            console.log(data);
+            alert("Biodata submitted successfully!");
+            navigate(`/profile/${data._id}`); // navigate to view profile page
+        } catch (err) {
+            console.log(err);
+            alert("Error submitting biodata.");
+        }
     }
 
     const progress = (step / steps.length) * 100;
@@ -133,19 +136,24 @@ const CreateBiodata = () => {
                                     {biodataTypes.map(t => <option key={t} value={t}>{t}</option>)}
                                 </select>
 
-                                <select name="maritalStatus" value={formData.maritalStatus} onChange={handleChange} className="w-full border p-2 rounded">
-                                    <option value="">Marital Status</option>
-                                    {maritalStatuses.map(s => <option key={s} value={s}>{s}</option>)}
-                                </select>
-
-                                <select name="religion" value={formData.religion} onChange={handleChange} className="w-full border p-2 rounded">
-                                    <option value="">Religion</option>
-                                    {religions.map(r => <option key={r} value={r}>{r}</option>)}
-                                </select>
-
                                 <div className="flex gap-3">
+                                    <select name="maritalStatus" value={formData.maritalStatus} onChange={handleChange} className="w-full border p-2 rounded">
+                                        <option value="">Marital Status</option>
+                                        {maritalStatuses.map(s => <option key={s} value={s}>{s}</option>)}
+                                    </select>
+
+                                    <select name="religion" value={formData.religion} onChange={handleChange} className="w-full border p-2 rounded">
+                                        <option value="">Religion</option>
+                                        {religions.map(r => <option key={r} value={r}>{r}</option>)}
+                                    </select>
+                                </div>
+
+                                <div className="flex gap-2 items-center">
                                     <input type="date" name="dateOfBirth" value={formData.dateOfBirth} onChange={handleChange} className="w-full border p-2 rounded" />
-                                    <input type="number" name="age" value={formData.age} readOnly className="w-full border p-2 rounded bg-black text-white" />
+                                    <div className="flex gap-1 items-center">
+                                        <input type="number" name="age" value={formData.age} readOnly className="w-20 border p-2 rounded bg-black text-white" />
+                                        <span className="text-white">years</span>
+                                    </div>
                                 </div>
 
                                 <div className="flex gap-3">
