@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import SectionTitle from "../../../../Home/SectionTitle/SectionTitle";
 
 const SearchBiodata = () => {
     const navigate = useNavigate();
@@ -50,40 +51,83 @@ const SearchBiodata = () => {
     };
 
     return (
-        <section className="p-6 md:px-12">
-            <h2 className="text-3xl font-bold text-center mb-6">🔍 Search Biodata</h2>
+        <section className="px-6 md:px-12">
 
+            <SectionTitle
+                heading={"Search Biodata"}
+            >
+
+            </SectionTitle>
             {/* 🔹 Filter Box */}
-            <div className="bg-amber-200 shadow-md rounded-lg p-4 mb-6 grid grid-cols-1 md:grid-cols-6 gap-4">
+            <div className="bg-gray-400 text-gray-800 border border-gray-200 shadow-md rounded-lg p-6 mb-6 pr-12 grid grid-cols-1 md:grid-cols-6 gap-4 items-end">
 
-                <input type="number" placeholder="Age" value={filters.age}
+                {/* Age */}
+                <input
+                    type="number"
+                    placeholder="Age"
+                    value={filters.age}
                     onChange={(e) => setFilters({ ...filters, age: e.target.value })}
-                    className="border p-2 rounded" />
+                    className="border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                />
 
-                <input type="text" placeholder="Profession" value={filters.profession}
+                {/* Profession */}
+                <input
+                    type="text"
+                    placeholder="Profession"
+                    value={filters.profession}
                     onChange={(e) => setFilters({ ...filters, profession: e.target.value })}
-                    className="border p-2 rounded" />
+                    className="border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                />
 
-                <input type="text" placeholder="District" value={filters.district}
+                {/* District */}
+                <input
+                    type="text"
+                    placeholder="District"
+                    value={filters.district}
                     onChange={(e) => setFilters({ ...filters, district: e.target.value })}
-                    className="border p-2 rounded" />
+                    className="border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                />
 
-                <select value={filters.gender}
+                {/* Gender */}
+                <select
+                    value={filters.gender}
                     onChange={(e) => setFilters({ ...filters, gender: e.target.value })}
-                    className="border p-2 rounded">
+                    className="border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                >
                     <option value="">Gender</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                     <option value="Other">Other</option>
                 </select>
 
-                <input type="text" placeholder="Religion" value={filters.religion}
+                {/* Religion */}
+                <select
+                    value={filters.religion}
                     onChange={(e) => setFilters({ ...filters, religion: e.target.value })}
-                    className="border p-2 rounded" />
+                    className="border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                >
+                    <option value="">Religion</option>
+                    <option value="Muslim">Muslim</option>
+                    <option value="Hindu">Hindu</option>
+                    <option value="Christian">Christian</option>
+                    <option value="Buddhist">Buddhist</option>
+                    <option value="Other">Other</option>
+                </select>
 
+                {/* Buttons */}
                 <div className="flex gap-2 col-span-1 md:col-span-1">
-                    <button onClick={handleSearch} className="bg-green-600 text-white px-4 py-2 rounded w-full">Search</button>
-                    <button onClick={handleReset} className="bg-gray-400 text-white px-4 py-2 rounded w-full">Reset</button>
+                    <button
+                        onClick={handleSearch}
+                        className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition"
+                    >
+                        Search
+                    </button>
+                    <button
+                        onClick={handleReset}
+                        className="bg-gray-700 hover:bg-gray-500 text-white px-4 py-2 rounded-lg transition"
+                    >
+                        Reset
+                    </button>
                 </div>
             </div>
 
