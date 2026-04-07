@@ -27,11 +27,13 @@ const Featured_Premium = () => {
             />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
-
                 {biodatas.map((item) => {
-                    const isPremium = specialProfessions.includes(
-                        item.profession?.toLowerCase()
-                    );
+                    // ✅ Premium logic: case-insensitive, trim, always shows "Premium"
+                    const isPremium = item.profession
+                        ? specialProfessions.some(prof =>
+                            item.profession.trim().toLowerCase().includes(prof.toLowerCase())
+                        )
+                        : false;
 
                     return (
                         <div
@@ -63,9 +65,9 @@ const Featured_Premium = () => {
                                 </p>
                             </div>
 
-                            {/* Premium Badge */}
+                            {/* ✅ Premium Badge */}
                             {isPremium && (
-                                <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded mb-2 w-fit">
+                                <span className="absolute top-2 right-2 bg-orange-500 text-white text-xs px-2 py-1 rounded z-10">
                                     Premium
                                 </span>
                             )}
