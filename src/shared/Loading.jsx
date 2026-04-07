@@ -14,7 +14,7 @@ const Loading = () => {
 
             {/* Optional Text */}
             <p className="text-gray-700 dark:text-gray-200 font-semibold text-lg animate-pulse">
-                Loading, please wait...
+                Please wait...
             </p>
 
         </div>
