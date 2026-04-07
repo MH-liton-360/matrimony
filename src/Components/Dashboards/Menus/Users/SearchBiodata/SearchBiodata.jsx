@@ -134,7 +134,7 @@ const SearchBiodata = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
                 {!loading && biodatas.length === 0 && (
-                    <div className="col-span-full flex flex-col items-center justify-center py-20">
+                    <div className="col-span-full flex flex-col items-center justify-center">
                         <NoData />
                     </div>
                 )}
