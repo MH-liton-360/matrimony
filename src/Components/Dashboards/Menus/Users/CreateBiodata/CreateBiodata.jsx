@@ -160,7 +160,7 @@ const CreateBiodata = () => {
 
                                 <div className="flex gap-3">
                                     <input type="text" name="profession" value={formData.profession} onChange={handleChange} placeholder="Profession" className="w-full border p-2 rounded" />
-                                    <input type="text" name="monthlyIncome" value={formData.monthlyIncome} onChange={handleChange} placeholder="Monthly Income" className="w-full border p-2 rounded" />
+                                    <input type="number" name="monthlyIncome" value={formData.monthlyIncome} onChange={handleChange} placeholder="Monthly Income" className="w-full border p-2 rounded" />
                                 </div>
 
                                 <input type="text" name="profileImage" value={formData.profileImage} onChange={handleChange} placeholder="Profile Image URL" className="w-full border p-2 rounded" />
@@ -226,7 +226,7 @@ const CreateBiodata = () => {
                                 </div>
                                 <div className="flex gap-3">
                                     <input type="text" name="expectedEducation" value={formData.expectedEducation} onChange={handleChange} placeholder="Expected Education" className="w-full border p-2 rounded" />
-                                    <input type="text" name="expectedProfession" value={formData.expectedEducation} onChange={handleChange} placeholder="Expected Profession" className="w-full border p-2 rounded" />
+                                    <input type="text" name="expectedProfession" value={formData.expectedProfession} onChange={handleChange} placeholder="Expected Profession" className="w-full border p-2 rounded" />
                                 </div>
                                 <textarea name="partnerPreferences" value={formData.partnerPreferences} onChange={handleChange} rows="3" placeholder="Partner Preferences" className="w-full border p-2 rounded" />
                             </div>
