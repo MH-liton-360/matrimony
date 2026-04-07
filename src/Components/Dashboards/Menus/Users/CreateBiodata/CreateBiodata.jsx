@@ -140,7 +140,7 @@ const CreateBiodata = () => {
                         {step === 1 && (
                             <div className="space-y-4">
                                 <select name="biodataType" value={formData.biodataType} onChange={handleChange} className="w-full border p-2 rounded">
-                                    <option value="">Select Type</option>
+                                    <option value="">Gender</option>
                                     {biodataTypes.map(t => <option key={t} value={t}>{t}</option>)}
                                 </select>
                                 <select name="maritalStatus" value={formData.maritalStatus} onChange={handleChange} className="w-full border p-2 rounded">
