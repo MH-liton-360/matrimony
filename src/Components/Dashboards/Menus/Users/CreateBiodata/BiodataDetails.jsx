@@ -1,8 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Loading from "../../../../../shared/Loading";
 
 const BiodataDetails = () => {
-    const { id } = useParams(); // URL theke id neya
+    const { id } = useParams();
     const [biodata, setBiodata] = useState(null);
 
     useEffect(() => {
@@ -12,7 +13,7 @@ const BiodataDetails = () => {
             .catch(err => console.error(err));
     }, [id]);
 
-    if (!biodata) return <p>Loading...</p>;
+    if (!biodata) return <Loading></Loading>;
 
     return (
         <div className="max-w-4xl mx-auto p-4">
@@ -29,6 +30,7 @@ const BiodataDetails = () => {
                     <p><strong>Profession:</strong> {biodata.profession}</p>
                     <p><strong>Age:</strong> {biodata.age}</p>
                     <p><strong>Marital Status:</strong> {biodata.maritalStatus}</p>
+                    <p><strong>Religion:</strong> {biodata.religion}</p>
                     <p><strong>About:</strong> {biodata.aboutMe}</p>
                     <p><strong>Location:</strong> {biodata.district}, {biodata.country}</p>
                     <p><strong>Family Status:</strong> {biodata.familyStatus}</p>
