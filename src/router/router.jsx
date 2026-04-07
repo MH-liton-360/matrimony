@@ -9,11 +9,11 @@ import Error from "../Components/Error/Errors/Error";
 import Profile from "../Components/Dashboards/Menus/Users/Profile/Profile";
 import Dashboard from "../layouts/Dashboard/Dashboard";
 import CreateBiodata from "../Components/Dashboards/Menus/Users/CreateBiodata/CreateBiodata";
-import Overview from "../Components/Dashboards/Menus/Users/Overview/Overview";
 import Setting from "../pages/Setting/Setting";
 import UserSetting from "../Components/Dashboards/Menus/Users/Setting/UserSetting";
 import BiodataDetails from "../Components/Dashboards/Menus/Users/CreateBiodata/BiodataDetails";
 import SecureRoute from "./Secure/SecureRoute";
+import SearchBiodata from "../Components/Dashboards/Menus/Users/SearchBiodata/SearchBiodata";
 
 export const router = createBrowserRouter([
     {
@@ -36,7 +36,7 @@ export const router = createBrowserRouter([
         Component: Dashboard,
         children: [
             { path: "profile", Component: Profile },
-            { path: "overview", Component: Overview },
+            { path: "search", Component: SearchBiodata },
             { path: "settings", Component: UserSetting },
         ]
     },

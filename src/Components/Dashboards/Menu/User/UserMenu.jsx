@@ -13,7 +13,7 @@ const UserMenu = [
     },
     {
         name: "Search Biodata",
-        path: "/dashboard/biodata",
+        path: "/dashboard/search",
         icon: FaSearch,
     },
     {
