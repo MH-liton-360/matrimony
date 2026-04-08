@@ -40,6 +40,7 @@ export const router = createBrowserRouter([
             { path: "settings", Component: UserSetting },
         ]
     },
+
     { path: "*", Component: Error },
 
 
