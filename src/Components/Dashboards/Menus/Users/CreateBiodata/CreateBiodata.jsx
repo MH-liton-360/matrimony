@@ -137,19 +137,19 @@ const CreateBiodata = () => {
                                 </select>
 
                                 <div className="flex gap-3">
-                                    <select name="maritalStatus" value={formData.maritalStatus} onChange={handleChange} className="w-full border p-2 rounded">
+                                    <select name="maritalStatus" value={formData.maritalStatus} onChange={handleChange} className="w-full border p-2 rounded bg-black">
                                         <option value="">Marital Status</option>
                                         {maritalStatuses.map(s => <option key={s} value={s}>{s}</option>)}
                                     </select>
 
-                                    <select name="religion" value={formData.religion} onChange={handleChange} className="w-full border p-2 rounded">
+                                    <select name="religion" value={formData.religion} onChange={handleChange} className="w-full border p-2 rounded bg-black">
                                         <option value="">Religion</option>
                                         {religions.map(r => <option key={r} value={r}>{r}</option>)}
                                     </select>
                                 </div>
 
                                 <div className="flex gap-2 items-center">
-                                    <input type="date" name="dateOfBirth" value={formData.dateOfBirth} onChange={handleChange} className="w-full border p-2 rounded" />
+                                    <input type="date" name="dateOfBirth" value={formData.dateOfBirth} onChange={handleChange} className="w-full border p-2 rounded bg-black" />
                                     <div className="flex gap-1 items-center">
                                         <input type="number" name="age" value={formData.age} readOnly className="w-20 border p-2 rounded bg-black text-white" />
                                         <span className="text-white">years</span>
@@ -157,16 +157,16 @@ const CreateBiodata = () => {
                                 </div>
 
                                 <div className="flex gap-3">
-                                    <input type="text" name="height" value={formData.height} onChange={handleChange} placeholder="Height" className="w-full border p-2 rounded" />
+                                    <input type="text" name="height" value={formData.height} onChange={handleChange} placeholder="Height" className="w-full border p-2 rounded bg-black" />
                                     <input type="text" name="weight" value={formData.weight} onChange={handleChange} placeholder="Weight" className="w-full border p-2 rounded" />
                                 </div>
 
                                 <div className="flex gap-3">
-                                    <input type="text" name="profession" value={formData.profession} onChange={handleChange} placeholder="Profession" className="w-full border p-2 rounded" />
-                                    <input type="number" name="monthlyIncome" value={formData.monthlyIncome} onChange={handleChange} placeholder="Monthly Income" className="w-full border p-2 rounded" />
+                                    <input type="text" name="profession" value={formData.profession} onChange={handleChange} placeholder="Profession" className="w-full border p-2 rounded bg-black" />
+                                    <input type="number" name="monthlyIncome" value={formData.monthlyIncome} onChange={handleChange} placeholder="Monthly Income" className="w-full border p-2 rounded bg-black" />
                                 </div>
 
-                                <input type="text" name="profileImage" value={formData.profileImage} onChange={handleChange} placeholder="Profile Image URL" className="w-full border p-2 rounded" />
+                                <input type="text" name="profileImage" value={formData.profileImage} onChange={handleChange} placeholder="Profile Image URL" className="w-full border p-2 rounded bg-black" />
                             </div>
                         )}
 
