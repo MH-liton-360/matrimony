@@ -174,21 +174,21 @@ const CreateBiodata = () => {
                         {step === 2 && (
                             <div className="space-y-4">
                                 <div className="flex gap-4">
-                                    <input type="text" name="fatherName" value={formData.fatherName} onChange={handleChange} placeholder="Father Name" className="w-full border p-2 rounded" />
-                                    <input type="text" name="fatherProfession" value={formData.fatherProfession} onChange={handleChange} placeholder="Father Profession" className="w-full border p-2 rounded" />
+                                    <input type="text" name="fatherName" value={formData.fatherName} onChange={handleChange} placeholder="Father Name" className="w-full border p-2 rounded bg-black" />
+                                    <input type="text" name="fatherProfession" value={formData.fatherProfession} onChange={handleChange} placeholder="Father Profession" className="w-full border p-2 rounded bg-black" />
                                 </div>
 
                                 <div className="flex gap-3">
                                     <input type="text" name="motherName" value={formData.motherName} onChange={handleChange} placeholder="Mother Name" className="w-full border p-2 rounded" />
-                                    <input type="text" name="motherProfession" value={formData.motherProfession} onChange={handleChange} placeholder="Mother Profession" className="w-full border p-2 rounded" />
+                                    <input type="text" name="motherProfession" value={formData.motherProfession} onChange={handleChange} placeholder="Mother Profession" className="w-full border p-2 rounded bg-black" />
                                 </div>
 
-                                <select name="familyStatus" value={formData.familyStatus} onChange={handleChange} className="w-full border p-2 rounded">
+                                <select name="familyStatus" value={formData.familyStatus} onChange={handleChange} className="w-full border p-2 rounded bg-black">
                                     <option value="">Family Status</option>
                                     {familyStatuses.map(s => <option key={s} value={s}>{s}</option>)}
                                 </select>
 
-                                <select name="familyType" value={formData.familyType} onChange={handleChange} className="w-full border p-2 rounded">
+                                <select name="familyType" value={formData.familyType} onChange={handleChange} className="w-full border p-2 rounded bg-black">
                                     <option value="">Family Type</option>
                                     {familyTypes.map(t => <option key={t} value={t}>{t}</option>)}
                                 </select>
