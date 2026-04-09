@@ -16,7 +16,7 @@ const BiodataDetails = () => {
     if (!biodata) return <Loading />;
 
     return (
-        <div className="max-w-5xl mx-auto p-6 bg-white shadow-lg rounded-lg">
+        <div className="max-w-5xl mx-auto p-6 my-6 bg-white shadow-lg rounded-lg">
             {/* Header */}
             <h1 className="text-4xl font-extrabold text-gray-800 mb-6 border-b pb-3">
                 {biodata.name}
