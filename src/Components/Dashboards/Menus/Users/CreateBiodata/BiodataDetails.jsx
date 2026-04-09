@@ -23,14 +23,14 @@ const BiodataDetails = () => {
             </h1>
 
             {/* Profile Section */}
-            <div className="flex flex-col md:flex-row gap-8">
+            <div className="flex flex-col md:flex-row gap-12">
                 <img
                     src={biodata.profileImage}
                     alt={biodata.name}
                     className="w-full md:w-1/3 h-80 object-cover rounded-lg shadow-md"
                 />
 
-                <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+                <div className="flex-1 grid grid-cols-1 md:grid-cols-2 text-gray-700">
                     <p><span className="font-semibold">Profession:</span> {biodata.profession}</p>
                     <p><span className="font-semibold">Age:</span> {biodata.age}</p>
                     <p><span className="font-semibold">Marital Status:</span> {biodata.maritalStatus}</p>
@@ -45,11 +45,11 @@ const BiodataDetails = () => {
             <div className="mt-8 space-y-4 text-gray-700 leading-relaxed">
                 <div>
                     <h2 className="text-xl font-semibold text-gray-800 mb-2">About</h2>
-                    <p className="bg-gray-50 p-4 rounded-md shadow-sm">{biodata.aboutMe}</p>
+                    <p className="bg-gray-50 rounded-md shadow-sm">{biodata.aboutMe}</p>
                 </div>
                 <div>
                     <h2 className="text-xl font-semibold text-gray-800 mb-2">Expected Partner</h2>
-                    <p className="bg-gray-50 p-4 rounded-md shadow-sm">{biodata.partnerPreferences}</p>
+                    <p className="bg-gray-50 rounded-md shadow-sm">{biodata.partnerPreferences}</p>
                 </div>
             </div>
         </div>
