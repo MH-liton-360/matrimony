@@ -130,10 +130,10 @@ const SearchBiodata = () => {
             {/*Loading */}
             {loading && <Loading />}
 
-            {/* Card Start Now here ---------------------------------------------------------------------------------------! */}
+            {/* Card Start Now here---------------------------------------------------------------------------------------! */}
 
             {/* Result Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
 
                 {!loading && biodatas.length === 0 && (
                     <div className="col-span-full flex flex-col items-center justify-center">
@@ -142,38 +142,52 @@ const SearchBiodata = () => {
                 )}
 
                 {biodatas.map((item) => (
-                    <div key={item._id} className="bg-white rounded-lg shadow-md p-4 flex flex-col hover:shadow-xl transition">
-
-                        {/* Image */}
-                        <div className="w-full mb-3">
+                    <div
+                        key={item._id}
+                        className="bg-amber-100 rounded-lg shadow-md hover:shadow-lg transition flex flex-col md:flex-row"
+                    >
+                        {/* Image Left */}
+                        <div className="md:w-2/4">
                             {item.profileImage ? (
-                                <img src={item.profileImage} alt={item.name} className="w-full h-44 object-cover rounded" />
+                                <img
+                                    src={item.profileImage}
+                                    alt={item.name}
+                                    className="w-full h-44 md:h-full object-cover rounded-l-lg"
+                                />
                             ) : (
-                                <div className="h-44 bg-gray-200 flex items-center justify-center text-gray-500 rounded">Photo</div>
+                                <div className="h-44 bg-gray-200 flex items-center justify-center text-gray-500 rounded-l-lg">
+                                    Photo
+                                </div>
                             )}
                         </div>
 
-                        {/* Name */}
-                        <h3 className="font-semibold text-lg text-gray-800">{item.name || "No Name"}</h3>
+                        {/* Text Right */}
+                        <div className="flex-1 p-4 flex flex-col justify-between">
+                            <div>
+                                <h3 className="font-semibold text-lg text-gray-800">
+                                    {item.name || "No Name"}
+                                </h3>
+                                <p className="text-sm text-gray-600">💼 {item.profession || "N/A"}</p>
+                                <p className="text-sm text-gray-600">
+                                    📍 {item.district || "Unknown"}, {item.country || ""}
+                                </p>
+                                <p className="text-xs text-gray-500 mt-2">
+                                    {item.aboutMe ? item.aboutMe.slice(0, 60) + "..." : "No description"}
+                                </p>
+                            </div>
 
-                        {/* Info */}
-                        <p className="text-sm text-gray-600">💼 {item.profession || "N/A"}</p>
-                        <p className="text-sm text-gray-600">🎂 Age: {item.age || "N/A"}</p>
-                        <p className="text-sm text-gray-600">📍 {item.district || "Unknown"}, {item.country || ""}</p>
-
-                        {/* About */}
-                        <p className="text-xs text-gray-500 mt-2 flex-1">{item.aboutMe ? item.aboutMe.slice(0, 60) + "..." : "No description"}</p>
-
-                        {/* Button */}
-                        <button
-                            onClick={() => navigate(`/biodata/${item._id}`)}
-                            className="mt-3 bg-green-600 text-white py-2 rounded hover:bg-green-700"
-                        >
-                            View Profile
-                        </button>
+                            {/* Button */}
+                            <button
+                                onClick={() => navigate(`/biodata/${item._id}`)}
+                                className="mt-3 bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 self-start"
+                            >
+                                View Profile
+                            </button>
+                        </div>
                     </div>
                 ))}
             </div>
+
         </section>
     );
 };
