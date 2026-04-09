@@ -213,7 +213,7 @@ const CreateBiodata = () => {
                         {/* Step 4 */}
                         {step === 4 && (
                             <div className="space-y-4">
-                                <input type="text" name="highestEducation" value={formData.highestEducation} onChange={handleChange} placeholder="Highest Education" className="w-full border p-2 rounded" />
+                                <input type="text" name="highestEducation" value={formData.highestEducation} onChange={handleChange} placeholder="Highest Education" className="w-full border p-2 rounded bg-black" />
                                 <textarea name="aboutMe" value={formData.aboutMe} onChange={handleChange} rows="4" placeholder="About Me" className="w-full border p-2 rounded" />
                             </div>
                         )}
@@ -222,14 +222,14 @@ const CreateBiodata = () => {
                         {step === 5 && (
                             <div className="space-y-4">
                                 <div className="flex gap-3">
-                                    <input type="text" name="expectedAge" value={formData.expectedAge} onChange={handleChange} placeholder="Expected Age" className="w-full border p-2 rounded" />
-                                    <input type="text" name="expectedHeight" value={formData.expectedHeight} onChange={handleChange} placeholder="Expected Height" className="w-full border p-2 rounded" />
+                                    <input type="text" name="expectedAge" value={formData.expectedAge} onChange={handleChange} placeholder="Expected Age" className="w-full border p-2 rounded bg-black" />
+                                    <input type="text" name="expectedHeight" value={formData.expectedHeight} onChange={handleChange} placeholder="Expected Height" className="w-full border p-2 rounded bg-black" />
                                 </div>
                                 <div className="flex gap-3">
-                                    <input type="text" name="expectedEducation" value={formData.expectedEducation} onChange={handleChange} placeholder="Expected Education" className="w-full border p-2 rounded" />
-                                    <input type="text" name="expectedProfession" value={formData.expectedProfession} onChange={handleChange} placeholder="Expected Profession" className="w-full border p-2 rounded" />
+                                    <input type="text" name="expectedEducation" value={formData.expectedEducation} onChange={handleChange} placeholder="Expected Education" className="w-full border p-2 rounded bg-black" />
+                                    <input type="text" name="expectedProfession" value={formData.expectedProfession} onChange={handleChange} placeholder="Expected Profession" className="w-full border p-2 rounded bg-black" />
                                 </div>
-                                <textarea name="partnerPreferences" value={formData.partnerPreferences} onChange={handleChange} rows="3" placeholder="Partner Preferences" className="w-full border p-2 rounded" />
+                                <textarea name="partnerPreferences" value={formData.partnerPreferences} onChange={handleChange} rows="3" placeholder="Partner Preferences" className="w-full border p-2 rounded bg-black" />
                             </div>
                         )}
 
