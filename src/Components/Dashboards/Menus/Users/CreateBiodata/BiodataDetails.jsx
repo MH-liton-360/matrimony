@@ -39,6 +39,7 @@ const BiodataDetails = () => {
                     <p><span className="font-semibold">Family Status:</span> {biodata.familyStatus}</p>
                     <p><span className="font-semibold">Education:</span> {biodata.highestEducation}</p>
                 </div>
+
             </div>
 
             {/* About Section */}
