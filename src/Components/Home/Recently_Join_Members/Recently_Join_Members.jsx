@@ -25,7 +25,6 @@ const Recently_Join_Members = () => {
         return () => clearInterval(interval);
     }, []);
 
-    const specialProfessions = ["doctor", "professor", "engineer", "actor", "sportsman"];
 
     return (
         <section className="pb-8 px-4 md:px-8 lg:px-16">
@@ -33,9 +32,7 @@ const Recently_Join_Members = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
                 {biodatas.map((item) => {
-                    const isPremium = specialProfessions.includes(
-                        item.profession?.toLowerCase()
-                    );
+
 
                     return (
                         <div
