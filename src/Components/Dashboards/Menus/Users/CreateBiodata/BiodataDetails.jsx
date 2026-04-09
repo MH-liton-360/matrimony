@@ -13,34 +13,44 @@ const BiodataDetails = () => {
             .catch(err => console.error(err));
     }, [id]);
 
-    if (!biodata) return <Loading></Loading>;
+    if (!biodata) return <Loading />;
 
     return (
-        <div className="max-w-4xl mx-auto p-4">
-            <h1 className="text-3xl font-bold mb-4">{biodata.name}</h1>
+        <div className="max-w-5xl mx-auto p-6 bg-white shadow-lg rounded-lg">
+            {/* Header */}
+            <h1 className="text-4xl font-extrabold text-gray-800 mb-6 border-b pb-3">
+                {biodata.name}
+            </h1>
 
-            <div className="flex flex-col md:flex-row gap-6">
+            {/* Profile Section */}
+            <div className="flex flex-col md:flex-row gap-8">
                 <img
                     src={biodata.profileImage}
                     alt={biodata.name}
-                    className="w-full md:w-1/3 h-72 object-cover rounded-md"
+                    className="w-full md:w-1/3 h-80 object-cover rounded-lg shadow-md"
                 />
 
-                <div className="flex-1 space-y-2">
-                    <p><strong>Profession:</strong> {biodata.profession}</p>
-                    <p><strong>Age:</strong> {biodata.age}</p>
-                    <p><strong>Marital Status:</strong> {biodata.maritalStatus}</p>
-                    <p><strong>Religion:</strong> {biodata.religion}</p>
-                    <p><strong>Location:</strong> {biodata.district}, {biodata.country}</p>
-                    <p><strong>Family Status:</strong> {biodata.familyStatus}</p>
-                    <p><strong>Education:</strong> {biodata.highestEducation}</p>
+                <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+                    <p><span className="font-semibold">Profession:</span> {biodata.profession}</p>
+                    <p><span className="font-semibold">Age:</span> {biodata.age}</p>
+                    <p><span className="font-semibold">Marital Status:</span> {biodata.maritalStatus}</p>
+                    <p><span className="font-semibold">Religion:</span> {biodata.religion}</p>
+                    <p><span className="font-semibold">Location:</span> {biodata.district}, {biodata.country}</p>
+                    <p><span className="font-semibold">Family Status:</span> {biodata.familyStatus}</p>
+                    <p><span className="font-semibold">Education:</span> {biodata.highestEducation}</p>
                 </div>
-
             </div>
-            <div className="">
-                <p><strong>About:</strong></p>
-                <p>{biodata.aboutMe}</p>
-                <p><strong>Expected Partner:</strong> {biodata.partnerPreferences}</p>
+
+            {/* About Section */}
+            <div className="mt-8 space-y-4 text-gray-700 leading-relaxed">
+                <div>
+                    <h2 className="text-xl font-semibold text-gray-800 mb-2">About</h2>
+                    <p className="bg-gray-50 p-4 rounded-md shadow-sm">{biodata.aboutMe}</p>
+                </div>
+                <div>
+                    <h2 className="text-xl font-semibold text-gray-800 mb-2">Expected Partner</h2>
+                    <p className="bg-gray-50 p-4 rounded-md shadow-sm">{biodata.partnerPreferences}</p>
+                </div>
             </div>
         </div>
     );
