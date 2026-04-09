@@ -67,7 +67,7 @@ const Featured_Premium = () => {
 
                             {/* ✅ Premium Badge */}
                             {isPremium && (
-                                <span className="absolute top-2 right-2 bg-orange-500 text-white text-xs px-2 py-1 rounded z-10">
+                                <span className="absolute top-3 right-3 bg-orange-500 text-white text-xs px-2 py-1 rounded z-10">
                                     Premium
                                 </span>
                             )}
@@ -94,6 +94,7 @@ const Featured_Premium = () => {
                                     </div>
                                 </div>
                             </div>
+
                             {/* View Profile Button */}
                             <button
                                 onClick={() => navigate(`/biodata/${item._id.toString()}`)}
