@@ -214,7 +214,7 @@ const CreateBiodata = () => {
                         {step === 4 && (
                             <div className="space-y-4">
                                 <input type="text" name="highestEducation" value={formData.highestEducation} onChange={handleChange} placeholder="Highest Education" className="w-full border p-2 rounded bg-black" />
-                                <textarea name="aboutMe" value={formData.aboutMe} onChange={handleChange} rows="4" placeholder="About Me" className="w-full border p-2 rounded" />
+                                <textarea name="aboutMe" value={formData.aboutMe} onChange={handleChange} rows="4" placeholder="About Me" className="w-full border p-2 rounded bg-black" />
                             </div>
                         )}
 
