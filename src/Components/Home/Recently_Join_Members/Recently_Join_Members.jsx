@@ -63,13 +63,6 @@ const Recently_Join_Members = () => {
                                 <p className="text-sm text-gray-600">{item.profession || "N/A"}</p>
                             </div>
 
-                            {/* Premium Badge */}
-                            {isPremium && (
-                                <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded mb-2 w-fit">
-                                    Premium
-                                </span>
-                            )}
-
                             {/* Description */}
                             <p className="text-xs text-gray-500 mb-2">
                                 {item.aboutMe ? item.aboutMe.slice(0, 60) + "..." : "No description"}
@@ -79,12 +72,6 @@ const Recently_Join_Members = () => {
                             <p className="text-xs text-gray-500 mb-2">
                                 📍 {item.district || "Unknown"}, {item.country || ""}
                             </p>
-
-                            {/* Rating */}
-                            <div className="flex items-center mb-2">
-                                <span className="text-yellow-500">★★★★★</span>
-                                <span className="ml-2 text-xs text-gray-600">{isPremium ? "Premium" : "New"}</span>
-                            </div>
 
                             {/* View Profile Button */}
                             <button

@@ -79,11 +79,21 @@ const Featured_Premium = () => {
                                     : "No description"}
                             </p>
 
-                            {/* Location */}
-                            <p className="text-xs text-gray-500 mb-2">
-                                📍 {item.district || "Unknown"}, {item.country || ""}
-                            </p>
+                            <div className="flex items-center justify-between">
+                                <div className="">
 
+                                    {/* Location */}
+                                    <p className="text-xs text-gray-500 mb-2">
+                                        📍 {item.district || "Unknown"}, {item.country || ""}
+                                    </p>
+                                </div>
+                                <div className="">
+                                    {/* Rating */}
+                                    <div className="flex items-center mb-2">
+                                        <span className="text-yellow-500">★★★★★</span>
+                                    </div>
+                                </div>
+                            </div>
                             {/* View Profile Button */}
                             <button
                                 onClick={() => navigate(`/biodata/${item._id.toString()}`)}
