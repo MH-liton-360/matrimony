@@ -18,12 +18,12 @@ const BiodataDetails = () => {
     return (
         <div className="max-w-5xl mx-auto p-6 my-6 bg-white shadow-lg rounded-lg">
             {/* Header */}
-            <h1 className="text-4xl font-extrabold text-gray-800 mb-6 border-b pb-3 p-2">
+            <h1 className="text-4xl font-extrabold text-gray-800 mb-6 border-b pb-3">
                 {biodata.name}
             </h1>
 
             {/* Profile Section */}
-            <div className="flex flex-col p-2 md:flex-row gap-12">
+            <div className="flex flex-col md:flex-row gap-12">
                 <img
                     src={biodata.profileImage}
                     alt={biodata.name}
@@ -45,12 +45,12 @@ const BiodataDetails = () => {
             {/* About Section */}
             <div className="mt-8 space-y-4 text-gray-700 leading-relaxed">
                 <div>
-                    <h2 className="text-xl font-semibold text-gray-800 mb-2 p-2">About</h2>
-                    <p className="bg-gray-50 p-2 rounded-md shadow-sm">{biodata.aboutMe}</p>
+                    <h2 className="text-xl font-semibold text-gray-800 mb-2">About</h2>
+                    <p className="bg-gray-50 p-1 rounded-md shadow-sm">{biodata.aboutMe}</p>
                 </div>
                 <div>
-                    <h2 className="text-xl font-semibold text-gray-800 mb-2 p-2">Expected Partner</h2>
-                    <p className="bg-gray-50 p-2 rounded-md shadow-sm">{biodata.partnerPreferences}</p>
+                    <h2 className="text-xl font-semibold text-gray-800 mb-2">Expected Partner</h2>
+                    <p className="bg-gray-50 p-1 rounded-md shadow-sm">{biodata.partnerPreferences}</p>
                 </div>
             </div>
         </div>
