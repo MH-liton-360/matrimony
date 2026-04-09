@@ -130,6 +130,8 @@ const SearchBiodata = () => {
             {/*Loading */}
             {loading && <Loading />}
 
+            {/* Card Start Now here ---------------------------------------------------------------------------------------! */}
+
             {/* Result Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
@@ -158,8 +160,6 @@ const SearchBiodata = () => {
                         <p className="text-sm text-gray-600">💼 {item.profession || "N/A"}</p>
                         <p className="text-sm text-gray-600">🎂 Age: {item.age || "N/A"}</p>
                         <p className="text-sm text-gray-600">📍 {item.district || "Unknown"}, {item.country || ""}</p>
-                        <p className="text-sm text-gray-600">⚧ {item.gender || "N/A"}</p>
-                        <p className="text-sm text-gray-600">✝ {item.religion || "N/A"}</p>
 
                         {/* About */}
                         <p className="text-xs text-gray-500 mt-2 flex-1">{item.aboutMe ? item.aboutMe.slice(0, 60) + "..." : "No description"}</p>
