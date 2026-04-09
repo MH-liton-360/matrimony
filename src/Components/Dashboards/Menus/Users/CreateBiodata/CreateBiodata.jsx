@@ -199,14 +199,14 @@ const CreateBiodata = () => {
                         {step === 3 && (
                             <div className="space-y-4">
                                 <div className="flex gap-3">
-                                    <select name="country" value={formData.country} onChange={handleChange} className="w-full border p-2 rounded">
+                                    <select name="country" value={formData.country} onChange={handleChange} className="w-full border p-2 rounded bg-black">
                                         <option value="">Country</option>
                                         {countries.map(c => <option key={c} value={c}>{c}</option>)}
                                     </select>
-                                    <input type="text" name="district" value={formData.district} onChange={handleChange} placeholder="District" className="w-full border p-2 rounded" />
+                                    <input type="text" name="district" value={formData.district} onChange={handleChange} placeholder="District" className="w-full border p-2 rounded bg-black" />
                                 </div>
-                                <input type="text" name="presentAddress" value={formData.presentAddress} onChange={handleChange} placeholder="Present Address" className="w-full border p-2 rounded" />
-                                <input type="text" name="permanentAddress" value={formData.permanentAddress} onChange={handleChange} placeholder="Permanent Address" className="w-full border p-2 rounded" />
+                                <input type="text" name="presentAddress" value={formData.presentAddress} onChange={handleChange} placeholder="Present Address" className="w-full border p-2 rounded bg-black" />
+                                <input type="text" name="permanentAddress" value={formData.permanentAddress} onChange={handleChange} placeholder="Permanent Address" className="w-full border p-2 rounded bg-black" />
                             </div>
                         )}
 
