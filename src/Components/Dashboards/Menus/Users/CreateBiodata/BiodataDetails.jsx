@@ -31,12 +31,16 @@ const BiodataDetails = () => {
                     <p><strong>Age:</strong> {biodata.age}</p>
                     <p><strong>Marital Status:</strong> {biodata.maritalStatus}</p>
                     <p><strong>Religion:</strong> {biodata.religion}</p>
-                    <p><strong>About:</strong> {biodata.aboutMe}</p>
                     <p><strong>Location:</strong> {biodata.district}, {biodata.country}</p>
                     <p><strong>Family Status:</strong> {biodata.familyStatus}</p>
                     <p><strong>Education:</strong> {biodata.highestEducation}</p>
-                    <p><strong>Expected Partner:</strong> {biodata.partnerPreferences}</p>
                 </div>
+
+            </div>
+            <div className="">
+                <p><strong>About:</strong></p>
+                <p>{biodata.aboutMe}</p>
+                <p><strong>Expected Partner:</strong> {biodata.partnerPreferences}</p>
             </div>
         </div>
     );
