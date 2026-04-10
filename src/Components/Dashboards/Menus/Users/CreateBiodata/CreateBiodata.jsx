@@ -238,6 +238,7 @@ const CreateBiodata = () => {
                             {step < steps.length && <button type="button" onClick={nextStep} className="bg-black text-white px-4 py-2 rounded">Next</button>}
                             {step === steps.length && <button type="submit" className="bg-green-600 text-white px-6 py-2 rounded">Submit</button>}
                         </div>
+
                     </form>
                 </div>
             </div>
