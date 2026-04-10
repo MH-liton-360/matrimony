@@ -242,6 +242,7 @@ const CreateBiodata = () => {
                     </form>
                 </div>
             </div>
+
         </section>
     );
 };
