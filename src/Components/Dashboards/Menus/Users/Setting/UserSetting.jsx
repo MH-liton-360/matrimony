@@ -94,6 +94,7 @@ const UserSetting = () => {
                     Update Profile
                 </button>
             </form>
+
         </div>
     );
 };

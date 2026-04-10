@@ -42,7 +42,7 @@ const SearchBiodata = () => {
             .finally(() => setLoading(false));
     };
 
-    // Reset filter...................
+    // Reset filter.......................................................!
     const handleReset = () => {
         setFilters({ age: "", profession: "", district: "", gender: "", religion: "" });
         fetchAllBiodata();
